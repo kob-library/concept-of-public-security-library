@@ -3,3 +3,9 @@
 > Авторское содержание. Разделов: 1. [Каталог](../../CATALOG.md)
 
 1. [«О текущем моменте» № 2 (74), февраль 2008 г. / Авторитет как помеха\](01.md)
+
+## Переводы на dotu.ru
+
+- English — [“About the current moment” №2(74), February 2008. Authority as an obstacle for personal and social development](../../translations/en/en-20080302_cur_moment0274/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

@@ -10,3 +10,9 @@
 6. [7.1. Исходный вопрос психологии как науки](06.md)
 7. [7.2. Жизненный алгоритм становления личности](07.md)
 8. [Заключение](08.md)
+
+## Переводы на dotu.ru
+
+- Slovenský — [Dialektika a ateizmus: dve nezlučiteľné podstaty](../../translations/sk/sk-20031115_dialektika_a_ateizmus/README.md) — work_match_edition_unknown
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

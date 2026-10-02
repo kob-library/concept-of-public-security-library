@@ -15,3 +15,9 @@
 11. [19.3.1. Итоги «развития» системы образования под властью библейского проекта](subsections/ch-19-s19-03-01.md)
 12. [19.3.2. Какой должна быть школа](subsections/ch-19-s19-03-02.md)
 13. [19.4. Наука](sections/ch-19-s19-04.md)
+
+## Переводы на dotu.ru
+
+- English — [The Fundamentals of Sociology (2016 edition)](../translations/en/en-the-fundamentals-of-sociology-2016/README.md) — перевод всего комплекта
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

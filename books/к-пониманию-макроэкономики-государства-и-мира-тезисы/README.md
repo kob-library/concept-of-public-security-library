@@ -7,3 +7,9 @@
 3. [2.4. Курсы валют: относительные и абсолютные](03.md)
 4. [3. Право собственности](04.md)
 5. [Заключение](05.md)
+
+## Переводы на dotu.ru
+
+- English — [To Understanding of Macroeconomу of State and World](../../translations/en/en-20021208-macroeconomy/README.md) — work_match_edition_unknown
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

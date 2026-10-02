@@ -3,3 +3,9 @@
 > Авторское содержание. Разделов: 1. [Каталог](../../CATALOG.md)
 
 1. [«О текущем моменте», № 3 (105), 2012 г. / Китайское «аниме»:\](01.md)
+
+## Переводы на dotu.ru
+
+- Čeština — [«О aktuální situaci» č.3 (105) Čínské „anime“ : vize mistrovství Evropy ve fotbale? nebo něco jiného?](../../translations/cs/cs-20120607_o_aktualni_situaci03105/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

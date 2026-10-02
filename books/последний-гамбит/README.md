@@ -12,3 +12,10 @@
 8. [8 — 12 октября. Индия. Бомбей — Путтапарти](08.md)
 9. [Утро. Суббота. 13 октября. Лондон](09.md)
 10. [О принципах тандемной деятельности](10.md)
+
+## Переводы на dotu.ru
+
+- Čeština — [Poslední gambit](../../translations/cs/cs-20020601_posledni-gambit/README.md) — work_match_edition_unknown
+- English — [The Last Gambit](../../translations/en/en-20050514-the_last_gambit/README.md) — work_match_edition_unknown
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

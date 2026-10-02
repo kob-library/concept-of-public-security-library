@@ -13,3 +13,9 @@
 9. [8.1. Откуда что берётся](09.md)
 10. [8.3. А что я один могу сделать?](10.md)
 11. [2. Семья в системе жизненных ценностей 16-17-летних подростков, проживающих в мегаполисе\[^600]](11.md)
+
+## Переводы на dotu.ru
+
+- Slovenský — [Vyriešenie problémov vzájomných národných vzťahov v duchu Koncepcie spoločenskej bezpečnosti](../../translations/sk/sk-20121002_vyriesenie_problemov/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

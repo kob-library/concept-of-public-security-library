@@ -3,3 +3,9 @@
 > Авторское содержание. Разделов: 1. [Каталог](../../CATALOG.md)
 
 1. [аналитическая записка / «Арбитраж» главы государства\](01.md)
+
+## Переводы на dotu.ru
+
+- Slovenský — [„Arbitráž“ hlavy štátu ako osnova pre „rozhodovanie“ vo vzťahu k elitárskym klanom](../../translations/sk/sk-20130219_arbitraz/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

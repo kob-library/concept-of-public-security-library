@@ -24,3 +24,11 @@
 20. [9. Мировоззрение для всех человеков](20.md)
 21. [10. Путь к соборности](21.md)
 22. [11. Попутный ветер Вседержительности](22.md)
+
+## Переводы на dotu.ru
+
+- English — [The Sufficiently General Theory of Governance (2011 edition)](../../translations/en/en-sgtg-2011/README.md)
+- Қазақша — [ЖЕТКІЛІКТІ ЖАЛПЫ БАСҚАРУ ТЕОРИЯСЫ (1991)](../../translations/kk/kk-19910213-dotu_red-1991-kaz/README.md) — older_or_alternate_edition
+- Slovenský — [Dostatočne všeobecná teória riadenia (2011)](../../translations/sk/sk-20110626_dostatocne_vseobecna_teoria_riadenia-2011/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

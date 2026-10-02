@@ -3,3 +3,9 @@
 > Авторское содержание. Разделов: 1. [Каталог](../../CATALOG.md)
 
 1. [Операция ЦРУ «Белый жеребец» — вторая серия голливудского фильма «Охота за Красным Октябрём»? / После прочтения всех трё](01.md)
+
+## Переводы на dotu.ru
+
+- Lietuvių — [CŽV operacija „Baltasis eržilas“ – antroji holivudinio filmo „Raudonojo Spalio medžioklė“ serija?](../../translations/lt/lt-20130805_czv_operacija/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

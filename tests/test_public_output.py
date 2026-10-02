@@ -3,6 +3,7 @@
 manifest generator and release dry-run."""
 import importlib.util
 import json
+import os
 import re
 import subprocess
 import sys
@@ -16,6 +17,10 @@ sys.path.insert(0, str(REPO / 'tests'))
 from scan_public_output import scan_tree  # noqa: E402
 import site_builder  # noqa: E402
 
+# Children print non-ASCII JSON; force UTF-8 stdio so text=True never
+# dies on locale-encoded (cp1251) bytes.
+SUBPROC_ENV = dict(os.environ, PYTHONIOENCODING='utf-8')
+
 from test_release_gate import corpus_pins, write_review  # noqa: E402
 # media_row/ole_row unused here: queues stay empty in these fixtures
 
@@ -27,7 +32,7 @@ def fixture_site_corpus(tmp: Path) -> Path:
     corpus = tmp / 'corpus'
     r = subprocess.run(
         [sys.executable, str(REPO / 'tools/make_fixture_corpus.py'),
-         '--output', str(corpus)], capture_output=True, text=True)
+         '--output', str(corpus)], capture_output=True, text=True, env=SUBPROC_ENV)
     assert r.returncode == 0, r.stderr
     for v in range(1, 7):
         d = corpus / f'tom-{v}'
@@ -390,7 +395,7 @@ class ReleaseManifestTest(unittest.TestCase):
             r = subprocess.run(
                 [sys.executable, str(REPO / 'tools/build_release_manifest.py'),
                  '--corpus', str(corpus), '--review', str(review.parent)],
-                capture_output=True, text=True)
+                capture_output=True, text=True, env=SUBPROC_ENV)
             self.assertEqual(r.returncode, 0, r.stderr)
             man = json.loads(r.stdout)
             self.assertEqual(man['manifest_kind'], 'release_candidate')
@@ -413,7 +418,7 @@ class ReleaseDryRunTest(unittest.TestCase):
                 [sys.executable, str(REPO / 'tools/release_dry_run.py'),
                  '--corpus', str(corpus), '--approval', str(approval),
                  '--output', str(out)],
-                capture_output=True, text=True)
+                capture_output=True, text=True, env=SUBPROC_ENV)
             self.assertEqual(r.returncode, 0, r.stderr)
             rep = json.loads(r.stdout)
             self.assertEqual(rep['verdict'], 'BLOCKED-BY-GATE')
@@ -431,7 +436,7 @@ class ExportRepoTest(unittest.TestCase):
             out = Path(t) / 'export'
             r = subprocess.run(
                 [sys.executable, str(REPO / 'tools/export_public_repo.py'),
-                 '--output', str(out)], capture_output=True, text=True)
+                 '--output', str(out)], capture_output=True, text=True, env=SUBPROC_ENV)
             self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
             self.assertTrue((out / 'README.md').is_file())
             self.assertTrue((out / 'LICENSE').is_file())
@@ -447,7 +452,7 @@ class ExportRepoTest(unittest.TestCase):
         # The operator account name (from the private remote URL) must never
         # appear in exported files — neither as path nor as content.
         url = subprocess.run(['git', '-C', str(REPO), 'remote', 'get-url', 'origin'],
-                             capture_output=True, text=True).stdout.strip()
+                             capture_output=True, text=True, env=SUBPROC_ENV).stdout.strip()
         m = re.search(r'github\.com[:/]([^/]+)/', url)
         if not m:
             self.skipTest('origin remote is not a GitHub URL')
@@ -455,7 +460,7 @@ class ExportRepoTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as t:
             out = Path(t) / 'export'
             subprocess.run([sys.executable, str(REPO / 'tools/export_public_repo.py'),
-                            '--output', str(out)], capture_output=True, text=True)
+                            '--output', str(out)], capture_output=True, text=True, env=SUBPROC_ENV)
             for p in out.rglob('*'):
                 if p.is_file():
                     self.assertNotIn(owner, p.read_bytes(),

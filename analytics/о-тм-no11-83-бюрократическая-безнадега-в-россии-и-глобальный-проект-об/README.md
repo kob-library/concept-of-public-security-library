@@ -3,3 +3,9 @@
 > Авторское содержание. Разделов: 1. [Каталог](../../CATALOG.md)
 
 1. [О текущем моменте» № 11 (83), 2008 г. / Бюрократическая безнадёга в России\](01.md)
+
+## Переводы на dotu.ru
+
+- English — [“About the current moment” №11(83), November 2008. Bureaucratic despair in Russia and global project “Obama”](../../translations/en/en-20081128-current_moment1183/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.

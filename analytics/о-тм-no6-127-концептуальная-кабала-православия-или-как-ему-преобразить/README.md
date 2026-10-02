@@ -3,3 +3,9 @@
 > Авторское содержание. Разделов: 1. [Каталог](../../CATALOG.md)
 
 1. [Развитие аналитической записки\ / «О текущем моменте» № 6 (127), июль 2016 года](01.md)
+
+## Переводы на dotu.ru
+
+- Čeština — [Pokračování analytické poznámky «О aktuální situaci» č.6 (127) Konceptuální kabala Pravoslaví a jak se může Pravoslaví transformovat](../../translations/cs/cs-20160728_o_aktualni_situaci06127-2/README.md)
+
+> Переводы — вторичный материал; канонический текст — русский оригинал этой работы.
