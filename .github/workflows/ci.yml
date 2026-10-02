@@ -1,0 +1,48 @@
+name: Validate site tooling
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Install site dependencies
+        run: pip install -r requirements.txt
+      - name: Compile tools, do not publish
+        run: python -m compileall -q tools converter
+      - name: Unit tests (release gate, public-build block)
+        run: python -m unittest discover -s tests -v
+      - name: Public-release gate is closed until reviewed
+        run: |
+          if python tools/release_gate.py --corpus source_corpus --approval review/release_approval.json; then
+            echo 'Gate is open: inspect approvals in code review';
+          else
+            echo 'Publication gate remains closed (expected before review)';
+          fi
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install -r requirements.txt
+      - name: Build synthetic fixture corpus (no real texts)
+        run: python tools/make_fixture_corpus.py --output /tmp/fixture_corpus
+      - name: Internal site builds on fixture
+        run: python tools/site_builder.py --corpus /tmp/fixture_corpus --output /tmp/fixture_site --mode internal
+      - name: Site link/search checks pass
+        run: python tools/test_preview.py --site /tmp/fixture_site
+      - name: Public mode refused by gate with expected reasons, no output emitted
+        run: >
+          python tools/assert_public_blocked.py
+          --corpus /tmp/fixture_corpus --output /tmp/fixture_pub
+          --release-approval review/release_approval.json
+          --expect "PUBLIC RELEASE BLOCKED"
+          --expect "release_scope missing"
+          --expect "Not approved: editorial_text_review"
+          --expect "Reviewer identity/date missing"

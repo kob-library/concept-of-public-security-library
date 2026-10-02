@@ -1,0 +1,22 @@
+__pycache__/
+.pytest_cache/
+_site/
+_site_pub/
+site_preview/
+*.pyc
+*.tmp
+# Source material deliberately excluded until edition-specific signoff.
+source_corpus/*
+!source_corpus/.gitkeep
+# This prevents accidental uploading of the unreleased corpus.
+
+# Local verification corpora and build output — never committed.
+corpus_extracted/
+kob_books_v0_4/
+kob_sociology_corpus/
+
+# media_qa binary assets (book illustrations, PDF page renders, OLE dumps)
+# are review material kept outside git, same as source_corpus.
+media_qa/media/
+media_qa/pages/
+media_qa/ole/
