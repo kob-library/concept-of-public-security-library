@@ -17,14 +17,15 @@ become visible omission markers, links to non-exported files are neutralized
 Authorial text is not edited.
 """
 from __future__ import annotations
-import argparse, json, re, sys
+import argparse, json, re, shutil, sys
 from pathlib import Path, PurePosixPath
 from urllib.parse import unquote
 
 sys.path.insert(0, str(Path(__file__).parent))
 import export_github_first as gh  # noqa: E402
 
-MOJI_MEDIA_RX = re.compile(r'!\[([^\]]*)\]\([^)]*\)')          # any image ref
+MOJI_MEDIA_RX = re.compile(r'!\[((?:[^\[\]]|\[[^\]]*\])*)\]\(([^)]*)\)')
+                                             # any image ref; alt may nest []
 IMG_TAG_RX = re.compile(r'<img\b[^>]*>', re.I)                 # pandoc/LO <img>
 IMG_SRC_RX = re.compile(r'src=["\']([^"\']+)["\']', re.I)
 MD_LINK_RX = gh.MD_LINK_RX
@@ -147,7 +148,7 @@ def work_footnote_defs(extra: Path, wsecs: list) -> dict:
 
 def transform_work_section(extra: Path, w: dict, s: dict, exported: set,
                            omitted: list, neutralized: list,
-                           wdefs: dict = None) -> str:
+                           wdefs: dict = None, media: dict = None) -> str:
     src = extra / s['path']
     body = gh.header_removed(src.read_text(encoding='utf-8')).replace(SOFT_HYPHEN, '')
     wdir = w['dir']
@@ -166,17 +167,67 @@ def transform_work_section(extra: Path, w: dict, s: dict, exported: set,
 
     def img_repl(m):
         alt = m.group(1)
-        ref = m.group(0)
-        name = ref.split('(', 1)[1].rsplit(')', 1)[0].split('/')[-1]
+        # group(2) is the real target — the alt text itself may contain
+        # parentheses, so string-splitting the ref would misparse
+        target = m.group(2)
+        name = target.split('/')[-1]
+        # media pass-through: keep the reference when the corpus file exists
+        # and the active policy admits it ('all' for private review builds,
+        # 'allowlist' for public sha-pinned releases)
+        if media and media['mode'] != 'none':
+            tp = unquote(target.split('#')[0].split('?')[0])
+            resolved = PurePosixPath(s['path']).parent
+            parts = []
+            for p in (resolved / tp).parts:
+                if p == '..':
+                    if parts:
+                        parts.pop()
+                elif p != '.':
+                    parts.append(p)
+            rel = '/'.join(parts)
+            cand = extra / rel
+            if cand.is_file():
+                keep = (media['mode'] == 'all'
+                        and (w['work_id'], name) in media['reg_allow']) or (
+                    media['mode'] == 'allowlist'
+                    and media['allow'].get((w['work_id'], name))
+                    == gh.sha256(cand))
+                if keep:
+                    media['copy'].append((cand, rel))
+                    return m.group(0)
         omitted.append(f'{wdir}:{s["section_id"]}:{name}')
         alt_txt = f' «{alt}»' if alt else ''
         return OMISSION_WORK.format(alt=alt_txt, name=name)
 
     def img_tag_repl(m):
         # pandoc/LibreOffice emit raw <img>; alt may carry local paths —
-        # keep only the src basename, never the alt text
+        # keep only the src basename, never the alt text. When the media
+        # policy admits the file, keep it as a plain markdown image.
         src = IMG_SRC_RX.search(m.group(0))
-        name = src.group(1).rsplit('/', 1)[-1] if src else 'image'
+        name = 'image'
+        if src:
+            target = src.group(1)
+            name = target.rsplit('/', 1)[-1]
+            if media and media['mode'] != 'none' and '://' not in target:
+                tp = unquote(target.split('#')[0].split('?')[0])
+                parts = []
+                for p in (PurePosixPath(s['path']).parent / tp).parts:
+                    if p == '..':
+                        if parts:
+                            parts.pop()
+                    elif p != '.':
+                        parts.append(p)
+                rel = '/'.join(parts)
+                cand = extra / rel
+                if cand.is_file():
+                    keep = (media['mode'] == 'all'
+                            and (w['work_id'], name) in media['reg_allow']) or (
+                        media['mode'] == 'allowlist'
+                        and media['allow'].get((w['work_id'], name))
+                        == gh.sha256(cand))
+                    if keep:
+                        media['copy'].append((cand, rel))
+                        return f'![]({target})'
         omitted.append(f'{wdir}:{s["section_id"]}:{name}')
         return OMISSION_WORK.format(alt='', name=name)
 
@@ -311,6 +362,38 @@ AI_USAGE = '''# Использование библиотеки ИИ-агент�
    соответствие оригиналу — поле `match`/`related_work_ids`, каноническим
    остаётся русский текст. Разделы переводов — `data/translation_sections.jsonl`.
 
+## Быстрые точки входа
+
+Редакционные точки входа (навигационная подсказка, не авторская иерархия):
+
+- широкий междисциплинарный вопрос по корпусу → проверить
+  «Мёртвую воду» (`books/мертвая-вода-ред-2015-года/`);
+- вопрос по общей теории/практике управления → «Достаточно общая теория
+  управления» (`books/достаточно-общая-теория-управления/`);
+- систематическое изучение социологии, истории, психологии, методологии
+  и управления → шеститомник «Основы социологии» (`tom-1` … `tom-6`).
+
+Конкретный вопрос всё равно решается через `data/works.jsonl`,
+`data/sections.jsonl`, полнотекстовый поиск и чтение полного раздела;
+редакционные описания не являются авторским текстом и не цитируются как
+таковой. Машинно-читаемые роли — `data/entry_points.json`.
+
+## Графический слой (рисунки, схемы, таблицы)
+
+Маршрут для визуальных объектов:
+
+1. `FIGURES.md` (корневой или в каталоге произведения) либо
+   `data/figures.jsonl` → `figure_id`, `work_id`, подпись, `figure_label`
+   («Рис. N»), `publication_status`.
+2. Поля `ref_sites` / `anchor_file` дают раздел, где объект стоит в тексте;
+   `source_page`/`source_bbox` — кандидатная позиция в PDF источника
+   (при наличии).
+3. Читайте полный текст раздела вокруг изображения — подпись и ссылка «см.
+   рис.» находятся в окружающем тексте, а не в записи реестра.
+4. Статусы: `published` — файл включён; `metadata_only_*`, `duplicate`,
+   `decorative_excluded` — изображение не включено; запись и статус
+   остаются честным указателем, а не доказательством содержания.
+
 ## Правила цитирования
 
 - Первичный текст — только авторское содержимое файлов разделов; `CATALOG.md`,
@@ -354,8 +437,19 @@ VOL_META = {
 
 
 def build_catalog(works: list) -> str:
+    dirs = {w['dir'] for w in works}
+    ep = []
+    if 'books/мертвая-вода-ред-2015-года' in dirs:
+        ep.append('- [«Мёртвая вода»](books/мертвая-вода-ред-2015-года/README.md)'
+                  ' — интегральная точка входа')
+    if 'books/достаточно-общая-теория-управления' in dirs:
+        ep.append('- [«Достаточно общая теория управления»]'
+                  '(books/достаточно-общая-теория-управления/README.md) — '
+                  'методология управления')
+    ep.append('- «Основы социологии» — систематический курс, 6 томов (ниже)')
     blocks = ['# Каталог произведений', '',
               'Редакционный указатель (не авторский текст). Статусы проверки — в NOTICE.md.', '',
+              '### Ключевые точки входа', ''] + ep + ['',
               '## Основы социологии (6 томов)', '']
     for v in sorted(VOL_META):
         title, year = VOL_META[v]
@@ -555,8 +649,7 @@ def build_translations(out: Path, ledger_path: Path, tbuild: Path,
                 body = MOJI_MEDIA_RX.sub(
                     lambda m: OMISSION_WORK.format(
                         alt=(' — ' + m.group(1)) if m.group(1) else '',
-                        name=(m.group(0).split('(')[-1].rstrip(')')
-                              .rsplit('/', 1)[-1])),
+                        name=m.group(2).rsplit('/', 1)[-1]),
                     body)
                 body = IMG_TAG_RX.sub(
                     lambda m: OMISSION_WORK.format(
@@ -699,16 +792,125 @@ def build_translations(out: Path, ledger_path: Path, tbuild: Path,
     return registry
 
 
+def load_unified_allowlist(path: Path | None) -> dict:
+    """{(work_id, basename): sha256} entries in public_media_allowlist.jsonl
+    for unified works (entries carry work_id; volume entries carry volume)."""
+    out = {}
+    if not path or not path.is_file():
+        return out
+    for line in path.read_text(encoding='utf-8').splitlines():
+        if not line.strip():
+            continue
+        e = json.loads(line)
+        if e.get('decision') == 'approved' and e.get('sha256') \
+                and e.get('work_id'):
+            out[(e['work_id'], Path(e['path']).name)] = e['sha256']
+    return out
+
+
+def build_figures_md(fig_rows: list, works: list) -> str:
+    """Top-level human index for the media layer (Issue #13 B8)."""
+    from collections import Counter
+    by_st = Counter(f.get('publication_status') or '?' for f in fig_rows)
+    out = ['# Графический слой библиотеки', '',
+           'Реестр иллюстраций, схем, таблиц и прочих графических объектов, '
+           'найденных в источниках произведений. Это редакционный указатель, '
+           'а не авторский текст. Статусы описывают состояние объекта на '
+           'момент сборки: `published` — файл включён в выпуск; '
+           '`metadata_only_*` — объект задокументирован, но файл не включён '
+           '(правовая проверка или источник недоступен); `duplicate` — '
+           'повтор ранее учтённого объекта; `decorative_excluded` — '
+           'декоративный элемент без содержательной нагрузки.', '',
+           'Машинно-читаемый реестр: [`data/figures.jsonl`](data/figures.jsonl).',
+           '', '## Статусы записей', '',
+           '| Статус | Записей |', '|--------|---------|']
+    for st, n in sorted(by_st.items()):
+        out.append(f'| {st} | {n} |')
+    out += ['', '## Реестры по произведениям', '',
+            'У каждой работы с графическими объектами есть `FIGURES.md` и '
+            '`figures_registry.jsonl` в её каталоге:', '']
+    by_work = {}
+    for f in fig_rows:
+        by_work.setdefault(f['work_id'], []).append(f)
+    wdir = {w['work_id']: w['dir'] for w in works}
+    for wid in sorted(by_work, key=lambda x: (wdir.get(x) or '', x)):
+        n = len(by_work[wid])
+        if wid.startswith('osnovy-sociologii-tom-'):
+            v = wid.rsplit('-', 1)[-1]
+            out.append(f'- [Основы социологии, том {v}](tom-{v}/FIGURES.md) '
+                       f'— {n}')
+        else:
+            d = wdir.get(wid)
+            if d:
+                out.append(f'- [{wid}]({d}/FIGURES.md) — {n}')
+    return '\n'.join(out) + '\n'
+
+
+def _resolve_public_path(row: dict, out: Path, work_dirs: dict) -> None:
+    """Point a sanitized figure record's public_path at the file's real
+    export-relative location, or null it when the bytes did not ship
+    (unreferenced duplicates, allowlist misses). The registry's nominal
+    assets/figures/… path is not where the exporter places media."""
+    wid = row.get('work_id') or ''
+    name = Path(row.get('media_file') or '').name
+    if not name:
+        row['public_path'] = row['public_asset_sha256'] = None
+        return
+    if wid.startswith('osnovy-sociologii-tom-'):
+        rel = f'tom-{wid.rsplit("-", 1)[-1]}/assets/media/{name}'
+    elif wid in work_dirs:
+        rel = f'{work_dirs[wid]}/media/{name}'
+    else:
+        row['public_path'] = row['public_asset_sha256'] = None
+        return
+    if (out / rel).is_file():
+        row['public_path'] = rel
+    else:
+        row['public_path'] = row['public_asset_sha256'] = None
+
+
 def extend(out: Path, extra: Path, report: dict,
-           tr_ledger: Path | None = None, tr_build: Path | None = None) -> dict:
+           tr_ledger: Path | None = None, tr_build: Path | None = None,
+           media_mode: str = 'none',
+           media_allowlist: Path | None = None,
+           figures_registry: Path | None = None) -> dict:
     works, secs = load_extra(extra)
     if not works:
         return report
+    # figure registry (Issue #13): needed early — the 'all' media mode may
+    # keep a ref only when the canonical record is published; corpus media
+    work_dirs = {w['work_id']: w['dir'] for w in works}
+    # dirs can still hold pre-existing rights-blocked files
+    fig_rows = []
+    if figures_registry and Path(figures_registry).is_file():
+        fig_rows = [json.loads(l) for l in
+                    Path(figures_registry).read_text(encoding='utf-8')
+                    .splitlines() if l.strip()]
+    reg_allow = set()
+    if fig_rows:
+        by_id = {f['figure_id']: f for f in fig_rows}
+        for f in fig_rows:
+            canon = by_id.get(f.get('duplicate_of') or '', f)
+            # a duplicate's local media_file shares the canonical bytes, so
+            # it is allowed too — but never the canonical's own filename,
+            # which may collide with a blocked file in this work
+            if f.get('media_file') and \
+                    canon['publication_status'] == 'published':
+                reg_allow.add((f['work_id'], f['media_file']))
+    media = {'mode': media_mode, 'copy': [],
+             'allow': load_unified_allowlist(media_allowlist),
+             'reg_allow': reg_allow}
+    dirs = {w['dir'] for w in works}
+    has_figs = {w['work_id']: (extra / w['dir'] / 'figures_registry.jsonl')
+                .is_file() for w in works}
     # pass 1: exported set for link audit (meta-only works ship just a card —
     # links to their section files must be neutralized, so paths stay absent)
     exported = {p.as_posix() for p in out.rglob('*') if p.is_file()}
     for w in works:
         exported.add(f'{w["dir"]}/README.md')
+        if has_figs.get(w['work_id']):
+            exported.add(f'{w["dir"]}/FIGURES.md')
+            exported.add(f'{w["dir"]}/figures_registry.jsonl')
         if is_meta_only(w):
             continue
         for s in secs.get(w['work_id'], []):
@@ -732,21 +934,114 @@ def extend(out: Path, extra: Path, report: dict,
             need = {m.group(1) for m in FN_REF_RX.finditer(src_body)} - local
             fn_replicated += len(need & set(wdefs))
             text = transform_work_section(extra, w, s, exported, omitted,
-                                          neutralized, wdefs)
+                                          neutralized, wdefs, media)
             (wdir / PurePosixPath(s['path']).name).write_text(text, encoding='utf-8')
             total_secs += 1
         (wdir / 'README.md').write_text(build_work_readme(w, wsecs), encoding='utf-8')
 
+    # media pass-through: copy the files kept by transform_work_section and
+    # ship the per-work figure documentation (metadata only, no private
+    # paths — figure records carry public corpus paths and hashes)
+    copied_media = []
+    for src, rel in media['copy']:
+        dest = out / rel
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dest)
+        copied_media.append(rel)
+    if media['mode'] == 'allowlist':
+        # also ship allowlisted objects never referenced inline (e.g.
+        # unbound_confirmed) so `published` status stays truthful
+        copied_set = {rel for _, rel in media['copy']}
+        for (wid, name), want in media['allow'].items():
+            if wid not in work_dirs:
+                continue
+            rel = f'{work_dirs[wid]}/media/{name}'
+            if rel in copied_set:
+                continue
+            src = extra / rel
+            if not src.is_file():
+                continue
+            if gh.sha256(src) != want:
+                raise SystemExit(f'allowlisted media bytes differ: {rel}')
+            dest = out / rel
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dest)
+            copied_media.append(rel)
+    for w in works:
+        if not has_figs.get(w['work_id']):
+            continue
+        wdir = out / w['dir']
+        src_fig = extra / w['dir'] / 'FIGURES.md'
+        if src_fig.is_file():
+            shutil.copy2(src_fig, wdir / 'FIGURES.md')
+        src_reg = extra / w['dir'] / 'figures_registry.jsonl'
+        if src_reg.is_file():
+            rows = [gh.public_figure_record(json.loads(l)) for l in
+                    src_reg.read_text(encoding='utf-8')
+                    .splitlines() if l.strip()]
+            for r in rows:
+                _resolve_public_path(r, out, work_dirs)
+            (wdir / 'figures_registry.jsonl').write_text(
+                ''.join(json.dumps(r, ensure_ascii=False) + '\n'
+                        for r in rows), encoding='utf-8')
+
+    # Issue #13 B5/B8: corpus-wide figure index — merged machine-readable
+    # registry (all volumes + unified works) and a top-level human index.
+    # Records are provenance metadata only; the media files themselves stay
+    # behind the media policy/allowlist gate.
+    if fig_rows:
+        shipped_dirs = {w['work_id'] for w in works} | \
+            {f'osnovy-sociologii-tom-{v}' for v in range(1, 7)
+             if (out / f'tom-{v}').is_dir()}
+        fig_rows = [f for f in fig_rows
+                    if f['work_id'] in shipped_dirs]
+        if fig_rows:
+            pub_rows = [gh.public_figure_record(f) for f in fig_rows]
+            for r in pub_rows:
+                _resolve_public_path(r, out, work_dirs)
+            (out / 'data' / 'figures.jsonl').write_text(
+                ''.join(json.dumps(f, ensure_ascii=False) + '\n'
+                        for f in pub_rows), encoding='utf-8')
+            (out / 'FIGURES.md').write_text(
+                build_figures_md(fig_rows, works), encoding='utf-8')
+
     (out / 'CATALOG.md').write_text(build_catalog(works), encoding='utf-8')
     (out / 'CHRONOLOGY.md').write_text(build_chronology(works), encoding='utf-8')
     (out / 'AI_USAGE.md').write_text(AI_USAGE, encoding='utf-8')
+    eps = []
+    if 'books/мертвая-вода-ред-2015-года' in dirs:
+        eps.append({'work_id': 'мертвая-вода-ред-2015-года',
+                    'role': 'integrative_entry_point',
+                    'dir': 'books/мертвая-вода-ред-2015-года',
+                    'note': 'широкий круг тем корпуса: ГИП, управление, '
+                            'суперсистемы, экономика, методология'})
+    if 'books/достаточно-общая-теория-управления' in dirs:
+        eps.append({'work_id': 'достаточно-общая-теория-управления',
+                    'role': 'management_methodology_entry_point',
+                    'dir': 'books/достаточно-общая-теория-управления',
+                    'note': 'общая теория и практика управления'})
+    eps.append({'work_id': 'osnovy-sociologii',
+                'role': 'systematic_course_entry_point',
+                'dir': None,
+                'volumes': [f'osnovy-sociologii-tom-{i}' for i in range(1, 7)],
+                'note': 'систематический учебный курс, 6 томов'})
+    (out / 'data' / 'entry_points.json').write_text(
+        json.dumps(eps, ensure_ascii=False, indent=2) + '\n',
+        encoding='utf-8')
     ext_ref = build_external_references(extra)
     if ext_ref:
         (out / 'EXTERNAL_REFERENCES.md').write_text(ext_ref, encoding='utf-8')
 
     tr_registry = []
-    if tr_ledger and tr_build and tr_ledger.exists() and tr_build.exists():
-        tr_registry = build_translations(out, tr_ledger, tr_build, report, works)
+    if tr_ledger or tr_build:
+        if not (tr_ledger and tr_ledger.exists()):
+            raise SystemExit(
+                f'translations ledger missing: {tr_ledger}')
+        if not (tr_build and tr_build.exists()):
+            raise SystemExit(
+                f'translations build dir missing: {tr_build}')
+        tr_registry = build_translations(out, tr_ledger, tr_build,
+                                         report, works)
 
     # NOTICE: provenance/exclusions for the extra corpus
     meta_n = sum(1 for w in works if is_meta_only(w))
@@ -849,9 +1144,77 @@ provenance-блоке её README/разделов; `dotu_url` — указат�
             ''.join(json.dumps(r, ensure_ascii=False) + '\n'
                     for r in base + recs), encoding='utf-8')
 
-    # README: append collections block; surface translations in the root TOC
+    # README: corpus v2 — corpus-wide H1/intro + three editorial entry points
     readme = out / 'README.md'
     body = readme.read_text(encoding='utf-8')
+    body = body.replace(
+        '# «Основы социологии» — библиотека первоисточников',
+        '# Библиотека первоисточников ВП СССР / Концепции общественной '
+        'безопасности', 1)
+    body = body.replace(
+        'Исследовательская библиотека первичных текстов: постановочные '
+        'материалы учебного курса «Основы социологии» ВП СССР в шести томах.',
+        'Исследовательская библиотека первичных текстов: материалы '
+        'ВП СССР / Концепции общественной безопасности — шеститомный '
+        'учебный курс «Основы социологии», книги, самостоятельные работы, '
+        'аналитические записки и опубликованные на dotu.ru переводы.', 1)
+    ep_items = []
+    if 'books/мертвая-вода-ред-2015-года' in dirs:
+        ep_items.append(
+            '**[«Мёртвая вода»](books/мертвая-вода-ред-2015-года/README.md)** — '
+            'интегральная точка входа в широкий круг тем корпуса: глобальный '
+            'исторический процесс, теория и практика управления, суперсистемы, '
+            'общественные процессы, государственное и негосударственное '
+            'управление, экономика и продуктообмен, мировоззренческие и '
+            'методологические вопросы.')
+    if 'books/достаточно-общая-теория-управления' in dirs:
+        ep_items.append(
+            '**[«Достаточно общая теория управления»]'
+            '(books/достаточно-общая-теория-управления/README.md)** — '
+            'методологическая точка входа по управлению.')
+    ep_items.append(
+        '**«Основы социологии»** — систематический учебный курс в шести '
+        'томах: [Том 1](tom-1/README.md) · [2](tom-2/README.md) · '
+        '[3](tom-3/README.md) · [4](tom-4/README.md) · [5](tom-5/README.md) · '
+        '[6](tom-6/README.md).')
+    entry_block = (
+        '## Ключевые работы / точки входа\n\n'
+        'Редакционные точки входа для первого знакомства с корпусом — это не '
+        'авторская иерархия произведений, не рейтинг и не оценка истинности; '
+        'остальные работы корпуса полностью доступны через каталог и поиск.\n\n'
+        + '\n'.join(f'{i}. {t}\n' for i, t in enumerate(ep_items, 1)))
+    pos = body.find('## Оглавление')
+    if pos >= 0:
+        body = body[:pos] + entry_block + '\n' + body[pos:]
+    # the base README still describes a text-only release; when the media
+    # layer ships (review candidate or an allowlisted public release) the
+    # composition paragraph must say so
+    if media_mode != 'none' and fig_rows:
+        n_pub = sum(1 for f in fig_rows
+                    if f['publication_status'] == 'published')
+        n_meta = sum(1 for f in fig_rows
+                     if f['publication_status'].startswith('metadata_only'))
+        body = re.sub(
+            r'Иллюстрации и обложки \*\*не включены\*\*:.*?'
+            r'редакция издания\.',
+            'Графический слой восстановлен из исходных документов там, где '
+            'это позволяют источники и правовой статус: реестр учитывает '
+            f'{len(fig_rows)} записей (см. [FIGURES.md](FIGURES.md) и '
+            '`data/figures.jsonl`), включено медиафайлов по записям '
+            f'`published`: {n_pub}. Изображения с незавершённой правовой '
+            'или технической проверкой не включены — на их месте стоят явные '
+            f'пометки, а записи метаданных ({n_meta}) сохранены в реестрах '
+            'работ. Часть объектов источников (встроенные OLE и объекты без '
+            'привязки к тексту) описана в очередях ревью и остаётся '
+            'метаданными — это ограничение выпуска, а не полная '
+            'текстово-графическая редакция издания. Векторная графика '
+            'источников (WMF/EMF) включена в технической конверсии PNG: '
+            'контрольные суммы исходника и результата зафиксированы в '
+            'реестрах; синтетическая реконструкция изображений не '
+            'применялась.',
+            body, count=1, flags=re.S)
+        body = body.replace('## Состав выпуска (текстовая редакция)',
+                            '## Состав выпуска (текст + подтверждённый графический слой)')
     if tr_registry:
         tr = report['translations']
         tl = '[Тематический указатель](TOPICS.md)'
@@ -868,6 +1231,9 @@ provenance-блоке её README/разделов; `dotu_url` — указат�
            f'({sum(1 for w in works if w["collection"] == "books")} книг, '
            f'{sum(1 for w in works if w["collection"] == "analytics")} аналитических записок и др.).',
            '- [Хронология](CHRONOLOGY.md) — по годам источников.',
+           *(['- [Графический слой](FIGURES.md) — реестр иллюстраций, схем и '
+              'таблиц корпуса со статусами восстановления.']
+             if fig_rows else []),
            *(['- [Без полного текста](EXTERNAL_REFERENCES.md) — '
               'карточки-указатели на материалы, которых нет в библиотеке.']
              if ext_ref else []),
@@ -930,6 +1296,8 @@ provenance-блоке её README/разделов; `dotu_url` — указат�
         'works_added': len(works), 'work_sections_added': total_secs,
         'excluded_works': getattr(load_extra, 'excluded', {}),
         'work_media_omitted': len(set(omitted)),
+        'work_media_copied': len(set(copied_media)),
+        'work_media_policy': media['mode'],
         'work_links_neutralized': len(set(neutralized)),
         'footnote_defs_replicated': fn_replicated,
         'files_hashed': len(manifest), 'files_on_disk': len(manifest) + 1,
@@ -956,11 +1324,30 @@ def main():
                     help='enriched dotu.ru translations ledger (jsonl)')
     ap.add_argument('--translations-build', type=Path, default=None,
                     help='converted translations tree <lang>/<id>/NN.md')
+    ap.add_argument('--media-registry', type=Path, default=None,
+                    help='review/figures_registry.jsonl for media staging')
+    ap.add_argument('--with-media', action='store_true',
+                    help='candidate mode only: ship registry-published '
+                         'media (private review builds; public mode still '
+                         'requires the positive allowlist)')
     a = ap.parse_args()
     report = gh.export(a.corpus, a.output, a.approval, a.mode, a.review_dir,
-                       forbid=tuple(a.forbid))
+                       forbid=tuple(a.forbid), with_media=a.with_media,
+                       media_registry=a.media_registry)
+    media_mode = 'none'
+    if a.mode == 'public':
+        # follows the same release_scope.media gate as the volume pipeline
+        from site_builder import load_release_scope
+        if load_release_scope(a.approval)['media'] == 'allowlist':
+            media_mode = 'allowlist'
+    elif a.with_media:
+        media_mode = 'all'
     report = extend(a.output, a.extra_corpus, report,
-                    a.translations_ledger, a.translations_build)
+                    a.translations_ledger, a.translations_build,
+                    media_mode=media_mode,
+                    media_allowlist=(a.approval.parent /
+                                     'public_media_allowlist.jsonl'),
+                    figures_registry=a.media_registry)
     print(json.dumps({k: (v if not isinstance(v, list) or len(v) < 8
                           else f'{len(v)} entries')
                       for k, v in report.items()}, ensure_ascii=False, indent=2))

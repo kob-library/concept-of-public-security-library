@@ -65,6 +65,36 @@ OMISSION = ('*[В оригинальном издании здесь распо�
 
 ARCHIVE_NOTE = 'соответствие редакции этой копии источнику проверяется'
 
+# Fields a figure-registry record may expose in an exported copy. Source
+# evidence (context_excerpt, docx_context, anchor_evidence, notes, raw
+# source paths/URLs, duplicate bookkeeping) stays in the private review
+# registry — it can carry personal data, contact info and audit detail.
+PUBLIC_FIG_FIELDS = (
+    'figure_id', 'work_id', 'work_dir', 'section_id',
+    'source_kind', 'containing_source', 'source_page',
+    'original_filename', 'media_file',
+    'caption', 'figure_label', 'media_type',
+    'rights_status', 'criticality', 'provenance_class',
+    'referenced_in_text', 'ref_count', 'anchor_confidence',
+    'publication_status', 'public_path', 'duplicate_of',
+    'source_sha256', 'public_asset_sha256',
+)
+
+EMAIL_RX = re.compile(r'[\w.+-]+@[\w-]+(?:\.[\w-]+)+')
+
+
+def public_figure_record(rec: dict) -> dict:
+    """Registry record stripped to export-safe fields (Issue #13)."""
+    out = {k: rec.get(k) for k in PUBLIC_FIG_FIELDS if k in rec}
+
+    def clean(v):
+        if isinstance(v, str):
+            return EMAIL_RX.sub('[email]', v)
+        if isinstance(v, list):
+            return [clean(x) for x in v]
+        return v
+    return {k: clean(v) for k, v in out.items()}
+
 
 def sha256(path: Path) -> str:
     h = hashlib.sha256()
@@ -72,6 +102,19 @@ def sha256(path: Path) -> str:
         for chunk in iter(lambda: f.read(2 ** 20), b''):
             h.update(chunk)
     return h.hexdigest()
+
+
+def _tom_public_path(row: dict, v: int, corpus: Path, allow: dict) -> dict:
+    """Rewrite a sanitized figure record's public_path to the real
+    export-relative location (tom-N/assets/media/<name>), or null it when
+    the file does not ship under the current media policy."""
+    name = Path(row.get('media_file') or '').name
+    src = corpus / f'tom-{v}/assets/media/{name}'
+    if name and src.is_file() and allow.get((v, name)) == sha256(src):
+        row['public_path'] = f'tom-{v}/assets/media/{name}'
+    else:
+        row['public_path'] = row['public_asset_sha256'] = None
+    return row
 
 
 def rel_link(from_file: PurePosixPath, to_path: str) -> str:
@@ -275,7 +318,46 @@ def build_topics(all_secs: list) -> str | None:
 
 def build_notice(volumes_secs: dict, works: list, scope: dict,
                  media_q: int, ole_q: int, inline_omitted: int,
-                 neutralized: list, max_md: int) -> str:
+                 neutralized: list, max_md: int,
+                 fig_rows: list | None = None) -> str:
+    media_lines = []
+    if scope['media'] == 'allowlist' and fig_rows:
+        # registry-aware disclosure: the figure registry, not the legacy
+        # review queue, is the decision artifact for the media layer
+        n_pub = sum(1 for f in fig_rows
+                    if f['publication_status'] == 'published')
+        n_rights = sum(1 for f in fig_rows
+                       if f['publication_status'] == 'metadata_only_rights')
+        n_src = sum(1 for f in fig_rows
+                    if f['publication_status'] == 'metadata_only_source')
+        n_unbound = sum(1 for f in fig_rows
+                        if f.get('anchor_confidence') == 'unbound_confirmed')
+        n_conv = sum(1 for f in fig_rows
+                     if f.get('conversion') and 'emf' in str(f['conversion']).lower()
+                     or 'wmf' in str(f.get('conversion') or '').lower())
+        media_lines = [
+            f'- {n_pub} графических объектов включены по положительному '
+            'списку (allowlist) с проверкой sha256; статус `published` '
+            'присвоен только объектам с подтверждённым происхождением.',
+            f'- {n_rights} объектов исключены по правовому статусу '
+            '(сторонние фото, репродукции, обложки, скриншоты) — '
+            'представлены только метаданными и явными пометками в тексте.',
+            f'- {n_src} объектов — только метаданные по источнику (OLE и '
+            f'неизвлечённые потоки); {n_unbound} объектов без надёжной '
+            'привязки к позиции в тексте.',
+            '- Векторная графика WMF/EMF включена в технической конверсии '
+            'PNG (LibreOffice); sha256 исходника и результата записаны в '
+            'реестре. Синтетическая реконструкция изображений не '
+            'применялась.']
+    else:
+        media_lines = [
+            f'- {inline_omitted} известных мест иллюстраций заменены явными '
+            'пометками об исключении.',
+            f'- {media_q} записей очереди ревью медиа и {ole_q} встроенных '
+            'OLE-объектов не привязаны к позиции в тексте — отсутствуют без '
+            'индивидуальной пометки.',
+            '- Исходные DOC/PDF и графика в выпуск не входят.']
+    media_block = '\n'.join(media_lines)
     rows = []
     for w in sorted(works, key=lambda x: x['volume']):
         if w['volume'] not in volumes_secs:
@@ -301,9 +383,8 @@ DOC → DOCX → Markdown выполнена автоматически (дет�
 
 ## Ограничения выпуска
 
-- {inline_omitted} известных мест иллюстраций заменены явными пометками об исключении.
-- {media_q} записей очереди ревью медиа и {ole_q} встроенных OLE-объектов не привязаны к позиции в тексте — отсутствуют без индивидуальной пометки.
-- Исходные DOC/PDF и графика в выпуск не входят.
+{media_block}
+- Исходные DOC/PDF в выпуск не входят.
 - Самый большой файл раздела: {max_md} байт — в пределах лимита отображения Markdown на GitHub; разбивка не потребовалась.
 - Относительные ссылки источника, ведущие на невключённые файлы, раскрыты в текст без URL (список ниже) — содержимое не выдумывалось.
 
@@ -352,7 +433,8 @@ def check_output_path(out: Path, corpus: Path, review_dir: Path | None):
 
 
 def export(corpus: Path, out: Path, approval: Path, mode: str,
-           review_dir: Path | None, forbid=()):
+           review_dir: Path | None, forbid=(), with_media: bool = False,
+           media_registry: Path | None = None):
     check_output_path(out, corpus, review_dir)
     if mode == 'public':
         ok, reasons, _ = check_release(corpus, approval)
@@ -361,6 +443,37 @@ def export(corpus: Path, out: Path, approval: Path, mode: str,
     scope = load_release_scope(approval)
     allow = load_media_allowlist(
         approval.parent / 'public_media_allowlist.jsonl') if approval else {}
+    # figure registry records (Issue #13): needed for per-volume FIGURES.md
+    # even when no media ships (status table is honest metadata)
+    fig_recs = []
+    if media_registry and Path(media_registry).is_file():
+        fig_recs = [json.loads(l) for l in
+                    Path(media_registry).read_text(encoding='utf-8')
+                    .splitlines() if l.strip()]
+
+    if with_media and mode != 'public' and scope['media'] == 'none':
+        # private review candidate: stage the media the registry flagged as
+        # publishable (authorial); public mode ignores this flag entirely —
+        # there the positive allowlist + sha256 check stays the only gate
+        allow = {}
+        if fig_recs:
+            recs = fig_recs
+            by_id = {r['figure_id']: r for r in recs}
+            for r in recs:
+                wd = r.get('work_dir') or ''
+                if not wd.startswith('tom-') or not r.get('media_file'):
+                    continue
+                if r['publication_status'] == 'duplicate':
+                    # a duplicate of a rights-blocked object stays blocked
+                    canon = by_id.get(r.get('duplicate_of') or '')
+                    if not canon or canon['publication_status'] != 'published':
+                        continue
+                elif r['publication_status'] != 'published':
+                    continue
+                f = corpus / wd / 'assets/media' / r['media_file']
+                if f.is_file():
+                    allow[(int(wd.split('-')[1]), f.name)] = sha256(f)
+        scope = {**scope, 'media': 'allowlist'}
 
     # Review-queue counts are disclosed honestly in README/NOTICE; queues
     # themselves are never exported.
@@ -395,6 +508,11 @@ def export(corpus: Path, out: Path, approval: Path, mode: str,
                 raise SystemExit(f'tom-{v}: section file missing: {s["path"]}')
             exported.add(f'tom-{v}/{s["path"]}')
         exported.add(f'tom-{v}/README.md')
+        # Issue #13: figure documentation for the volume (generated from the
+        # registry below — human index + per-work records)
+        if any(r.get('work_dir') == f'tom-{v}' for r in fig_recs):
+            exported.add(f'tom-{v}/FIGURES.md')
+            exported.add(f'tom-{v}/data/figures_registry.jsonl')
         volumes_secs[v] = secs
         if scope['media'] == 'allowlist':
             for f in (book / 'assets/media').rglob('*'):
@@ -413,6 +531,40 @@ def export(corpus: Path, out: Path, approval: Path, mode: str,
             dest.write_text(text, encoding='utf-8')
         (out / f'tom-{v}/README.md').write_text(
             build_volume_readme(v, secs, scope), encoding='utf-8')
+        recs_v = [r for r in fig_recs
+                  if r.get('work_dir') == f'tom-{v}']
+        if recs_v:
+            by_id_v = {r['figure_id']: r for r in fig_recs}
+            fmd = [f'# Графический слой: Основы социологии, том {v}', '',
+                   'Реестр иллюстраций/объектов, найденных в источниках '
+                   'тома. Редакционный указатель, не авторский текст. '
+                   'Статусы — на момент сборки реестра.', '',
+                   '| # | Метка | Тип | Статус | Файл | Подпись |',
+                   '|---|-------|-----|--------|------|---------|']
+            for i, r in enumerate(recs_v, 1):
+                canon = by_id_v.get(r.get('duplicate_of') or '', r)
+                shipped = canon['publication_status'] == 'published' and \
+                    (out / f'tom-{v}/assets/media'
+                     / (r.get('media_file') or '—')).is_file()
+                fl = (f'[media/{r["media_file"]}]'
+                      f'(assets/media/{r["media_file"]})'
+                      if shipped else '—')
+                fmd.append('| {i} | {lab} | {mt} | {st} | {fl} | {cap} |'
+                           .format(i=i,
+                                   lab=r.get('figure_label') or '—',
+                                   mt=r.get('media_type') or '—',
+                                   st=r.get('publication_status') or '—',
+                                   fl=fl,
+                                   cap=(r.get('caption') or '—')[:80]
+                                   .replace('|', '\\|')))
+            (out / f'tom-{v}/FIGURES.md').write_text(
+                '\n'.join(fmd) + '\n', encoding='utf-8')
+            (out / f'tom-{v}/data').mkdir(parents=True, exist_ok=True)
+            (out / f'tom-{v}/data/figures_registry.jsonl').write_text(
+                ''.join(json.dumps(_tom_public_path(public_figure_record(r),
+                                                    v, corpus, allow),
+                                   ensure_ascii=False) + '\n'
+                        for r in recs_v), encoding='utf-8')
         if scope['media'] == 'allowlist':
             for f in (corpus / f'tom-{v}/assets/media').rglob('*'):
                 if not f.is_file():
@@ -456,7 +608,8 @@ def export(corpus: Path, out: Path, approval: Path, mode: str,
         encoding='utf-8')
     (out / 'NOTICE.md').write_text(
         build_notice(volumes_secs, works, scope, media_q, ole_q,
-                     len(set(omitted)), neutralized, max_md), encoding='utf-8')
+                     len(set(omitted)), neutralized, max_md,
+                     fig_rows=fig_recs), encoding='utf-8')
     shutil.copy2(REPO / 'export/LICENSE', out / 'LICENSE')
     for rel in CODE_FILES:
         src = REPO / rel

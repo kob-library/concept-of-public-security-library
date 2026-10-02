@@ -1,0 +1,28 @@
+[
+  {
+    "work_id": "мертвая-вода-ред-2015-года",
+    "role": "integrative_entry_point",
+    "dir": "books/мертвая-вода-ред-2015-года",
+    "note": "широкий круг тем корпуса: ГИП, управление, суперсистемы, экономика, методология"
+  },
+  {
+    "work_id": "достаточно-общая-теория-управления",
+    "role": "management_methodology_entry_point",
+    "dir": "books/достаточно-общая-теория-управления",
+    "note": "общая теория и практика управления"
+  },
+  {
+    "work_id": "osnovy-sociologii",
+    "role": "systematic_course_entry_point",
+    "dir": null,
+    "volumes": [
+      "osnovy-sociologii-tom-1",
+      "osnovy-sociologii-tom-2",
+      "osnovy-sociologii-tom-3",
+      "osnovy-sociologii-tom-4",
+      "osnovy-sociologii-tom-5",
+      "osnovy-sociologii-tom-6"
+    ],
+    "note": "систематический учебный курс, 6 томов"
+  }
+]

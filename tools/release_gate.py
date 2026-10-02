@@ -102,21 +102,43 @@ def check_verified_media_bytes(corpus:Path, media_rows:list, reasons:list):
 
 MEDIA_ALLOWLIST='public_media_allowlist.jsonl'
 
+def tom_publishable_media(registry_rows:list, volumes):
+    """{volume: {media_basename: figure_id}} the Issue #13 figure registry
+    declares publishable for the tom corpus: status 'published' or a
+    'duplicate' whose canonical record is published. The registry is the
+    decision artifact for the media layer; assets/media/ is the corpus
+    media store and also holds blocked objects that must never ship."""
+    byid={r.get('figure_id'):r for r in registry_rows}
+    out={v:{} for v in volumes}
+    for r in registry_rows:
+        wd=r.get('work_dir') or ''
+        if not wd.startswith('tom-') or not r.get('media_file'):
+            continue
+        try:v=int(wd.split('-',1)[1])
+        except ValueError:continue
+        if v not in out:continue
+        st=r.get('publication_status')
+        ok=st=='published' or (st=='duplicate' and
+            byid.get(r.get('duplicate_of'),{}).get('publication_status')=='published')
+        if ok:out[v][Path(r['media_file']).name]=r.get('figure_id')
+    return out
+
+
 def check_public_media(corpus:Path, volumes, media_allowlist:Path, approval:dict,
-                       verified_media:set, reasons:list, notes:list):
+                       verified_media:set, registry_rows:list, reasons:list, notes:list):
     """Positive immutable allowlist of published preview media.
 
-    Every file that site_builder could ship (corpus tom-N/assets/media/**)
+    Every registry-publishable corpus file (tom-N/assets/media/<name>)
     must be covered by an allowlist entry: unique (volume, normalized
     'assets/media/<name>' path), decision='approved', named reviewer, scope
-    equal to the approval's release_scope, sha256 of the published preview
-    bytes, and a source_image that is itself verified in the review queue.
-    Unknown or byte-changed preview files, duplicate/missing entries and
-    out-of-sandbox paths all block the release.
+    equal to the approval's release_scope name, sha256 of the published
+    bytes, and a figure_id that is itself registry-publishable (or a
+    source_image verified in the legacy review queue). Unknown or
+    byte-changed files, duplicate/missing entries and out-of-sandbox
+    paths all block the release.
     """
-    previews={v:sorted(p for p in (corpus/f'tom-{v}/assets/media').rglob('*') if p.is_file())
-              for v in volumes if (corpus/f'tom-{v}/assets/media').is_dir()}
-    total=sum(len(x) for x in previews.values())
+    publishable=tom_publishable_media(registry_rows,volumes)
+    total=sum(len(x) for x in publishable.values())
     if not total:
         notes.append('No publishable preview media present');return
     entries={}
@@ -125,10 +147,13 @@ def check_public_media(corpus:Path, volumes, media_allowlist:Path, approval:dict
         return
     try:rows=jsonl(media_allowlist)
     except Exception:reasons.append('Public media allowlist unparseable');return
+    publishable_ids={fid for m in publishable.values() for fid in m.values()}
     scope=approval.get('release_scope')
     scope_name=scope.get('name') if isinstance(scope,dict) else scope
     for e in rows:
         v=e.get('volume');path=e.get('path')
+        if 'work_id' in e and 'volume' not in e:
+            continue  # unified-work entries are gated by the exporter itself
         key=(v,path)
         if not isinstance(v,int) or not path or key in entries:
             reasons.append(f'Allowlist entry duplicate or malformed: {e!r}');continue
@@ -141,23 +166,28 @@ def check_public_media(corpus:Path, volumes, media_allowlist:Path, approval:dict
         if e.get('scope')!=scope_name:
             reasons.append(f'Allowlist entry scope mismatch: {path} (volume {v})');continue
         src=e.get('source_image')
-        if (v,src) not in verified_media:
-            reasons.append(f'Allowlist entry {path} (volume {v}) does not reference a verified queue original: {src}');continue
+        fid=e.get('figure_id')
+        if fid not in publishable_ids and (v,src) not in verified_media:
+            reasons.append(f'Allowlist entry {path} (volume {v}) references neither a '
+                           f'registry-publishable figure_id nor a verified queue original');continue
         entries[key]=e
     covered=set()
-    for v,files in previews.items():
-        for f in files:
-            rel=f'assets/media/{f.name}'
+    for v,names in publishable.items():
+        for name in sorted(names):
+            rel=f'assets/media/{name}'
             e=entries.get((v,rel))
             if not e:
                 reasons.append(f'Publishable media not allowlisted: tom-{v}/{rel}');continue
+            f=corpus/f'tom-{v}'/rel
+            if not f.is_file():
+                reasons.append(f'Publishable media missing from corpus: tom-{v}/{rel}');continue
             covered.add((v,rel))
             if sha256(f)!=e.get('sha256'):
                 reasons.append(f'Allowlisted media bytes differ from approved: tom-{v}/{rel}')
     for (v,rel) in entries:
         if (v,rel) not in covered:
-            reasons.append(f'Allowlist entry references missing preview file: tom-{v}/{rel}')
-    notes.append(f'Public media allowlist: {len(covered)} of {total} preview files approved')
+            reasons.append(f'Allowlist entry references non-publishable/missing file: tom-{v}/{rel}')
+    notes.append(f'Public media allowlist: {len(covered)} of {total} publishable tom files approved')
 
 def check_release(corpus:Path, release_file:Path):
     """Returns (approved, blocking_reasons, informational_notes)."""
@@ -178,6 +208,26 @@ def check_release(corpus:Path, release_file:Path):
     if not approval.get('approved_by') or not approval.get('approval_date'):
         reasons.append('Reviewer identity/date missing')
     check_source_pins(corpus,approval,reasons,notes)
+    registry_rows=[]
+    reg_path=release_file.parent/'figures_registry.jsonl'
+    if media_scope=='allowlist':
+        if not reg_path.is_file():
+            reasons.append('Figure registry missing; required to define the publishable media set')
+        else:
+            try:registry_rows=jsonl(reg_path)
+            except Exception:reasons.append('Figure registry unparseable')
+    # Registry-decided objects supersede legacy queue tracking rows: a queue
+    # entry whose image already carries a final registry status (published,
+    # duplicate, metadata_only_*, decorative_excluded) is resolved by the
+    # Issue #13 media pass; only genuinely undecided images stay pending.
+    decided=set()
+    for r in registry_rows:
+        wd=r.get('work_dir') or ''
+        if wd.startswith('tom-'):
+            try:v=int(wd.split('-',1)[1])
+            except ValueError:continue
+            for n in (r.get('media_file'),r.get('original_filename')):
+                if n:decided.add((v,Path(n).name))
     media_rows=[];ole_rows=[]
     for path,label,store in [(release_file.parent/'media_review_queue.jsonl','Image',media_rows),
                            (release_file.parent/'ole_review_queue.jsonl','OLE',ole_rows)]:
@@ -187,14 +237,17 @@ def check_release(corpus:Path, release_file:Path):
         rows=jsonl(path)
         store.extend(rows)
         if not rows:continue
-        pending=[x['id'] if 'id' in x else x.get('saved_as','unknown') for x in rows if x.get('human_review_status')!='verified']
+        pending=[x['id'] if 'id' in x else x.get('saved_as','unknown') for x in rows
+                 if x.get('human_review_status')!='verified'
+                 and (x.get('volume'),x.get('image')
+                      or Path(x.get('saved_as') or '').name) not in decided]
         if pending:
             msg=f'{label}: {len(pending)} review entries not human-verified'
             (reasons if media_scope!='none' else notes).append(msg+('' if media_scope!='none' else ' (not shipped in this scope)'))
     check_verified_media_bytes(corpus,media_rows,reasons)
     verified_media={(r.get('volume'),r.get('image')) for r in media_rows if r.get('human_review_status')=='verified'}
     if media_scope=='allowlist':
-        check_public_media(corpus,volumes,release_file.parent/MEDIA_ALLOWLIST,approval,verified_media,reasons,notes)
+        check_public_media(corpus,volumes,release_file.parent/MEDIA_ALLOWLIST,approval,verified_media,registry_rows,reasons,notes)
     elif media_scope=='none':
         notes.append('Media scope "none": no graphics shipped; media/OLE queues deferred')
     # One OLE object = one stable insertion identity (saved_as path). Duplicate
@@ -216,11 +269,12 @@ def check_release(corpus:Path, release_file:Path):
             except Exception:reasons.append('Volume 1: pilot manifest unparseable');continue
             not_placed=z.get('docx_media_without_body_use') or []
             if not_placed:
-                uncovered=[n for n in not_placed if (v,n) not in verified_media]
+                uncovered=[n for n in not_placed
+                           if (v,n) not in verified_media and (v,n) not in decided]
                 if uncovered:
                     msg=f'Volume 1: {len(uncovered)} of {len(not_placed)} non-inline media lack a verified review entry (e.g. {", ".join(sorted(uncovered)[:3])})'
                     (reasons if media_scope!='none' else notes).append(msg)
-                else:notes.append(f'Volume 1: {len(not_placed)} non-inline media covered by verified queue entries')
+                else:notes.append(f'Volume 1: {len(not_placed)} non-inline media covered by verified queue/registry entries')
         else:
             q=p/'data/qa.json'
             if not q.exists():reasons.append(f'Volume {v}: QA missing');continue
@@ -235,7 +289,8 @@ def check_release(corpus:Path, release_file:Path):
             if omitted:
                 notes.append(f'Volume {v}: {omitted} source media not inline in Markdown (source metric, unchanged)')
             if not_placed:
-                uncovered=[n for n in not_placed if (v,n) not in verified_media]
+                uncovered=[n for n in not_placed
+                           if (v,n) not in verified_media and (v,n) not in decided]
                 if uncovered:
                     msg=f'Volume {v}: {len(uncovered)} of {len(not_placed)} omitted media lack a verified review entry (e.g. {", ".join(sorted(uncovered)[:3])})'
                     (reasons if media_scope!='none' else notes).append(msg)
@@ -246,8 +301,11 @@ def check_release(corpus:Path, release_file:Path):
             # not by removal.
             ole_total=z.get('OLE_objects') or 0
             if ole_total:
-                done=verified_ole.get(v,0)
-                notes.append(f'Volume {v}: {ole_total} OLE objects in source DOC; {done} verified in queue')
+                done=verified_ole.get(v,0)+sum(
+                    1 for r in registry_rows
+                    if r.get('work_dir')==f'tom-{v}'
+                    and r.get('source_kind')=='ole_object')
+                notes.append(f'Volume {v}: {ole_total} OLE objects in source DOC; {done} verified in queue/registry')
                 if done<ole_total:
                     msg=f'Volume {v}: {ole_total-done} of {ole_total} embedded OLE objects not human-verified'
                     (reasons if media_scope!='none' else notes).append(msg)

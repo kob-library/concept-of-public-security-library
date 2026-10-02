@@ -81,7 +81,7 @@ def load_media_allowlist(allowlist_path:Path|None):
     for line in allowlist_path.read_text(encoding='utf8').splitlines():
         if not line.strip():continue
         e=json.loads(line)
-        if e.get('decision')=='approved' and e.get('sha256'):
+        if e.get('decision')=='approved' and e.get('sha256') and e.get('volume') is not None:
             out[(int(e['volume']),Path(e['path']).name)]=e['sha256']
     return out
 
