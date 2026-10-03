@@ -30,7 +30,10 @@ SITE_ONLY_BYTES = [
     (re.compile(rb'media_review_queue|ole_review_queue|release_approval'), 'internal review data'),
     (re.compile(rb'/mnt/data|kob_pilot_t1|kob_converter_workspace'), 'internal workspace path'),
     (re.compile(rb'javascript\s*:', re.I), 'javascript: URL in output'),
-    (re.compile(rb'<script(?![^>]*assets/(reader|search)\.js)', re.I), 'inline/foreign script tag'),
+    # executable scripts only: known static assets and non-executable
+    # JSON-LD structured-data blocks are allowed
+    (re.compile(rb'<script(?![^>]*assets/(reader|search)\.js)'
+                rb'(?![^>]*application/ld\+json)', re.I), 'inline/foreign script tag'),
     # bare opaque file-sharing ids (e.g. drive links without the domain)
     (re.compile(rb'[?&]id=[\w-]{20,}'), 'opaque external file id'),
 ]

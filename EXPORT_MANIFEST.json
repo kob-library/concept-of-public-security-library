@@ -13578,6 +13578,11 @@
       "sha256": "b152f61c8ffe6b14734dd1a4f7ba9779307fc96f30fa9768c55e3d64ff6b96f3"
     },
     {
+      "path": "CONCEPTS.md",
+      "bytes": 17554,
+      "sha256": "cbf74492f54b65f7c314c9e70a937598049edefc437bfce10851d03edcd63dae"
+    },
+    {
       "path": "converter/assemble_release.py",
       "bytes": 10440,
       "sha256": "477819ce01d06ff78298173f4b1dac65943c6fbb4f1f2acd507094c81326d155"
@@ -13618,6 +13623,26 @@
       "sha256": "150afea6b9fb22bbb7938d365ac5ff8131525a861635fbe56335c37982565c95"
     },
     {
+      "path": "data/citations.jsonl",
+      "bytes": 10460,
+      "sha256": "f0b2beb9ab019c45a935890b5099771642ef59db5f017dd19bf7695b4110a9cc"
+    },
+    {
+      "path": "data/concepts.jsonl",
+      "bytes": 21313,
+      "sha256": "3e3dc2ab99bf253e5f07072dd3bcd73295d3dceed3b9ec45c3e0c6e1bab8cca1"
+    },
+    {
+      "path": "data/dcat.jsonld",
+      "bytes": 139706,
+      "sha256": "3ec3c1c3b491931570c90d7f6b5e3997026a45b109b644cdc873a1753db472b8"
+    },
+    {
+      "path": "data/entities.json",
+      "bytes": 159992,
+      "sha256": "28c38162327a3c6f7cdfbd2251c5d1477e0473041c519f220f9e45f14e4fb7bb"
+    },
+    {
       "path": "data/entry_points.json",
       "bytes": 1086,
       "sha256": "2c9339ce0c175f9cb2faa867ade83d41778e1d1197ae443531161a1321d01945"
@@ -13628,9 +13653,19 @@
       "sha256": "d10e7faeb2240d09c2e561ac2a7d7bc6df552e64fc0f1e84328558a94d5e72c9"
     },
     {
+      "path": "data/language_variants.jsonl",
+      "bytes": 137082,
+      "sha256": "93844c44532ef9c0c787458a5397d5e5934e755f09f51ae58560d89384c6f8d6"
+    },
+    {
       "path": "data/sections.jsonl",
       "bytes": 545761,
       "sha256": "c5856477b4adb652c7aa54ec2d4c6cd14279ae9c3d26b336772d224efbdea9ac"
+    },
+    {
+      "path": "data/topics.jsonl",
+      "bytes": 1511,
+      "sha256": "13144e8713df13ee8d18b7635233edfe504224b1a0fc5486ac0d91ad8b1df25d"
     },
     {
       "path": "data/translation_sections.jsonl",
@@ -13674,8 +13709,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 8715,
-      "sha256": "f9aa82f42cd88182f63a04e9d2843893dd89e0d3f1e95ca01d07685c2cd7d7fe"
+      "bytes": 8924,
+      "sha256": "f30148e6f3db55cb917c621209915c5f2eea03d6c3879822d70b84247d4d7243"
     },
     {
       "path": "requirements.txt",
@@ -13701,6 +13736,11 @@
       "path": "tests/test_release_gate.py",
       "bytes": 25044,
       "sha256": "76295bb413cf40a4b69f3f6ab82a0b9647cde968a1c01badc57d35d09baf8a64"
+    },
+    {
+      "path": "tests/test_research_discovery.py",
+      "bytes": 22593,
+      "sha256": "adf2a03331be6085752b92a94329a736528e249294eef3d16389ab8cf36acb47"
     },
     {
       "path": "tests/test_unified_export.py",
@@ -15109,8 +15149,8 @@
     },
     {
       "path": "tools/export_github_first.py",
-      "bytes": 42051,
-      "sha256": "606c464e0cce812e9b1b1cfc0f2e7557414aa4cf0420eb75f8a7924449bd6a39"
+      "bytes": 42068,
+      "sha256": "68cd26d74c19b00f026354ca3651165eaab57df7bf11360bf00cdfbb0b34df74"
     },
     {
       "path": "tools/export_public_repo.py",
@@ -15119,8 +15159,8 @@
     },
     {
       "path": "tools/export_unified.py",
-      "bytes": 77187,
-      "sha256": "199163e21b84e46bddd75b88de96756f5b04820ae14288a7c7e622ea6754e162"
+      "bytes": 89830,
+      "sha256": "2710672a79becbba5ba726a7f53a80329b31272907bb062baeb877ea44a28c41"
     },
     {
       "path": "tools/make_fixture_corpus.py",
@@ -15134,18 +15174,23 @@
     },
     {
       "path": "tools/release_gate.py",
-      "bytes": 18640,
-      "sha256": "a01584f28c50085c20751f4ab223e73c02a7c00ff9d42e6dc173239d9592a78c"
+      "bytes": 19171,
+      "sha256": "ad1c363725ea4a9bd4cf64ce32c20aded69dc17cf394b6eedf774c76f0bec908"
     },
     {
       "path": "tools/scan_public_output.py",
-      "bytes": 8664,
-      "sha256": "4210ee80820cbe0c8cae85984eba5d64f41bbc1f8b61819c70ea3dbc1449fb05"
+      "bytes": 8836,
+      "sha256": "668216e05e6c220cc48b7e511a152f5171f546056fcf49db00f361e5ecf4e5c2"
+    },
+    {
+      "path": "tools/semantic_layer.py",
+      "bytes": 13649,
+      "sha256": "54ca6d3a9faa0c7b30edba4c6c15ffe0232976434db8b4a5f5c6985272adf053"
     },
     {
       "path": "tools/site_builder.py",
-      "bytes": 36709,
-      "sha256": "403ff5b4e68ec90655944476d95be99143a0f9790754d69a373ce1f84a26330f"
+      "bytes": 55403,
+      "sha256": "b8d542e6dcdae1911dd3a83bc239a49c0c20e35208583bd749da925e72baf052"
     },
     {
       "path": "tools/test_preview.py",
@@ -15154,8 +15199,8 @@
     },
     {
       "path": "TOPICS.md",
-      "bytes": 12569,
-      "sha256": "5d46eed36cd6c52c8e0cbb7c8b02751ffd0cdf98613997e2a0a3cc2adadf134e"
+      "bytes": 14054,
+      "sha256": "af0bac4b85c60e0ea4615b2d1f1b0b09b4fc9e58e4c5c16df8c95d8dab9ad607"
     },
     {
       "path": "translations/ar/ar-20100218_antikoran-strategy_arabian/01.md",

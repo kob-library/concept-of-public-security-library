@@ -1,0 +1,3188 @@
+{
+ "generated_by": "semantic_layer",
+ "entities": [
+  {
+   "kind": "topic",
+   "id": "topic-management",
+   "label": "Управление и теория управления",
+   "members": 82,
+   "repo_path": "TOPICS.md",
+   "site_path": "topics/topic-management.html",
+   "membership_rule": {
+    "type": "title_terms",
+    "terms": [
+     "управлени"
+    ]
+   },
+   "membership_rule_version": 1,
+   "member_section_ids": [
+    "os-t1-source-28876226106e-s01-07",
+    "os-t1-source-28876226106e-ch-06",
+    "os-t1-source-28876226106e-s06-01",
+    "os-t1-source-28876226106e-s06-02",
+    "os-t1-source-28876226106e-s06-03",
+    "os-t1-source-28876226106e-s06-05",
+    "os-t1-source-28876226106e-s06-06",
+    "os-t1-source-28876226106e-s06-07",
+    "os-t1-source-28876226106e-s06-08",
+    "os-t1-source-28876226106e-s06-11",
+    "os-t1-source-28876226106e-s06-13",
+    "os-t1-source-28876226106e-ch-07",
+    "os-t1-source-28876226106e-s07-01",
+    "os-t1-source-28876226106e-s07-03",
+    "os-t1-source-28876226106e-s07-04",
+    "os-t1-source-28876226106e-s07-06",
+    "os-t1-source-28876226106e-s07-08",
+    "os-t1-source-28876226106e-s07-09",
+    "os-2-17468c374b02-ch-08-s08-03",
+    "os-2-17468c374b02-ch-08-s08-04",
+    "os-2-17468c374b02-ch-08-s08-05",
+    "os-2-17468c374b02-ch-08-s08-06",
+    "os-3-73a6462301de-ch-10-s10-06-04",
+    "os-4-626d5f616670-ch-13-s13-01",
+    "os-4-626d5f616670-ch-13-s13-02-02",
+    "intelros-ru-цели-японии-в-xxi-веке/s01",
+    "wikileaks-и-глобальная-смена-управления-главные-причины-и-перспективы/s01",
+    "дело-было-в-педженте/s25",
+    "достаточно-общая-теория-управления/s02",
+    "достаточно-общая-теория-управления/s03",
+    "достаточно-общая-теория-управления/s05",
+    "достаточно-общая-теория-управления/s06",
+    "достаточно-общая-теория-управления/s07",
+    "достаточно-общая-теория-управления/s12",
+    "достаточно-общая-теория-управления/s13",
+    "интеллектуальная-позиция-no2/s04",
+    "интеллектуальная-позиция-no3/s06",
+    "к-пониманию-макроэкономики-государства-и-мира-тезисы/s02",
+    "краткий-курс/s05",
+    "краткий-курс/s10",
+    "краткий-курс/s15",
+    "краткий-курс/s25",
+    "культура-административной-деятельности/s07",
+    "мусульманский-облик-троцкизма/s01",
+    "надо-спасать-школу-ответ/s01",
+    "о-выявлении-алгоритма-управления-россией-вопреки-ее-интересам-и-о-путя/s01",
+    "о-контрольных-параметрах-макроэкономики/s01",
+    "о-состоянии-тенденциях-и-возможностях-управления/s01",
+    "о-тм-no4-5-88-89-полная-функция-управления-на-руси-и-в-сша-об-этике-и-/s05",
+    "об-имитационно-провокационной-деятельности/s08",
+    "принципы-кадровой-политики-государства-антигосударства-общественной-ин/s03",
+    "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили/s02",
+    "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили/s12",
+    "сад-растет-сам/s06",
+    "сетевые-технологии-и-управление-революционными-ситуациями/s01",
+    "мертвая-вода-ред-2015-года/s06",
+    "мертвая-вода-ред-2015-года/s07",
+    "мертвая-вода-ред-2015-года/s10",
+    "мертвая-вода-ред-2015-года/s12",
+    "мертвая-вода-ред-2015-года/s13",
+    "мертвая-вода-ред-2015-года/s14",
+    "мертвая-вода-ред-2015-года/s15",
+    "мертвая-вода-ред-2015-года/s22",
+    "мертвая-вода-ред-2015-года/s23",
+    "мертвая-вода-ред-2015-года/s24",
+    "мертвая-вода-ред-2015-года/s25",
+    "мертвая-вода-ред-2015-года/s26",
+    "мертвая-вода-ред-2015-года/s36",
+    "мертвая-вода-ред-2015-года/s37",
+    "мертвая-вода-ред-2015-года/s39",
+    "мертвая-вода-ред-2015-года/s41",
+    "экономика-инновационного-развития-в-условиях-глобализации-ред-2025-год/s12",
+    "экономика-инновационного-развития-в-условиях-глобализации-ред-2025-год/s16",
+    "справочник-по-межкультурному-взаимодействию/s05",
+    "справочник-по-межкультурному-взаимодействию/s07",
+    "справочник-по-межкультурному-взаимодействию/s11",
+    "научно-методологическое-обеспечение-социального-управления-и-наша-жизн/s01",
+    "от-корпоративности-под-покровом-идей-к-соборности-в-богодержавии-ред-2/s01",
+    "и-будете-искать-кому-бы-продаться-но-не-будет-на-вас-покупающего-ред-2/s01",
+    "философия-управления-качеством/s01",
+    "к-богодержавию-ред-2015-г/s01",
+    "либерализм-враг-свободы-ред-2015-г/s01"
+   ]
+  },
+  {
+   "kind": "topic",
+   "id": "topic-society",
+   "label": "Общество и социальные процессы",
+   "members": 79,
+   "repo_path": "TOPICS.md",
+   "site_path": "topics/topic-society.html",
+   "membership_rule": {
+    "type": "title_terms",
+    "terms": [
+     "обществ",
+     "социальн",
+     "социолог"
+    ]
+   },
+   "membership_rule_version": 1,
+   "member_section_ids": [
+    "os-t1-source-28876226106e-s01-01",
+    "os-t1-source-28876226106e-s01-02",
+    "os-t1-source-28876226106e-s01-04",
+    "os-t1-source-28876226106e-s01-05",
+    "os-t1-source-28876226106e-s01-06",
+    "os-t1-source-28876226106e-s03-01",
+    "os-t1-source-28876226106e-s04-01",
+    "os-2-17468c374b02-ch-09",
+    "os-2-17468c374b02-ch-09-s09-03",
+    "os-2-17468c374b02-ch-09-s09-04",
+    "os-3-73a6462301de-ch-10-s10-01",
+    "os-3-73a6462301de-ch-11-s11-03",
+    "os-3-73a6462301de-ch-11-s11-03-01",
+    "os-3-73a6462301de-ch-11-s11-03-02",
+    "os-3-73a6462301de-ch-11-s11-03-03",
+    "os-3-73a6462301de-ch-11-s11-04",
+    "os-4-626d5f616670-ch-13-s13-02-01",
+    "os-5-234bfeb38188-ch-16",
+    "os-5-234bfeb38188-ch-17",
+    "os-5-234bfeb38188-ch-18",
+    "os-5-234bfeb38188-ch-19",
+    "os-6-e835b1f35db3-ch-20-s20-04-02",
+    "os-6-e835b1f35db3-ch-21",
+    "os-6-e835b1f35db3-ch-21-s21-04-02",
+    "os-6-e835b1f35db3-ch-23",
+    "os-6-e835b1f35db3-ap-09",
+    "гражданское-общество-преступление-и-психопатия/s01",
+    "две-задачи-социологии/s01",
+    "дело-было-в-педженте/s02",
+    "достаточно-общая-теория-управления/s14",
+    "интеллектуальная-позиция-no1/s08",
+    "интеллектуальная-позиция-no1/s13",
+    "консолидация-общества-варианты-иллюзорные-и-реальные/s01",
+    "краткий-курс/s03",
+    "краткий-курс/s24",
+    "краткий-курс/s27",
+    "культура-административной-деятельности/s08",
+    "нам-нужна-иная-школа/s04",
+    "нам-нужна-иная-школа/s07",
+    "нравственность-предопределяет-этику-а-этика-жизнь-людей-в-обществе/s01",
+    "о-тм-no12-72-если-вы-желаете-чтобы-общество-жило-по-человечески-сами-с/s01",
+    "о-тм-no3-135-очередные-задачи-постсоветской-власти-и-общества-и-возмож/s01",
+    "об-иcкоренении-глобальной-угрозы-международного-терроризма/s03",
+    "об-иcкоренении-глобальной-угрозы-международного-терроризма/s05",
+    "об-имитационно-провокационной-деятельности/s07",
+    "об-имитационно-провокационной-деятельности/s09",
+    "об-опасных-тенденциях-в-деятельности-кпе/s06",
+    "об-экспертизе-расовых-доктрин-и-смуты-на-руси/s01",
+    "обмен-мнениями-ответ-хоперским-казакам/s01",
+    "общественные-институты-и-система/s01",
+    "общество-государственность-и-семья/s03",
+    "общество-государственность-и-семья/s04",
+    "общество-государственность-и-семья/s05",
+    "общество-государственность-и-семья/s06",
+    "общество-государственность-и-семья/s11",
+    "оракул-социальный-институт-и-политтехнология/s01",
+    "печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра/s09",
+    "по-вере-вашей-да-будет-вам/s08",
+    "принципы-кадровой-политики-государства-антигосударства-общественной-ин/s02",
+    "разрешение-проблем-национальных-взаимоотношений-в-русле-коб/s01",
+    "разрешение-проблем-национальных-взаимоотношений-в-русле-коб/s03",
+    "разрешение-проблем-национальных-взаимоотношений-в-русле-коб/s07",
+    "русское-правоведение-юридическая-чума-на-руси-вылечим/s02",
+    "русское-правоведение-юридическая-чума-на-руси-вылечим/s08",
+    "средства-массовой-информации-в-системе-заклинания-социальной-стихии/s01",
+    "мертвая-вода-ред-2015-года/s33",
+    "мертвая-вода-ред-2015-года/s42",
+    "мертвая-вода-ред-2015-года/s43",
+    "мертвая-вода-ред-2015-года/s44",
+    "экономика-инновационного-развития-в-условиях-глобализации-ред-2025-год/s05",
+    "экономика-инновационного-развития-в-условиях-глобализации-ред-2025-год/s15",
+    "вяло-текущая-тягомотина-и-главная-задача-общества-формирование-педагог/s01",
+    "о-текущем-моменте-no6-138-2018г-к-100-летию-завершения-боевых-действий/s06",
+    "от-корпоративности-под-покровом-идей-к-соборности-в-богодержавии-ред-2/s06",
+    "от-корпоративности-под-покровом-идей-к-соборности-в-богодержавии-ред-2/s07",
+    "и-будете-искать-кому-бы-продаться-но-не-будет-на-вас-покупающего-ред-2/s05",
+    "печальное-наследие-атлантиды-ред-2013-г/s09",
+    "о-текущем-моменте-no2-50-2006г-иудин-грех-хх-съезда/s06",
+    "общественная-этико-экономическая-экспертиза-научного-отчета-академии-н/s01"
+   ]
+  },
+  {
+   "kind": "topic",
+   "id": "topic-egregors",
+   "label": "Эгрегоры и матрично-эгрегориальное управление",
+   "members": 3,
+   "repo_path": "TOPICS.md",
+   "site_path": "topics/topic-egregors.html",
+   "membership_rule": {
+    "type": "title_terms",
+    "terms": [
+     "эгрегор",
+     "матрич"
+    ]
+   },
+   "membership_rule_version": 1,
+   "member_section_ids": [
+    "os-t1-source-28876226106e-s04-08",
+    "os-3-73a6462301de-ch-10-s10-05",
+    "российское-общество-и-гибель-апл-курск-12-августа-2000-года/s06"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-egregor",
+   "term": "эгрегор",
+   "aliases": [
+    "эгрегоры",
+    "эгрегориальный"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-egregor.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s04-08",
+    "os-3-73a6462301de-ch-10-s10-05",
+    "os-4-626d5f616670-ch-13-s13-02-02"
+   ],
+   "related_topic_ids": [
+    "topic-egregors"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "osnovy-sociologii-tom-3",
+    "osnovy-sociologii-tom-4"
+   ],
+   "related_concept_ids": [
+    "cp-matrichno-egregorialnoe-upravlenie",
+    "cp-sobornyiy-intellekt"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-matrichno-egregorialnoe-upravlenie",
+   "term": "матрично-эгрегориальное управление",
+   "aliases": [
+    "эгрегориально-матричное управление",
+    "эгрегориальное управление",
+    "матричное управление"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-matrichno-egregorialnoe-upravlenie.html",
+   "evidence_section_ids": [
+    "os-4-626d5f616670-ch-13-s13-02-02",
+    "os-3-73a6462301de-ch-10-s10-05"
+   ],
+   "related_topic_ids": [
+    "topic-egregors"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-4",
+    "osnovy-sociologii-tom-3"
+   ],
+   "related_concept_ids": [
+    "cp-egregor",
+    "cp-besstrukturnoe-upravlenie"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-supersistema",
+   "term": "суперсистема",
+   "aliases": [
+    "суперсистемы",
+    "суперсистемный"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-supersistema.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-12",
+    "os-t1-source-28876226106e-s06-08",
+    "достаточно-общая-теория-управления/s09"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "достаточно-общая-теория-управления"
+   ],
+   "related_concept_ids": [
+    "cp-sobornyiy-intellekt",
+    "cp-besstrukturnoe-upravlenie"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-tip-stroya-psihiki",
+   "term": "тип строя психики",
+   "aliases": [
+    "типы строя психики",
+    "строй психики"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-tip-stroya-psihiki.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s04-07",
+    "os-3-73a6462301de-ch-10-s10-02",
+    "os-3-73a6462301de-ch-10-s10-03"
+   ],
+   "related_topic_ids": [
+    "topic-society"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "osnovy-sociologii-tom-3"
+   ],
+   "related_concept_ids": [
+    "cp-egregor",
+    "cp-obraz-zhizni"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-polnaya-funktsiya-upravleniya",
+   "term": "полная функция управления",
+   "aliases": [
+    "полной функции управления"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-polnaya-funktsiya-upravleniya.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-03",
+    "os-2-17468c374b02-ch-08-s08-05"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "osnovy-sociologii-tom-2"
+   ],
+   "related_concept_ids": [
+    "cp-vektor-tseley",
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-vektor-tseley",
+   "term": "вектор целей",
+   "aliases": [
+    "вектора целей",
+    "вектор ошибки"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-vektor-tseley.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-05",
+    "достаточно-общая-теория-управления/s11"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "достаточно-общая-теория-управления"
+   ],
+   "related_concept_ids": [
+    "cp-polnaya-funktsiya-upravleniya",
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-dotu",
+   "term": "достаточно общая теория управления",
+   "aliases": [
+    "ДОТУ",
+    "достаточно общей теории управления"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-dotu.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-ch-06",
+    "os-t1-source-28876226106e-s06-01",
+    "достаточно-общая-теория-управления/s02"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "достаточно-общая-теория-управления"
+   ],
+   "related_concept_ids": [
+    "cp-polnaya-funktsiya-upravleniya",
+    "cp-metod-dinamicheskogo-programmirovaniya",
+    "cp-supersistema"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-kontseptualnaya-vlast",
+   "term": "концептуальная власть",
+   "aliases": [
+    "концептуальной власти"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-kontseptualnaya-vlast.html",
+   "evidence_section_ids": [
+    "сборник-аналитических-записок-концептуальная-власть-на-руси/s02",
+    "из-прошлого-русской-концептуальной-власти/s01",
+    "интеллектуальная-позиция-no3/s15",
+    "os-2-17468c374b02-ch-08-s08-05"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "сборник-аналитических-записок-концептуальная-власть-на-руси",
+    "из-прошлого-русской-концептуальной-власти",
+    "osnovy-sociologii-tom-2"
+   ],
+   "related_concept_ids": [
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-bibleyskiy-proekt",
+   "term": "библейский проект",
+   "aliases": [
+    "библейского проекта"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-bibleyskiy-proekt.html",
+   "evidence_section_ids": [
+    "os-2-17468c374b02-ch-08-s08-07",
+    "os-3-73a6462301de-ch-10-s10-05",
+    "os-2-17468c374b02-ap-02"
+   ],
+   "related_topic_ids": [
+    "topic-egregors"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-2",
+    "osnovy-sociologii-tom-3"
+   ],
+   "related_concept_ids": [
+    "cp-egregor"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-besstrukturnoe-upravlenie",
+   "term": "бесструктурное управление",
+   "aliases": [
+    "бесструктурный способ управления",
+    "бесструктурным управлением"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-besstrukturnoe-upravlenie.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-08",
+    "os-t1-source-28876226106e-s06-12"
+   ],
+   "related_topic_ids": [
+    "topic-management",
+    "topic-egregors"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1"
+   ],
+   "related_concept_ids": [
+    "cp-supersistema",
+    "cp-matrichno-egregorialnoe-upravlenie"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-metod-dinamicheskogo-programmirovaniya",
+   "term": "метод динамического программирования",
+   "aliases": [
+    "динамического программирования"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-metod-dinamicheskogo-programmirovaniya.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-13",
+    "мертвая-вода-ред-2015-года/s41"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1",
+    "мертвая-вода-ред-2015-года"
+   ],
+   "related_concept_ids": [
+    "cp-dotu",
+    "cp-polnaya-funktsiya-upravleniya"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-informatsionno-algoritmicheskaya-bezopasnost",
+   "term": "информационно-алгоритмическая безопасность",
+   "aliases": [
+    "информационно-алгоритмической безопасности"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-informatsionno-algoritmicheskaya-bezopasnost.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-11"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-1"
+   ],
+   "related_concept_ids": [
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-sobornyiy-intellekt",
+   "term": "соборный интеллект",
+   "aliases": [
+    "соборного интеллекта",
+    "соборность"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-sobornyiy-intellekt.html",
+   "evidence_section_ids": [
+    "достаточно-общая-теория-управления/s11",
+    "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили/s11",
+    "мертвая-вода-ред-2015-года/s21",
+    "os-t1-source-28876226106e-s06-12"
+   ],
+   "related_topic_ids": [
+    "topic-egregors",
+    "topic-management"
+   ],
+   "related_work_ids": [
+    "достаточно-общая-теория-управления",
+    "мертвая-вода-ред-2015-года",
+    "osnovy-sociologii-tom-1"
+   ],
+   "related_concept_ids": [
+    "cp-supersistema",
+    "cp-egregor"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-obraz-zhizni",
+   "term": "образ жизни",
+   "aliases": [
+    "образе жизни"
+   ],
+   "definition_scope": "corpus_term",
+   "repo_path": "CONCEPTS.md",
+   "site_path": "concepts/cp-obraz-zhizni.html",
+   "evidence_section_ids": [
+    "os-6-e835b1f35db3-ch-22"
+   ],
+   "related_topic_ids": [
+    "topic-society"
+   ],
+   "related_work_ids": [
+    "osnovy-sociologii-tom-6"
+   ],
+   "related_concept_ids": [
+    "cp-tip-stroya-psihiki"
+   ]
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-01-07",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s01-07",
+   "anchor": "sec-01-07",
+   "site_path": "tom-1/sections/01-07.html",
+   "repo_path": "tom-1/sections/01-07.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-04-07",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s04-07",
+   "anchor": "sec-04-07",
+   "site_path": "tom-1/sections/04-07.html",
+   "repo_path": "tom-1/sections/04-07.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-04-08",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s04-08",
+   "anchor": "sec-04-08",
+   "site_path": "tom-1/sections/04-08.html",
+   "repo_path": "tom-1/sections/04-08.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-ch06",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-ch-06",
+   "anchor": "sec-ch-06",
+   "site_path": "tom-1/chapters/06.html",
+   "repo_path": "tom-1/chapters/06.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-01",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-01",
+   "anchor": "sec-06-01",
+   "site_path": "tom-1/sections/06-01.html",
+   "repo_path": "tom-1/sections/06-01.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-03",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-03",
+   "anchor": "sec-06-03",
+   "site_path": "tom-1/sections/06-03.html",
+   "repo_path": "tom-1/sections/06-03.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-05",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-05",
+   "anchor": "sec-06-05",
+   "site_path": "tom-1/sections/06-05.html",
+   "repo_path": "tom-1/sections/06-05.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-08",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-08",
+   "anchor": "sec-06-08",
+   "site_path": "tom-1/sections/06-08.html",
+   "repo_path": "tom-1/sections/06-08.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-11",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-11",
+   "anchor": "sec-06-11",
+   "site_path": "tom-1/sections/06-11.html",
+   "repo_path": "tom-1/sections/06-11.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-12",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-12",
+   "anchor": "sec-06-12",
+   "site_path": "tom-1/sections/06-12.html",
+   "repo_path": "tom-1/sections/06-12.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-13",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-13",
+   "anchor": "sec-06-13",
+   "site_path": "tom-1/sections/06-13.html",
+   "repo_path": "tom-1/sections/06-13.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t2-08-05",
+   "work_id": "osnovy-sociologii-tom-2",
+   "section_id": "os-2-17468c374b02-ch-08-s08-05",
+   "anchor": "sec-08-05",
+   "site_path": "tom-2/sections/ch-08-s08-05.html",
+   "repo_path": "tom-2/sections/ch-08-s08-05.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t2-08-07",
+   "work_id": "osnovy-sociologii-tom-2",
+   "section_id": "os-2-17468c374b02-ch-08-s08-07",
+   "anchor": "sec-08-07",
+   "site_path": "tom-2/sections/ch-08-s08-07.html",
+   "repo_path": "tom-2/sections/ch-08-s08-07.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t2-ap-02",
+   "work_id": "osnovy-sociologii-tom-2",
+   "section_id": "os-2-17468c374b02-ap-02",
+   "anchor": "sec-ap-02",
+   "site_path": "tom-2/appendices/ap-02.html",
+   "repo_path": "tom-2/appendices/ap-02.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t3-ch10",
+   "work_id": "osnovy-sociologii-tom-3",
+   "section_id": "os-3-73a6462301de-ch-10",
+   "anchor": "sec-ch-10",
+   "site_path": "tom-3/chapters/ch-10.html",
+   "repo_path": "tom-3/chapters/ch-10.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t3-10-02",
+   "work_id": "osnovy-sociologii-tom-3",
+   "section_id": "os-3-73a6462301de-ch-10-s10-02",
+   "anchor": "sec-10-02",
+   "site_path": "tom-3/sections/ch-10-s10-02.html",
+   "repo_path": "tom-3/sections/ch-10-s10-02.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t3-10-05",
+   "work_id": "osnovy-sociologii-tom-3",
+   "section_id": "os-3-73a6462301de-ch-10-s10-05",
+   "anchor": "sec-10-05",
+   "site_path": "tom-3/sections/ch-10-s10-05.html",
+   "repo_path": "tom-3/sections/ch-10-s10-05.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t4-ch13",
+   "work_id": "osnovy-sociologii-tom-4",
+   "section_id": "os-4-626d5f616670-ch-13",
+   "anchor": "sec-ch-13",
+   "site_path": "tom-4/chapters/ch-13.html",
+   "repo_path": "tom-4/chapters/ch-13.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t4-13-02-02",
+   "work_id": "osnovy-sociologii-tom-4",
+   "section_id": "os-4-626d5f616670-ch-13-s13-02-02",
+   "anchor": "sec-13-02-02",
+   "site_path": "tom-4/subsections/ch-13-s13-02-02.html",
+   "repo_path": "tom-4/subsections/ch-13-s13-02-02.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t5-19-03-01",
+   "work_id": "osnovy-sociologii-tom-5",
+   "section_id": "os-5-234bfeb38188-ch-19-s19-03-01",
+   "anchor": "sec-19-03-01",
+   "site_path": "tom-5/subsections/ch-19-s19-03-01.html",
+   "repo_path": "tom-5/subsections/ch-19-s19-03-01.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t6-ch22",
+   "work_id": "osnovy-sociologii-tom-6",
+   "section_id": "os-6-e835b1f35db3-ch-22",
+   "anchor": "sec-ch-22",
+   "site_path": "tom-6/chapters/ch-22.html",
+   "repo_path": "tom-6/chapters/ch-22.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-dotu-02",
+   "work_id": "достаточно-общая-теория-управления",
+   "section_id": "достаточно-общая-теория-управления/s02",
+   "anchor": "sec-dotu-02",
+   "site_path": null,
+   "repo_path": "books/достаточно-общая-теория-управления/02.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-dotu-09",
+   "work_id": "достаточно-общая-теория-управления",
+   "section_id": "достаточно-общая-теория-управления/s09",
+   "anchor": "sec-dotu-09",
+   "site_path": null,
+   "repo_path": "books/достаточно-общая-теория-управления/09.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-dotu-11",
+   "work_id": "достаточно-общая-теория-управления",
+   "section_id": "достаточно-общая-теория-управления/s11",
+   "anchor": "sec-dotu-11",
+   "site_path": null,
+   "repo_path": "books/достаточно-общая-теория-управления/11.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-mv-15",
+   "work_id": "мертвая-вода-ред-2015-года",
+   "section_id": "мертвая-вода-ред-2015-года/s15",
+   "anchor": "sec-mv-15",
+   "site_path": null,
+   "repo_path": "books/мертвая-вода-ред-2015-года/15.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-mv-21",
+   "work_id": "мертвая-вода-ред-2015-года",
+   "section_id": "мертвая-вода-ред-2015-года/s21",
+   "anchor": "sec-mv-21",
+   "site_path": null,
+   "repo_path": "books/мертвая-вода-ред-2015-года/21.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-mv-41",
+   "work_id": "мертвая-вода-ред-2015-года",
+   "section_id": "мертвая-вода-ред-2015-года/s41",
+   "anchor": "sec-mv-41",
+   "site_path": null,
+   "repo_path": "books/мертвая-вода-ред-2015-года/41.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kv-sbornik-02",
+   "work_id": "сборник-аналитических-записок-концептуальная-власть-на-руси",
+   "section_id": "сборник-аналитических-записок-концептуальная-власть-на-руси/s02",
+   "anchor": "sec-kv-02",
+   "site_path": null,
+   "repo_path": "books/сборник-аналитических-записок-концептуальная-власть-на-руси/02.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kv-iz-proshlogo-01",
+   "work_id": "из-прошлого-русской-концептуальной-власти",
+   "section_id": "из-прошлого-русской-концептуальной-власти/s01",
+   "anchor": "sec-kv-ip-01",
+   "site_path": null,
+   "repo_path": "analytics/из-прошлого-русской-концептуальной-власти/01.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kursk-06",
+   "work_id": "российское-общество-и-гибель-апл-курск-12-августа-2000-года",
+   "section_id": "российское-общество-и-гибель-апл-курск-12-августа-2000-года/s06",
+   "anchor": "sec-kursk-06",
+   "site_path": null,
+   "repo_path": "books/российское-общество-и-гибель-апл-курск-12-августа-2000-года/06.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kadry-10",
+   "work_id": "принципы-кадровой-политики-государства-антигосударства-общественной-ин",
+   "section_id": "принципы-кадровой-политики-государства-антигосударства-общественной-ин/s10",
+   "anchor": "sec-kadry-10",
+   "site_path": null,
+   "repo_path": "books/принципы-кадровой-политики-государства-антигосударства-общественной-ин/10.md",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-psih-11",
+   "work_id": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили",
+   "section_id": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили/s11",
+   "anchor": "sec-psih-11",
+   "site_path": null,
+   "repo_path": "books/психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили/11.md",
+   "language": "ru"
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-topic-management-ru",
+   "entity_id": "topic-management",
+   "language": "ru",
+   "canonical_name": "Управление и теория управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-topic-management-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-topic-society-ru",
+   "entity_id": "topic-society",
+   "language": "ru",
+   "canonical_name": "Общество и социальные процессы",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-topic-society-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-topic-egregors-ru",
+   "entity_id": "topic-egregors",
+   "language": "ru",
+   "canonical_name": "Эгрегоры и матрично-эгрегориальное управление",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-topic-egregors-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-egregor-ru",
+   "entity_id": "cp-egregor",
+   "language": "ru",
+   "canonical_name": "эгрегор",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-egregor-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-matrichno-egregorialnoe-upravlenie-ru",
+   "entity_id": "cp-matrichno-egregorialnoe-upravlenie",
+   "language": "ru",
+   "canonical_name": "матрично-эгрегориальное управление",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-matrichno-egregorialnoe-upravlenie-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-supersistema-ru",
+   "entity_id": "cp-supersistema",
+   "language": "ru",
+   "canonical_name": "суперсистема",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-supersistema-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-tip-stroya-psihiki-ru",
+   "entity_id": "cp-tip-stroya-psihiki",
+   "language": "ru",
+   "canonical_name": "тип строя психики",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-tip-stroya-psihiki-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-polnaya-funktsiya-upravleniya-ru",
+   "entity_id": "cp-polnaya-funktsiya-upravleniya",
+   "language": "ru",
+   "canonical_name": "полная функция управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-polnaya-funktsiya-upravleniya-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-vektor-tseley-ru",
+   "entity_id": "cp-vektor-tseley",
+   "language": "ru",
+   "canonical_name": "вектор целей",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-vektor-tseley-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-dotu-ru",
+   "entity_id": "cp-dotu",
+   "language": "ru",
+   "canonical_name": "достаточно общая теория управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-dotu-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-kontseptualnaya-vlast-ru",
+   "entity_id": "cp-kontseptualnaya-vlast",
+   "language": "ru",
+   "canonical_name": "концептуальная власть",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-kontseptualnaya-vlast-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-bibleyskiy-proekt-ru",
+   "entity_id": "cp-bibleyskiy-proekt",
+   "language": "ru",
+   "canonical_name": "библейский проект",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-bibleyskiy-proekt-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-besstrukturnoe-upravlenie-ru",
+   "entity_id": "cp-besstrukturnoe-upravlenie",
+   "language": "ru",
+   "canonical_name": "бесструктурное управление",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-besstrukturnoe-upravlenie-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-metod-dinamicheskogo-programmirovaniya-ru",
+   "entity_id": "cp-metod-dinamicheskogo-programmirovaniya",
+   "language": "ru",
+   "canonical_name": "метод динамического программирования",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-metod-dinamicheskogo-programmirovaniya-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-informatsionno-algoritmicheskaya-bezopasnost-ru",
+   "entity_id": "cp-informatsionno-algoritmicheskaya-bezopasnost",
+   "language": "ru",
+   "canonical_name": "информационно-алгоритмическая безопасность",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-informatsionno-algoritmicheskaya-bezopasnost-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-sobornyiy-intellekt-ru",
+   "entity_id": "cp-sobornyiy-intellekt",
+   "language": "ru",
+   "canonical_name": "соборный интеллект",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-sobornyiy-intellekt-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-obraz-zhizni-ru",
+   "entity_id": "cp-obraz-zhizni",
+   "language": "ru",
+   "canonical_name": "образ жизни",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-obraz-zhizni-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "ru",
+   "canonical_name": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ar",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "ar",
+   "canonical_name": "ستراتيجيةٌ مستمرّةٌ لتغلّب الإسلام القرآني من قِبَلِ رؤساء مشروع الكتاب المقدّس",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-интеллектуальная-позиция-no2-ru",
+   "entity_id": "интеллектуальная-позиция-no2",
+   "language": "ru",
+   "canonical_name": "интеллектуальная-позиция-no2",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-интеллектуальная-позиция-no2-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-интеллектуальная-позиция-no2-cs",
+   "entity_id": "интеллектуальная-позиция-no2",
+   "language": "cs",
+   "canonical_name": "Sinajský “pochod”",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-интеллектуальная-позиция-no2-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-медный-всадник-это-вам-не-медный-змий-ru",
+   "entity_id": "медный-всадник-это-вам-не-медный-змий",
+   "language": "ru",
+   "canonical_name": "медный-всадник-это-вам-не-медный-змий",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-медный-всадник-это-вам-не-медный-змий-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-медный-всадник-это-вам-не-медный-змий-cs",
+   "entity_id": "медный-всадник-это-вам-не-медный-змий",
+   "language": "cs",
+   "canonical_name": "MĚDĚNÝ JEZDEC, TO VÁM NENÍ MĚDĚNÝ HAD…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-медный-всадник-это-вам-не-медный-змий-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-время-начинаю-про-сталина-рассказ-ru",
+   "entity_id": "время-начинаю-про-сталина-рассказ",
+   "language": "ru",
+   "canonical_name": "время-начинаю-про-сталина-рассказ",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-время-начинаю-про-сталина-рассказ-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-время-начинаю-про-сталина-рассказ-cs",
+   "entity_id": "время-начинаю-про-сталина-рассказ",
+   "language": "cs",
+   "canonical_name": "Nastal čas o Stalinovi pohovořit…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-время-начинаю-про-сталина-рассказ-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-об-имитационно-провокационной-деятельности-ru",
+   "entity_id": "об-имитационно-провокационной-деятельности",
+   "language": "ru",
+   "canonical_name": "об-имитационно-провокационной-деятельности",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-об-имитационно-провокационной-деятельности-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-об-имитационно-провокационной-деятельности-cs",
+   "entity_id": "об-имитационно-провокационной-деятельности",
+   "language": "cs",
+   "canonical_name": "O imitačně-provokační činnosti",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-об-имитационно-провокационной-деятельности-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-исторические-параллели-и-знаки-времени-ru",
+   "entity_id": "о-тм-no2-исторические-параллели-и-знаки-времени",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-исторические-параллели-и-знаки-времени",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-исторические-параллели-и-знаки-времени-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-исторические-параллели-и-знаки-времени-cs",
+   "entity_id": "о-тм-no2-исторические-параллели-и-знаки-времени",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.2 Historické paralely a znamení doby",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-исторические-параллели-и-знаки-времени-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-в-меру-своего-понимания-ru",
+   "entity_id": "в-меру-своего-понимания",
+   "language": "ru",
+   "canonical_name": "в-меру-своего-понимания",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-в-меру-своего-понимания-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-в-меру-своего-понимания-cs",
+   "entity_id": "в-меру-своего-понимания",
+   "language": "cs",
+   "canonical_name": "V míře svého chápání…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-в-меру-своего-понимания-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-последний-гамбит-ru",
+   "entity_id": "последний-гамбит",
+   "language": "ru",
+   "canonical_name": "последний-гамбит",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-последний-гамбит-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-последний-гамбит-cs",
+   "entity_id": "последний-гамбит",
+   "language": "cs",
+   "canonical_name": "Poslední gambit",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-последний-гамбит-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили-ru",
+   "entity_id": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили",
+   "language": "ru",
+   "canonical_name": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили-cs",
+   "entity_id": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили",
+   "language": "cs",
+   "canonical_name": "Psychologický aspekt historie a perspektiv civilizace",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-иудин-грех-хх-съезда-ru",
+   "entity_id": "иудин-грех-хх-съезда",
+   "language": "ru",
+   "canonical_name": "иудин-грех-хх-съезда",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-иудин-грех-хх-съезда-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-иудин-грех-хх-съезда-cs",
+   "entity_id": "иудин-грех-хх-съезда",
+   "language": "cs",
+   "canonical_name": "Jidášův hřích 20. sjezdu",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-иудин-грех-хх-съезда-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-сад-растет-сам-ru",
+   "entity_id": "сад-растет-сам",
+   "language": "ru",
+   "canonical_name": "сад-растет-сам",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-сад-растет-сам-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-сад-растет-сам-cs",
+   "entity_id": "сад-растет-сам",
+   "language": "cs",
+   "canonical_name": "“Sad“ roste sám?..",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-сад-растет-сам-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--cs",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "cs",
+   "canonical_name": "Dlouhodobá antikoránická strategie zákulisí biblického projektu",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "ru",
+   "canonical_name": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-cs",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "cs",
+   "canonical_name": "„Konec dějin“, „Souboj kultur“ a skutečné perspektivy lidstva",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина-ru",
+   "entity_id": "о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина",
+   "language": "ru",
+   "canonical_name": "о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина-cs",
+   "entity_id": "о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина",
+   "language": "cs",
+   "canonical_name": "O dynamickém programování budoucnosti v tvorbě A.S.Puškina",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой-ru",
+   "entity_id": "о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой",
+   "language": "ru",
+   "canonical_name": "о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой-cs",
+   "entity_id": "о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.5 (101) Situace ve světě: ve vzduchu je nebezpečí…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо-ru",
+   "entity_id": "о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо",
+   "language": "ru",
+   "canonical_name": "о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо-cs",
+   "entity_id": "о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.3 (105) Čínské „anime“ : vize mistrovství Evropy ve fotbale? nebo něco jiného?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-случайные-совпадения-либо-не-случайные-ru",
+   "entity_id": "случайные-совпадения-либо-не-случайные",
+   "language": "ru",
+   "canonical_name": "случайные-совпадения-либо-не-случайные",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-случайные-совпадения-либо-не-случайные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-случайные-совпадения-либо-не-случайные-cs",
+   "entity_id": "случайные-совпадения-либо-не-случайные",
+   "language": "cs",
+   "canonical_name": "Náhodné souhry okolností? – nebo nenáhodné…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-случайные-совпадения-либо-не-случайные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности-ru",
+   "entity_id": "о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности",
+   "language": "ru",
+   "canonical_name": "о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности-cs",
+   "entity_id": "о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.4 (111) Moc na Rusi: možnosti nevyužité a možnosti aktuální",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-113-фашиствующий-антифашизм-либералов-ru",
+   "entity_id": "о-тм-no2-113-фашиствующий-антифашизм-либералов",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-113-фашиствующий-антифашизм-либералов",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-113-фашиствующий-антифашизм-либералов-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-113-фашиствующий-антифашизм-либералов-cs",
+   "entity_id": "о-тм-no2-113-фашиствующий-антифашизм-либералов",
+   "language": "cs",
+   "canonical_name": "„O aktuální situaci“ č. 2 (113) Fašizující „antifašizmus“ liberálů",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-113-фашиствующий-антифашизм-либералов-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-концептуальной-обусловленности-науки-ru",
+   "entity_id": "о-концептуальной-обусловленности-науки",
+   "language": "ru",
+   "canonical_name": "о-концептуальной-обусловленности-науки",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-концептуальной-обусловленности-науки-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-концептуальной-обусловленности-науки-cs",
+   "entity_id": "о-концептуальной-обусловленности-науки",
+   "language": "cs",
+   "canonical_name": "O konceptuální podmíněnosti vědy",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-концептуальной-обусловленности-науки-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-114-мистика-большевизма-ru",
+   "entity_id": "о-тм-no3-114-мистика-большевизма",
+   "language": "ru",
+   "canonical_name": "о-тм-no3-114-мистика-большевизма",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no3-114-мистика-большевизма-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-114-мистика-большевизма-cs",
+   "entity_id": "о-тм-no3-114-мистика-большевизма",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.3 (114) „Mystika“ bolševizmu",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no3-114-мистика-большевизма-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-про-войны-ru",
+   "entity_id": "про-войны",
+   "language": "ru",
+   "canonical_name": "про-войны",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-про-войны-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-про-войны-cs",
+   "entity_id": "про-войны",
+   "language": "cs",
+   "canonical_name": "O válkách",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-про-войны-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-тест-на-интеллектуальность-и-порядочность-для-представителей-государст-ru",
+   "entity_id": "тест-на-интеллектуальность-и-порядочность-для-представителей-государст",
+   "language": "ru",
+   "canonical_name": "тест-на-интеллектуальность-и-порядочность-для-представителей-государст",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-тест-на-интеллектуальность-и-порядочность-для-представителей-государст-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-тест-на-интеллектуальность-и-порядочность-для-представителей-государст-cs",
+   "entity_id": "тест-на-интеллектуальность-и-порядочность-для-представителей-государст",
+   "language": "cs",
+   "canonical_name": "Otázky vládě (zamyšlení na dané téma…)",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-тест-на-интеллектуальность-и-порядочность-для-представителей-государст-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились-ru",
+   "entity_id": "о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились",
+   "language": "ru",
+   "canonical_name": "о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились-cs",
+   "entity_id": "о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.4 (115) Z čoho sa niektorí tak rozrušujú?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни-ru",
+   "entity_id": "о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни",
+   "language": "ru",
+   "canonical_name": "о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни-cs",
+   "entity_id": "о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.5 (116) USA a zbytek světa:perspektivy globální konfrontace",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no1-117-мировая-война-близится-к-завершению-ru",
+   "entity_id": "о-тм-no1-117-мировая-война-близится-к-завершению",
+   "language": "ru",
+   "canonical_name": "о-тм-no1-117-мировая-война-близится-к-завершению",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no1-117-мировая-война-близится-к-завершению-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no1-117-мировая-война-близится-к-завершению-cs",
+   "entity_id": "о-тм-no1-117-мировая-война-близится-к-завершению",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.1 (117) Světová válka se blíží k završení…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no1-117-мировая-война-близится-к-завершению-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-сопоставление-авраамических-вероучений-ru",
+   "entity_id": "сопоставление-авраамических-вероучений",
+   "language": "ru",
+   "canonical_name": "сопоставление-авраамических-вероучений",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-сопоставление-авраамических-вероучений-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-сопоставление-авраамических-вероучений-cs",
+   "entity_id": "сопоставление-авраамических-вероучений",
+   "language": "cs",
+   "canonical_name": "Srovnání «abrahámských» věroučení",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-сопоставление-авраамических-вероучений-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью-ru",
+   "entity_id": "о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью",
+   "language": "ru",
+   "canonical_name": "о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью-cs",
+   "entity_id": "о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.3 (119) O budoucnosti: sněte v pravdě a s Láskou…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-консолидация-общества-варианты-иллюзорные-и-реальные-ru",
+   "entity_id": "консолидация-общества-варианты-иллюзорные-и-реальные",
+   "language": "ru",
+   "canonical_name": "консолидация-общества-варианты-иллюзорные-и-реальные",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-консолидация-общества-варианты-иллюзорные-и-реальные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-консолидация-общества-варианты-иллюзорные-и-реальные-cs",
+   "entity_id": "консолидация-общества-варианты-иллюзорные-и-реальные",
+   "language": "cs",
+   "canonical_name": "Konsolidace společnosti: možnosti – iluzorní a reálné",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-консолидация-общества-варианты-иллюзорные-и-реальные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no4-120-о-возрождении-суверенитета-россии-ru",
+   "entity_id": "о-тм-no4-120-о-возрождении-суверенитета-россии",
+   "language": "ru",
+   "canonical_name": "о-тм-no4-120-о-возрождении-суверенитета-россии",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no4-120-о-возрождении-суверенитета-россии-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no4-120-о-возрождении-суверенитета-россии-cs",
+   "entity_id": "о-тм-no4-120-о-возрождении-суверенитета-россии",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.4 (120) Jak se obnovuje suverenita",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no4-120-о-возрождении-суверенитета-россии-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт-ru",
+   "entity_id": "альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт",
+   "language": "ru",
+   "canonical_name": "альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт-cs",
+   "entity_id": "альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт",
+   "language": "cs",
+   "canonical_name": "«Alternativní historie»: intelektuální masturbace, masová psychóza, politická technologie…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-121-что-там-на-западе-ru",
+   "entity_id": "о-тм-no5-121-что-там-на-западе",
+   "language": "ru",
+   "canonical_name": "о-тм-no5-121-что-там-на-западе",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no5-121-что-там-на-западе-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-121-что-там-на-западе-cs",
+   "entity_id": "о-тм-no5-121-что-там-на-западе",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.5 (121) A co na Západě?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no5-121-что-там-на-западе-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-текущем-моменте-no6-127-2016г-новая-доктрина-путина-ru",
+   "entity_id": "о-текущем-моменте-no6-127-2016г-новая-доктрина-путина",
+   "language": "ru",
+   "canonical_name": "о-текущем-моменте-no6-127-2016г-новая-доктрина-путина",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-текущем-моменте-no6-127-2016г-новая-доктрина-путина-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-текущем-моменте-no6-127-2016г-новая-доктрина-путина-cs",
+   "entity_id": "о-текущем-моменте-no6-127-2016г-новая-доктрина-путина",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.6 (127) Nová doktrína Putina?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-текущем-моменте-no6-127-2016г-новая-доктрина-путина-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить-ru",
+   "entity_id": "о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить",
+   "language": "ru",
+   "canonical_name": "о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить-cs",
+   "entity_id": "о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить",
+   "language": "cs",
+   "canonical_name": "Pokračování analytické poznámky «О aktuální situaci» č.6 (127) Konceptuální kabala Pravoslaví a jak se může Pravoslaví transformovat",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-новой-глобальной-повестке-дня-ru",
+   "entity_id": "о-новой-глобальной-повестке-дня",
+   "language": "ru",
+   "canonical_name": "о-новой-глобальной-повестке-дня",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-новой-глобальной-повестке-дня-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-новой-глобальной-повестке-дня-cs",
+   "entity_id": "о-новой-глобальной-повестке-дня",
+   "language": "cs",
+   "canonical_name": "O novém globálním pořadu dne",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-новой-глобальной-повестке-дня-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-перспективах-глобальной-цивилизации-о-россии-и-сша-ru",
+   "entity_id": "о-перспективах-глобальной-цивилизации-о-россии-и-сша",
+   "language": "ru",
+   "canonical_name": "о-перспективах-глобальной-цивилизации-о-россии-и-сша",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-перспективах-глобальной-цивилизации-о-россии-и-сша-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-перспективах-глобальной-цивилизации-о-россии-и-сша-cs",
+   "entity_id": "о-перспективах-глобальной-цивилизации-о-россии-и-сша",
+   "language": "cs",
+   "canonical_name": "O perspektivách globální civilizace, o Rusku a USA…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-перспективах-глобальной-цивилизации-о-россии-и-сша-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-ru",
+   "entity_id": "о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-cs",
+   "entity_id": "о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии",
+   "language": "cs",
+   "canonical_name": "«О aktuální situaci» č.2 (134) Globalizace jako „hybridní válka“ a poslání Ruska v ní",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--de",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "de",
+   "canonical_name": "Langfristige Strategie zur Überwindung des koranischen Islams durch die Drahtzieher des biblischen Projekts",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-de",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "de",
+   "canonical_name": "«Das Ende der Geschichte», «Kampf der Kulturen» und die wirklichen Perspektiven der Menschheit",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-121-что-там-на-западе-de",
+   "entity_id": "о-тм-no5-121-что-там-на-западе",
+   "language": "de",
+   "canonical_name": "„Der aktuelle Moment“ № 5 (121). Was ist dort im Westen?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no5-121-что-там-на-западе-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-de",
+   "entity_id": "о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии",
+   "language": "de",
+   "canonical_name": "„Der aktuelle Moment“ № 2 (134). Die Globalisierung als ein „hybrider Krieg“ und die Mission Russlands darin",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-эгоист-подобен-давно-сидящему-в-колодце-ru",
+   "entity_id": "эгоист-подобен-давно-сидящему-в-колодце",
+   "language": "ru",
+   "canonical_name": "эгоист-подобен-давно-сидящему-в-колодце",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-эгоист-подобен-давно-сидящему-в-колодце-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-эгоист-подобен-давно-сидящему-в-колодце-en",
+   "entity_id": "эгоист-подобен-давно-сидящему-в-колодце",
+   "language": "en",
+   "canonical_name": "Egoist is like one sitting for long in a well",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-эгоист-подобен-давно-сидящему-в-колодце-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-матрица-матрице-рознь-ru",
+   "entity_id": "матрица-матрице-рознь",
+   "language": "ru",
+   "canonical_name": "матрица-матрице-рознь",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-матрица-матрице-рознь-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-матрица-матрице-рознь-en",
+   "entity_id": "матрица-матрице-рознь",
+   "language": "en",
+   "canonical_name": "The Matrix and “The Matrix” — two opposites",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-матрица-матрице-рознь-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост-ru",
+   "entity_id": "о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост",
+   "language": "ru",
+   "canonical_name": "о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост-en",
+   "entity_id": "о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост",
+   "language": "en",
+   "canonical_name": "“About the current moment” №10, October 2002. Calling things by their proper names",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-к-пониманию-макроэкономики-государства-и-мира-тезисы-ru",
+   "entity_id": "к-пониманию-макроэкономики-государства-и-мира-тезисы",
+   "language": "ru",
+   "canonical_name": "к-пониманию-макроэкономики-государства-и-мира-тезисы",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-к-пониманию-макроэкономики-государства-и-мира-тезисы-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-к-пониманию-макроэкономики-государства-и-мира-тезисы-en",
+   "entity_id": "к-пониманию-макроэкономики-государства-и-мира-тезисы",
+   "language": "en",
+   "canonical_name": "To Understanding of Macroeconomу of State and World",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-к-пониманию-макроэкономики-государства-и-мира-тезисы-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-форд-и-сталин-о-том-как-жить-по-человечески-ru",
+   "entity_id": "форд-и-сталин-о-том-как-жить-по-человечески",
+   "language": "ru",
+   "canonical_name": "форд-и-сталин-о-том-как-жить-по-человечески",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-форд-и-сталин-о-том-как-жить-по-человечески-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-форд-и-сталин-о-том-как-жить-по-человечески-en",
+   "entity_id": "форд-и-сталин-о-том-как-жить-по-человечески",
+   "language": "en",
+   "canonical_name": "Ford and Stalin. How to Live in Humaneness",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-форд-и-сталин-о-том-как-жить-по-человечески-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-последний-гамбит-en",
+   "entity_id": "последний-гамбит",
+   "language": "en",
+   "canonical_name": "The Last Gambit",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-последний-гамбит-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев-ru",
+   "entity_id": "о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев",
+   "language": "ru",
+   "canonical_name": "о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев-en",
+   "entity_id": "о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев",
+   "language": "en",
+   "canonical_name": "“About the current moment” №9(57), September 2015. The Future of the Humankind: The Dictatorship of Conscience or the Tyranny of Bible Owners",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-разрядке-разрушительной-антирусской-матрицы-ru",
+   "entity_id": "о-разрядке-разрушительной-антирусской-матрицы",
+   "language": "ru",
+   "canonical_name": "о-разрядке-разрушительной-антирусской-матрицы",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-разрядке-разрушительной-антирусской-матрицы-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-разрядке-разрушительной-антирусской-матрицы-en",
+   "entity_id": "о-разрядке-разрушительной-антирусской-матрицы",
+   "language": "en",
+   "canonical_name": "On the Discharge of the Destructive Anti-Russian Matrix",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-разрядке-разрушительной-антирусской-матрицы-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию-ru",
+   "entity_id": "о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию-en",
+   "entity_id": "о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию",
+   "language": "en",
+   "canonical_name": "“About the current moment” №2(74), February 2008. Authority as an obstacle for personal and social development",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no8-80-знаки-рубежа-эпох-ru",
+   "entity_id": "о-тм-no8-80-знаки-рубежа-эпох",
+   "language": "ru",
+   "canonical_name": "о-тм-no8-80-знаки-рубежа-эпох",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no8-80-знаки-рубежа-эпох-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no8-80-знаки-рубежа-эпох-en",
+   "entity_id": "о-тм-no8-80-знаки-рубежа-эпох",
+   "language": "en",
+   "canonical_name": "“About the current moment” №8(80), August 2008. Signs of Boundary Between Epochs",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no8-80-знаки-рубежа-эпох-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об-ru",
+   "entity_id": "о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об",
+   "language": "ru",
+   "canonical_name": "о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об-en",
+   "entity_id": "о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об",
+   "language": "en",
+   "canonical_name": "“About the current moment” №11(83), November 2008. Bureaucratic despair in Russia and global project “Obama”",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--en",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "en",
+   "canonical_name": "The long-term strategy to overcome Koranic Islam with the help of wheeler – dealers of the Biblical Project",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-en",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "en",
+   "canonical_name": "«The end of a history», «collision of civilizations» and the valid prospects of mankind",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no1-97-десталинизация-мертвые-души-за-работой-ru",
+   "entity_id": "о-тм-no1-97-десталинизация-мертвые-души-за-работой",
+   "language": "ru",
+   "canonical_name": "о-тм-no1-97-десталинизация-мертвые-души-за-работой",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no1-97-десталинизация-мертвые-души-за-работой-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no1-97-десталинизация-мертвые-души-за-работой-en",
+   "entity_id": "о-тм-no1-97-десталинизация-мертвые-души-за-работой",
+   "language": "en",
+   "canonical_name": "“About the current moment” №1(97), January 2011. “De-Stalinization”: dead souls at work…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no1-97-десталинизация-мертвые-души-за-работой-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-ru",
+   "entity_id": "о-тм-no2-109-глобализация-начало-нового-этапа",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-109-глобализация-начало-нового-этапа",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-en",
+   "entity_id": "о-тм-no2-109-глобализация-начало-нового-этапа",
+   "language": "en",
+   "canonical_name": "“About the current moment” №2(109), March 2013. Globalization: beginning of a new stage",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий-ru",
+   "entity_id": "о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий-en",
+   "entity_id": "о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий",
+   "language": "en",
+   "canonical_name": "“About the current moment” №2(118), March 2015. To the 70th Anniversary of the Great Victory (1945): Get Rid of Illusions Power!",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-беседа-в-кафе-у-бирона-ru",
+   "entity_id": "беседа-в-кафе-у-бирона",
+   "language": "ru",
+   "canonical_name": "беседа-в-кафе-у-бирона",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-беседа-в-кафе-у-бирона-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-беседа-в-кафе-у-бирона-en",
+   "entity_id": "беседа-в-кафе-у-бирона",
+   "language": "en",
+   "canonical_name": "A chat with Pushkin in cafe “At Biron”",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-беседа-в-кафе-у-бирона-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-как-и-для-чего-писания-делаются-священными-ru",
+   "entity_id": "как-и-для-чего-писания-делаются-священными",
+   "language": "ru",
+   "canonical_name": "как-и-для-чего-писания-делаются-священными",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-как-и-для-чего-писания-делаются-священными-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-как-и-для-чего-писания-делаются-священными-en",
+   "entity_id": "как-и-для-чего-писания-делаются-священными",
+   "language": "en",
+   "canonical_name": "How and why are Scriptures made “sacred”?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-как-и-для-чего-писания-делаются-священными-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-en",
+   "entity_id": "о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии",
+   "language": "en",
+   "canonical_name": "“About the current moment” №2(134), April 2018. Globalization as a «hybrid war» and the mission of Russia in it",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-саммите-в-стрельне-ru",
+   "entity_id": "о-саммите-в-стрельне",
+   "language": "ru",
+   "canonical_name": "о-саммите-в-стрельне",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-саммите-в-стрельне-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-саммите-в-стрельне-en",
+   "entity_id": "о-саммите-в-стрельне",
+   "language": "en",
+   "canonical_name": "G8 Summit in Strelna",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-саммите-в-стрельне-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-ru",
+   "entity_id": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "language": "ru",
+   "canonical_name": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-en",
+   "entity_id": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "language": "en",
+   "canonical_name": "Global crisis root cause: just economy or biblical culture?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-любовь-к-мудрости-от-прошлого-к-будущему-ru",
+   "entity_id": "любовь-к-мудрости-от-прошлого-к-будущему",
+   "language": "ru",
+   "canonical_name": "любовь-к-мудрости-от-прошлого-к-будущему",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-любовь-к-мудрости-от-прошлого-к-будущему-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-любовь-к-мудрости-от-прошлого-к-будущему-en",
+   "entity_id": "любовь-к-мудрости-от-прошлого-к-будущему",
+   "language": "en",
+   "canonical_name": "Love for wisdom: from the past to the future…",
+   "translation_status": "provisional",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-любовь-к-мудрости-от-прошлого-к-будущему-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-мертвая-вода-ред-2015-года-ru",
+   "entity_id": "мертвая-вода-ред-2015-года",
+   "language": "ru",
+   "canonical_name": "мертвая-вода-ред-2015-года",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-мертвая-вода-ред-2015-года-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-мертвая-вода-ред-2015-года-en",
+   "entity_id": "мертвая-вода-ред-2015-года",
+   "language": "en",
+   "canonical_name": "Dead Water (2015 edition)",
+   "translation_status": "provisional",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-мертвая-вода-ред-2015-года-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-принципы-кадровой-политики-государства-антигосударства-общественной-ин-ru",
+   "entity_id": "принципы-кадровой-политики-государства-антигосударства-общественной-ин",
+   "language": "ru",
+   "canonical_name": "принципы-кадровой-политики-государства-антигосударства-общественной-ин",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-принципы-кадровой-политики-государства-антигосударства-общественной-ин-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-принципы-кадровой-политики-государства-антигосударства-общественной-ин-en",
+   "entity_id": "принципы-кадровой-политики-государства-антигосударства-общественной-ин",
+   "language": "en",
+   "canonical_name": "Principles of Cadre Politics: State, “Anti-State”, Social Initiative",
+   "translation_status": "provisional",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-принципы-кадровой-политики-государства-антигосударства-общественной-ин-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-достаточно-общая-теория-управления-ru",
+   "entity_id": "достаточно-общая-теория-управления",
+   "language": "ru",
+   "canonical_name": "достаточно-общая-теория-управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-достаточно-общая-теория-управления-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-достаточно-общая-теория-управления-en",
+   "entity_id": "достаточно-общая-теория-управления",
+   "language": "en",
+   "canonical_name": "The Sufficiently General Theory of Governance (2011 edition)",
+   "translation_status": "provisional",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-достаточно-общая-теория-управления-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры-ru",
+   "entity_id": "мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры",
+   "language": "ru",
+   "canonical_name": "мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры-en",
+   "entity_id": "мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры",
+   "language": "en",
+   "canonical_name": "«The Master and Margarita»: Hymn to Demonism? Or Gospel of Selfless Faith",
+   "translation_status": "provisional",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--es",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "es",
+   "canonical_name": "La estrategia duradera de ruinar El Islam Coránico por los acaudilladores del proecto Bíblico",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-es",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "es",
+   "canonical_name": "«El Fin de la Historia», «el Conflicto de las Civilizaciones» y las perspectivas reales de la humanidad",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-es",
+   "entity_id": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "language": "es",
+   "canonical_name": "La crisis global económica o la crisis de la cultura bíblica?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--fa",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "fa",
+   "canonical_name": "استراتژی طولانی مدت برای غلبه بر اسلام قرآنی توسط طراحان کتاب مقدس",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-130-ноосфера-человечество-личность-глобализация-ru",
+   "entity_id": "о-тм-no2-130-ноосфера-человечество-личность-глобализация",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-130-ноосфера-человечество-личность-глобализация",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-130-ноосфера-человечество-личность-глобализация-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-130-ноосфера-человечество-личность-глобализация-fa",
+   "entity_id": "о-тм-no2-130-ноосфера-человечество-личность-глобализация",
+   "language": "fa",
+   "canonical_name": "درباره آنِ جاری» شماره 2 (130) ـ می 2017",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-130-ноосфера-человечество-личность-глобализация-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--fi",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "fi",
+   "canonical_name": "Raamatullisen projektin ohjaajien pitkäkestoinen strategia nujertaa koraaninen islam",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-fi",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "fi",
+   "canonical_name": "“Historian loppu”, “kulttuurien kamppailu” ja ihmiskunnan todelliset tulevaisuudennäkymät",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-fi",
+   "entity_id": "о-тм-no2-109-глобализация-начало-нового-этапа",
+   "language": "fi",
+   "canonical_name": "“Nykytilanteesta” №2 (109), maaliskuu 2013 – Globalisaatio: uuden vaiheen alku",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни-fi",
+   "entity_id": "о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни",
+   "language": "fi",
+   "canonical_name": "“Nykytilanteesta” №5 (116), joulukuu 2014 – Yhdysvallat ja muu maailma: Globaalin vastakkainasettelun näkymät",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-fi",
+   "entity_id": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "language": "fi",
+   "canonical_name": "Globaali talouskriisi vai raamatullisen kulttuurin kriisi?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--fr",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "fr",
+   "canonical_name": "La ruine de l’islam coranique",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-fr",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "fr",
+   "canonical_name": "«La Fin de l’Hisoire», «le Choc des Civilisations» & les perspectives réelles de l’humanité",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-fr",
+   "entity_id": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "language": "fr",
+   "canonical_name": "La crise de l’économie mondiale ou de la culture biblique?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-глобальный-экономический-кризис-или-кризис-библейской-культуры-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина-fr",
+   "entity_id": "о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина",
+   "language": "fr",
+   "canonical_name": "La programmation dynamique de l’avenir dans l’œuvre d’Alexandre S. Pouchkine",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--it",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "it",
+   "canonical_name": "La strategia di lunga durata di superamento dell islam coranico dagli padroni dell progetto Bibbia",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-it",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "it",
+   "canonical_name": "La fine della storia e collisione delle civilta",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-научно-методологическое-обеспечение-социального-управления-и-наша-жизн-ru",
+   "entity_id": "научно-методологическое-обеспечение-социального-управления-и-наша-жизн",
+   "language": "ru",
+   "canonical_name": "научно-методологическое-обеспечение-социального-управления-и-наша-жизн",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-научно-методологическое-обеспечение-социального-управления-и-наша-жизн-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-научно-методологическое-обеспечение-социального-управления-и-наша-жизн-it",
+   "entity_id": "научно-методологическое-обеспечение-социального-управления-и-наша-жизн",
+   "language": "it",
+   "canonical_name": "Supporto scientifico e metodoloogico della gestione sociale e la nostra vita",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-научно-методологическое-обеспечение-социального-управления-и-наша-жизн-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-достаточно-общая-теория-управления-kk",
+   "entity_id": "достаточно-общая-теория-управления",
+   "language": "kk",
+   "canonical_name": "ЖЕТКІЛІКТІ ЖАЛПЫ БАСҚАРУ ТЕОРИЯСЫ (1991)",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-достаточно-общая-теория-управления-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--kk",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "kk",
+   "canonical_name": "Iнжіл жобасының билеп-төстеушілердің құран исламын жеңудің ұзақ мерзімді стратегиясы",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-случайные-совпадения-либо-не-случайные-kk",
+   "entity_id": "случайные-совпадения-либо-не-случайные",
+   "language": "kk",
+   "canonical_name": "Кездейсоқ сәйкестік па? – немесе кездейсоқ емес…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-случайные-совпадения-либо-не-случайные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-123-земля-выходит-из-конспирологического-проекта-ru",
+   "entity_id": "о-тм-no2-123-земля-выходит-из-конспирологического-проекта",
+   "language": "ru",
+   "canonical_name": "о-тм-no2-123-земля-выходит-из-конспирологического-проекта",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no2-123-земля-выходит-из-конспирологического-проекта-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-123-земля-выходит-из-конспирологического-проекта-kk",
+   "entity_id": "о-тм-no2-123-земля-выходит-из-конспирологического-проекта",
+   "language": "kk",
+   "canonical_name": "«Ағымдағы сәт туралы», No2 (123), ақпан 2016 ж. Жер конспирациялы жобасынан шыға бастады",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-123-земля-выходит-из-конспирологического-проекта-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах-ru",
+   "entity_id": "о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах",
+   "language": "ru",
+   "canonical_name": "о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах-kk",
+   "entity_id": "о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах",
+   "language": "kk",
+   "canonical_name": "«Ағымдағы сәт туралы» № 1 (144), 2023 жылдың ақпан – сәуірі",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--lt",
+   "entity_id": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "language": "lt",
+   "canonical_name": "Ilgalaikė biblinio projekto vadeivų strategija kaip įveikti koraninį islamą",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-долговременная-стратегия-преодоления-коранического-ислама-заправилами--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-lt",
+   "entity_id": "о-тм-no2-109-глобализация-начало-нового-этапа",
+   "language": "lt",
+   "canonical_name": "„Apie dabartinį momentą“ Nr. 2 (109), 2013 metų kovas. Globalizacija: naujo etapo pradžia",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-109-глобализация-начало-нового-этапа-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за--ru",
+   "entity_id": "операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за-",
+   "language": "ru",
+   "canonical_name": "операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за-",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за--lt",
+   "entity_id": "операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за-",
+   "language": "lt",
+   "canonical_name": "CŽV operacija „Baltasis eržilas“ – antroji holivudinio filmo „Raudonojo Spalio medžioklė“ serija?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за--ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no1-112-ихр-кампф-против-человечности-ru",
+   "entity_id": "о-тм-no1-112-ихр-кампф-против-человечности",
+   "language": "ru",
+   "canonical_name": "о-тм-no1-112-ихр-кампф-против-человечности",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no1-112-ихр-кампф-против-человечности-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no1-112-ихр-кампф-против-человечности-lt",
+   "entity_id": "о-тм-no1-112-ихр-кампф-против-человечности",
+   "language": "lt",
+   "canonical_name": "„Apie dabartinį momentą“ № 1 (112), kovas 2014 metų „Ihr kampf“ prieš žmogiškumą",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no1-112-ихр-кампф-против-человечности-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-консолидация-общества-варианты-иллюзорные-и-реальные-lt",
+   "entity_id": "консолидация-общества-варианты-иллюзорные-и-реальные",
+   "language": "lt",
+   "canonical_name": "Visuomenės konsolidacija: variantai – iliuziniai ir realūs",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-консолидация-общества-варианты-иллюзорные-и-реальные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт-lt",
+   "entity_id": "альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт",
+   "language": "lt",
+   "canonical_name": "„Alternatyvioji istorija“: intelektualinis onanizmas, masinė psichozė, politinė technologija…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-об-иносказательности-развода-путиных-ru",
+   "entity_id": "об-иносказательности-развода-путиных",
+   "language": "ru",
+   "canonical_name": "об-иносказательности-развода-путиных",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-об-иносказательности-развода-путиных-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-об-иносказательности-развода-путиных-lt",
+   "entity_id": "об-иносказательности-развода-путиных",
+   "language": "lt",
+   "canonical_name": "Apie Putinų skyrybų kitareikšmiškumą",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-об-иносказательности-развода-путиных-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-случайные-совпадения-либо-не-случайные-lt",
+   "entity_id": "случайные-совпадения-либо-не-случайные",
+   "language": "lt",
+   "canonical_name": "Atsitiktiniai sutapimai? – arba ne atsitiktiniai…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-случайные-совпадения-либо-не-случайные-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-время-начинаю-про-сталина-рассказ-lt",
+   "entity_id": "время-начинаю-про-сталина-рассказ",
+   "language": "lt",
+   "canonical_name": "Laikas: apie Staliną pradedu pasakojimą…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-время-начинаю-про-сталина-рассказ-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-110-наше-дело-и-дела-не-наши-ru",
+   "entity_id": "о-тм-no3-110-наше-дело-и-дела-не-наши",
+   "language": "ru",
+   "canonical_name": "о-тм-no3-110-наше-дело-и-дела-не-наши",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-тм-no3-110-наше-дело-и-дела-не-наши-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no3-110-наше-дело-и-дела-не-наши-lt",
+   "entity_id": "о-тм-no3-110-наше-дело-и-дела-не-наши",
+   "language": "lt",
+   "canonical_name": "Mūsų reikalas ir reikalai ne mūsų…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no3-110-наше-дело-и-дела-не-наши-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-психтроцкизм-и-пидорасинг-угроза-жизни-человечества-ru",
+   "entity_id": "психтроцкизм-и-пидорасинг-угроза-жизни-человечества",
+   "language": "ru",
+   "canonical_name": "психтроцкизм-и-пидорасинг-угроза-жизни-человечества",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-психтроцкизм-и-пидорасинг-угроза-жизни-человечества-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-психтроцкизм-и-пидорасинг-угроза-жизни-человечества-lt",
+   "entity_id": "психтроцкизм-и-пидорасинг-угроза-жизни-человечества",
+   "language": "lt",
+   "canonical_name": "Psichtrockizmas ir pidorasingas – pavojus žmonijos egzistavimui",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-психтроцкизм-и-пидорасинг-угроза-жизни-человечества-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-научно-методологическое-обеспечение-социального-управления-и-наша-жизн-ro",
+   "entity_id": "научно-методологическое-обеспечение-социального-управления-и-наша-жизн",
+   "language": "ro",
+   "canonical_name": "Suportul științific și metodologic a gestionării sociale și viața noastră",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-научно-методологическое-обеспечение-социального-управления-и-наша-жизн-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз-ru",
+   "entity_id": "приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз",
+   "language": "ru",
+   "canonical_name": "приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз-sk",
+   "entity_id": "приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз",
+   "language": "sk",
+   "canonical_name": "Príď na pomoc mojej neviere…",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра-ru",
+   "entity_id": "печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра",
+   "language": "ru",
+   "canonical_name": "печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра-sk",
+   "entity_id": "печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра",
+   "language": "sk",
+   "canonical_name": "Smutné dedičstvo Atlantídy",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-матрица-матрице-рознь-sk",
+   "entity_id": "матрица-матрице-рознь",
+   "language": "sk",
+   "canonical_name": "Matrica a “Matrica” — dva protiklady",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-матрица-матрице-рознь-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-диалектика-и-атеизм-две-сути-несовместны-ru",
+   "entity_id": "диалектика-и-атеизм-две-сути-несовместны",
+   "language": "ru",
+   "canonical_name": "диалектика-и-атеизм-две-сути-несовместны",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-диалектика-и-атеизм-две-сути-несовместны-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-диалектика-и-атеизм-две-сути-несовместны-sk",
+   "entity_id": "диалектика-и-атеизм-две-сути-несовместны",
+   "language": "sk",
+   "canonical_name": "Dialektika a ateizmus: dve nezlučiteľné podstaty",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-диалектика-и-атеизм-две-сути-несовместны-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-язык-наш-как-объективная-данность-и-как-культура-речи-ru",
+   "entity_id": "язык-наш-как-объективная-данность-и-как-культура-речи",
+   "language": "ru",
+   "canonical_name": "язык-наш-как-объективная-данность-и-как-культура-речи",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-язык-наш-как-объективная-данность-и-как-культура-речи-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-язык-наш-как-объективная-данность-и-как-культура-речи-sk",
+   "entity_id": "язык-наш-как-объективная-данность-и-как-культура-речи",
+   "language": "sk",
+   "canonical_name": "Jazyk náš: ako objektívna dannosť i ako kultúra reči",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-язык-наш-как-объективная-данность-и-как-культура-речи-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-нам-нужна-иная-школа-ru",
+   "entity_id": "нам-нужна-иная-школа",
+   "language": "ru",
+   "canonical_name": "нам-нужна-иная-школа",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-нам-нужна-иная-школа-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-нам-нужна-иная-школа-sk",
+   "entity_id": "нам-нужна-иная-школа",
+   "language": "sk",
+   "canonical_name": "Potrebujeme inú školu",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-нам-нужна-иная-школа-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-достаточно-общая-теория-управления-sk",
+   "entity_id": "достаточно-общая-теория-управления",
+   "language": "sk",
+   "canonical_name": "Dostatočne všeobecná teória riadenia (2011)",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-достаточно-общая-теория-управления-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-разрешение-проблем-национальных-взаимоотношений-в-русле-коб-ru",
+   "entity_id": "разрешение-проблем-национальных-взаимоотношений-в-русле-коб",
+   "language": "ru",
+   "canonical_name": "разрешение-проблем-национальных-взаимоотношений-в-русле-коб",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-разрешение-проблем-национальных-взаимоотношений-в-русле-коб-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-разрешение-проблем-национальных-взаимоотношений-в-русле-коб-sk",
+   "entity_id": "разрешение-проблем-национальных-взаимоотношений-в-русле-коб",
+   "language": "sk",
+   "canonical_name": "Vyriešenie problémov vzájomných národných vzťahov v duchu Koncepcie spoločenskej bezpečnosti",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-разрешение-проблем-национальных-взаимоотношений-в-русле-коб-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных-ru",
+   "entity_id": "арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных",
+   "language": "ru",
+   "canonical_name": "арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных-sk",
+   "entity_id": "арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных",
+   "language": "sk",
+   "canonical_name": "„Arbitráž“ hlavy štátu ako osnova pre „rozhodovanie“ vo vzťahu k elitárskym klanom",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-состоянии-тенденциях-и-возможностях-управления-ru",
+   "entity_id": "о-состоянии-тенденциях-и-возможностях-управления",
+   "language": "ru",
+   "canonical_name": "о-состоянии-тенденциях-и-возможностях-управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-о-состоянии-тенденциях-и-возможностях-управления-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-состоянии-тенденциях-и-возможностях-управления-sk",
+   "entity_id": "о-состоянии-тенденциях-и-возможностях-управления",
+   "language": "sk",
+   "canonical_name": "О stave, trendoch a možnostiach riadenia",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-состоянии-тенденциях-и-возможностях-управления-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-о-тм-no2-123-земля-выходит-из-конспирологического-проекта-sk",
+   "entity_id": "о-тм-no2-123-земля-выходит-из-конспирологического-проекта",
+   "language": "sk",
+   "canonical_name": "«O aktuálnom dianí», № 2 (123) Zem vychádza z konšpiračného projektu",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-о-тм-no2-123-земля-выходит-из-конспирологического-проекта-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-как-и-для-чего-писания-делаются-священными-sk",
+   "entity_id": "как-и-для-чего-писания-делаются-священными",
+   "language": "sk",
+   "canonical_name": "Ako a prečo sa písma robia «svätými»?",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-как-и-для-чего-писания-делаются-священными-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-zh",
+   "entity_id": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "language": "zh",
+   "canonical_name": "End of Pre-History (in Chinese)",
+   "translation_status": "confirmed",
+   "review_status": "unreviewed",
+   "canonical_variant_id": "lv-конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че-ru",
+   "indexable": false
+  }
+ ]
+}

@@ -1,0 +1,3571 @@
+{
+ "@context": {
+  "dcat": "http://www.w3.org/ns/dcat#",
+  "dct": "http://purl.org/dc/terms/",
+  "xsd": "http://www.w3.org/2001/XMLSchema#"
+ },
+ "@type": "dcat:Catalog",
+ "dct:title": "Библиотека первоисточников ВП СССР / КОБ",
+ "dct:language": "ru",
+ "dcat:dataset": [
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "osnovy-sociologii-tom-1",
+   "dct:title": "Основы социологии. Том 1",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "osnovy-sociologii-tom-2",
+   "dct:title": "Основы социологии. Том 2",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "osnovy-sociologii-tom-3",
+   "dct:title": "Основы социологии. Том 3",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "osnovy-sociologii-tom-4",
+   "dct:title": "Основы социологии. Том 4",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "osnovy-sociologii-tom-5",
+   "dct:title": "Основы социологии. Том 5",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "osnovy-sociologii-tom-6",
+   "dct:title": "Основы социологии. Том 6",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "040526-послание-президента-федеральному-собранию-рф",
+   "dct:title": "040526-Послание Президента Федеральному Собранию РФ",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "040729-ненависть-и-слепота",
+   "dct:title": "040729-НЕНАВИСТЬ и СЛЕПОТА"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "040730-контракт-человека-с-богом",
+   "dct:title": "040730-Контракт человека с Богом"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "2005-год-некоторые-итоги-и-перспективы",
+   "dct:title": "2005 год некоторые итоги и перспективы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "ii-мировая-социалистическая-революция-на-сей-раз-тихой-сапой",
+   "dct:title": "II мировая «социалистическая» революция на сей раз тихой сапой",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "intelros-ru-цели-японии-в-xxi-веке",
+   "dct:title": "Intelros_ru - Цели Японии в XXI веке"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "wikileaks-и-глобальная-смена-управления-главные-причины-и-перспективы",
+   "dct:title": "WikiLeaks  и глобальная смена управления - главные причины и перспективы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "альтернативная-история-интеллектуальный-онанизм-массовый-психоз-политт",
+   "dct:title": "«Альтернативная история» — интеллектуальный онанизм, массовый психоз, политтехнология…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "арбитраж-главы-государства-как-основа-разводняка-в-отношении-элитарных",
+   "dct:title": "«Арбитраж» главы государства как основа «разводняка» в отношении «элитарных» кланов",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "беседа-в-кафе-у-бирона",
+   "dct:title": "Беседа в кафе «у Бирона»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "бобков-об-андропове",
+   "dct:title": "Бобков_об_Андропове"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "большевизм-в-богодержавии-единственное-лекарство-от-фашизма",
+   "dct:title": "Большевизм в Богодержавии - единственное лекарство от фашизма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "большим-политикам-и-их-экономистам",
+   "dct:title": "Большим политикам и их экономистам",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "будущее-наступает-сейчас",
+   "dct:title": "Будущее наступает сейчас",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "будущее-создаем-все-мы-вопрос-какое",
+   "dct:title": "Будущее создаём ВСЕ МЫ вопрос - какое",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "бурлаки-с-большой-прессы-или-все-же-листья-оторвавшиеся-от-дерева",
+   "dct:title": "Бурлаки с «большой прессы» или всё же листья, оторвавшиеся от дерева",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "бухгалтерию-должен-знать-каждый-из-учебника-физики",
+   "dct:title": "Бухгалтерию должен знать каждый, из учебника физики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "в-меру-своего-понимания",
+   "dct:title": "В меру своего понимания…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "в-чем-разумный-выбор-россии",
+   "dct:title": "В чём разумный выбор России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "вам-ехать-или-шашечки",
+   "dct:title": "Вам ехать или шашечки",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "вера-и-мера",
+   "dct:title": "Вера и Мера",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "властным-гражданам-россии-информация-к-размышлению",
+   "dct:title": "Властным гражданам России (информация к размышлению)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "вп-ссср-действительно-против-какой-бы-то-ни-было-империи-но-прежде-все",
+   "dct:title": "ВП СССР действительно против какой бы то ни было империи, но прежде всего против империи лжи",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "впечатления-от-семинара-в-москве-19-12-2010-г-с-участием-китаиста-веди",
+   "dct:title": "Впечатления от семинара в Москве 19.12.2010 г. с участием китаиста-ведиста Гваськова-Девятова",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "время-начинаю-про-сталина-рассказ",
+   "dct:title": "Время - начинаю про Сталина рассказ…"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "выступление-и-дискуссия-на-мюнхенской-конференции",
+   "dct:title": "Выступление и дискуссия на Мюнхенской конференции",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "где-же-центр-власти",
+   "dct:title": "Где же центр власти",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "генеральное-наступление-на-грабли-продолжается",
+   "dct:title": "Генеральное наступление на грабли продолжается",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "главная-проблема-глобальной-цивилизации-и-миссия-русской-многонационал",
+   "dct:title": "Главная проблема глобальной цивилизации и миссия Русской многонациональной цивилизации в её разрешении",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2017"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "глобальный-экономический-кризис-или-кризис-библейской-культуры",
+   "dct:title": "Глобальный экономический кризис или кризис библейской культуры",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "гражданское-общество-преступление-и-психопатия",
+   "dct:title": "«Гражданское общество» преступление и психопатия",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "грыжу-экономики-следует-вырезать",
+   "dct:title": "Грыжу экономики следует «вырезать»"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "да-притечем-и-мы-ко-свету",
+   "dct:title": "Да притечём и мы ко свету…"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "да-разве-может-быть-собственное-мнение-у-людей-не-удостоенных-доверия-",
+   "dct:title": "Да разве может быть собственное мнение у людей, не удостоенных доверия начальства!",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "дает-корова-молоко-а-что-и-кому-дает-священная-корова-по-кличке-федера",
+   "dct:title": "Даёт корова молоко… А что и кому даёт «священная корова» по кличке «Федеральный резерв США»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "два-капитана-судно-утопят",
+   "dct:title": "Два капитана - судно утопят",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "две-задачи-социологии",
+   "dct:title": "Две задачи социологии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "две-стороны-одной-медали",
+   "dct:title": "Две стороны одной «медали»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "дело-было-в-педженте",
+   "dct:title": "Дело было в Педженте"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "дело-троцкого-под-знаменем-сталина-новый-продукт-политической-химии",
+   "dct:title": "Дело Троцкого под знаменем Сталина — новый продукт «политической химии»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "диалектика-и-атеизм-две-сути-несовместны",
+   "dct:title": "Диалектика и атеизм - две сути несовместны"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "для-правительства-российской-федерации",
+   "dct:title": "Для Правительства Российской Федерации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "долговременная-стратегия-преодоления-коранического-ислама-заправилами-",
+   "dct:title": "Долговременная стратегия преодоления коранического ислама заправилами библейского проекта",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "домик-в-коломне",
+   "dct:title": "Домик в Коломне"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "достаточно-общая-теория-управления",
+   "dct:title": "Достаточно общая теория управления"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "дрейфусиада-наших-дней",
+   "dct:title": "Дрейфусиада наших дней",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "думайте-сами-решайте-сами",
+   "dct:title": "Думайте сами, решайте сами",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "евразийство-и-россия-современность-и-перспективы",
+   "dct:title": "Евразийство и Россия современность и перспективы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "загадки-информационной-войны",
+   "dct:title": "Загадки информационной войны",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "закон-о-земле-и-понятие-о-злоупотреблениях-законодательной-властью",
+   "dct:title": "«Закон о земле» и «Понятие о злоупотреблениях законодательной властью»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "заметка-из-вечернего-петербурга",
+   "dct:title": "Заметка из Вечернего Петербурга",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "знаки-времени",
+   "dct:title": "Знаки времени",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "из-прошлого-русской-концептуальной-власти",
+   "dct:title": "Из прошлого Русской концептуальной власти",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2000"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "интеллектуальная-позиция-no1",
+   "dct:title": "Интеллектуальная позиция №1"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "интеллектуальная-позиция-no2",
+   "dct:title": "Интеллектуальная позиция №2"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "интеллектуальная-позиция-no3",
+   "dct:title": "Интеллектуальная позиция №3"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "интеллектуальная-позиция-no4",
+   "dct:title": "Интеллектуальная позиция №4"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "инферногенезис",
+   "dct:title": "Инферногенезис"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "информационная-безопасность-в-режиме-сетевой-войны",
+   "dct:title": "Информационная безопасность в режиме «сетевой войны»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "информационные-соотношения-в-иерархиях-знахарство-тайные-ордена-попы-м",
+   "dct:title": "Информационные соотношения в иерархиях - знахарство, тайные ордена, попы, масоны",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "историческая-наука-и-человеко-общество-ведение-взаимосвязи",
+   "dct:title": "Историческая наука и человеко-общество-ведение взаимосвязи",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "историческое-развитие-русской-цивилизации-с-начала-хх-века-по-настояще",
+   "dct:title": "Историческое развитие Русской цивилизации с начала ХХ века по настоящее время",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "иудин-грех-хх-съезда",
+   "dct:title": "Иудин грех ХХ съезда",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "к-вопросу-об-истории-характере-и-перспективах-профсоюзного-движения-в-",
+   "dct:title": "К вопросу об истории, характере и перспективах профсоюзного движения в России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "к-вопросу-перехода-на-стандарт-энергообеспеченности-мкфс",
+   "dct:title": "К вопросу перехода на стандарт энергообеспеченности МКФС",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "к-партийцам",
+   "dct:title": "К партийцам",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "к-пониманию-макроэкономики-государства-и-мира-тезисы",
+   "dct:title": "К пониманию макроэкономики государства и мира (тезисы)"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "как-и-для-чего-писания-делаются-священными",
+   "dct:title": "Как и для чего писания делаются священными",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "каков-смысл-геополитики",
+   "dct:title": "Каков смысл геополитики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "команде-президента-рф-в-ответ-на-президентское-послание-от-30-марта-19",
+   "dct:title": "Команде президента РФ в ответ на президентское послание от 30 марта 1999 года",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "комментарии-к-статье-ю-мухина-гений-организации-масс",
+   "dct:title": "Комментарии к статье Ю.Мухина «Гений организации масс»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "комментарии-к-фильму-время-печали-еще-не-пришло",
+   "dct:title": "Комментарии к фильму «ВРЕМЯ ПЕЧАЛИ ещё не пришло»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "комментарий-к-документу-основы-концепции-национальной-безопасности",
+   "dct:title": "Комментарий к документу «Основы Концепции Национальной Безопасности»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "кому-отрава-мертвая-вода",
+   "dct:title": "Кому отрава «Мёртвая вода»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "конверсионные-проблемы-экономики",
+   "dct:title": "Конверсионные проблемы экономики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "конец-истории-столкновение-цивилизаций-и-действительные-перспективы-че",
+   "dct:title": "«Конец истории», «столкновение цивилизаций» и действительные перспективы человечества",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "консолидация-общества-варианты-иллюзорные-и-реальные",
+   "dct:title": "Консолидация общества — варианты — иллюзорные и реальные",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "краткий-курс",
+   "dct:title": "Краткий курс…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "кризис-охлократии-как-преддверие-народовластия",
+   "dct:title": "Кризис охлократии как преддверие народовластия",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "кто-должен-быть-за-социализм",
+   "dct:title": "Кто должен быть за социализм",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "культура-административной-деятельности",
+   "dct:title": "Культура административной деятельности"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "ловля-рыбки-в-мутной-воде",
+   "dct:title": "Ловля рыбки в мутной воде",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "лучше-быть-русским-чем-рабом-в-риме",
+   "dct:title": "Лучше быть русским, чем рабом в Риме",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "любовь-к-мудрости-от-прошлого-к-будущему",
+   "dct:title": "Любовь к мудрости - от прошлого к будущему"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "мастер-и-маргарита-гимн-демонизму-либо-евангелие-беззаветной-веры",
+   "dct:title": "Мастер и Маргарита — гимн демонизму либо Евангелие беззаветной веры"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "матрица-матрице-рознь",
+   "dct:title": "Матрица «Матрице» - рознь"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "матрица-однако-повторение-сюжета",
+   "dct:title": "Матрица, однако - повторение сюжета",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "махатхир-мохаммад-доклад-в-джадде",
+   "dct:title": "-Махатхир_Мохаммад_доклад_в_Джадде",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "медный-всадник-это-вам-не-медный-змий",
+   "dct:title": "Медный Всадник - это вам не медный змий…"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "мертвая-вода-действительно-не-живая-ответ-и-и-синявину",
+   "dct:title": "«Мёртвая вода» - действительно не живая (ответ И.И.Синявину)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "мусульманский-облик-троцкизма",
+   "dct:title": "Мусульманский облик троцкизма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "надо-спасать-школу",
+   "dct:title": "Надо спасать школу"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "надо-спасать-школу-ответ",
+   "dct:title": "Надо спасать школу ОТВЕТ"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "наивная-формула-победы",
+   "dct:title": "«Наивная формула победы»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "нам-нужна-иная-школа",
+   "dct:title": "Нам нужна иная школа"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "наука-и-жизнь-какова-наука-такова-и-жизнь",
+   "dct:title": "Наука и жизнь — какова наука — такова и жизнь",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "наши-дни-православная-иерархия-и-патриотизм-в-россии",
+   "dct:title": "Наши дни Православная иерархия и патриотизм в России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "не-все-стриги-что-растет",
+   "dct:title": "Не всё стриги, что растёт",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "неголосующие-и-праздно-болтающие-о-признаках-разрешения-концептуальной",
+   "dct:title": "Неголосующие и праздно болтающие (О признаках разрешения концептуальной неопределенности)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "некоторые-аспекты-функционирования-глобального-хозяйства-и-мировой-кре",
+   "dct:title": "Некоторые аспекты функционирования глобального хозяйства и мировой кредитно-финансовой системы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "некоторые-соображения-по-поводу-статьи-в-п-сажина-на-сайте-кпе",
+   "dct:title": "Некоторые соображения по поводу статьи В.П.Сажина на сайте КПЕ",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "новая-национальная-идея",
+   "dct:title": "Новая национальная идея"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "нравственность-предопределяет-этику-а-этика-жизнь-людей-в-обществе",
+   "dct:title": "Нравственность предопределяет этику, а этика - жизнь людей в обществе",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-выявлении-алгоритма-управления-россией-вопреки-ее-интересам-и-о-путя",
+   "dct:title": "О выявлении алгоритма управления Россией вопреки её интересам и о путях высвобождения из него",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-гарантии-прав-человека",
+   "dct:title": "О гарантии прав человека",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-делах-в-санкт-петербургской-епархии",
+   "dct:title": "О делах в Санкт-Петербургской епархии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-динамическом-программировании-будущего-в-творчестве-а-с-пушкина",
+   "dct:title": "О динамическом программировании будущего в творчестве А.С. Пушкина",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-дистанционном-обучении",
+   "dct:title": "О дистанционном обучении",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-задачах-на-будущее-кпе-и-беспартийных-приверженцев-коб",
+   "dct:title": "О задачах на будущее КПЕ и беспартийных приверженцев КОБ"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-заключении-специалиста-по-усть-коксинскому-делу",
+   "dct:title": "О Заключении специалиста по Усть-Коксинскому делу",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-книге-е-э-михайлова-бремя-имперской-нации",
+   "dct:title": "О книге Е.Э.Михайлова «Бремя имперской нации»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-книге-р-эпперсона-невидимая-рука-введение-во-взгляд-на-историю-как-н",
+   "dct:title": "О книге Р.Эпперсона «Невидимая рука (Введение во взгляд на историю как на Заговор)»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-контрольных-параметрах-макроэкономики",
+   "dct:title": "О контрольных параметрах макроэкономики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1994"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-концептуальной-обусловленности-науки",
+   "dct:title": "О концептуальной обусловленности науки",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-коррупции-борьбе-с-коррупцией-и-об-искоренении-коррупции",
+   "dct:title": "О коррупции, «борьбе с коррупцией» и об искоренении коррупции",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-личностной-культуре-общения",
+   "dct:title": "О личностной культуре общения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-монархии-вообще-и-перспективах-монархического-ренессанса-россии-в-ча",
+   "dct:title": "О монархии вообще и перспективах монархического «ренессанса» России, в частности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-нашей-деятельности-как-мы-ее-понимаем-нашим-критикам-и-единомышленни",
+   "dct:title": "О нашей деятельности, как мы ее понимаем (Нашим критикам и единомышленникам)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-новой-глобальной-повестке-дня",
+   "dct:title": "О новой глобальной повестке дня",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-перспективах-глобальной-цивилизации-о-россии-и-сша",
+   "dct:title": "О перспективах глобальной цивилизации, о России и США…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2017"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-причинах-международного-терроризма-нищие-духом-не-блаженные-но-опасн",
+   "dct:title": "О причинах «международного терроризма» нищие духом - не блаженные, но опасно блажные",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-причинах-нынешнего-так-называемого-финансового-кризиса-и-возможностя",
+   "dct:title": "О причинах нынешнего так называемого «финансового кризиса» и возможностях его иcчерпания",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-разрядке-разрушительной-антирусской-матрицы",
+   "dct:title": "О разрядке разрушительной антирусской матрицы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-расовых-доктринах-несостоятельны-но-правдоподобны",
+   "dct:title": "О расовых доктринах - несостоятельны, но правдоподобны"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-романе-б-пруса-фараон",
+   "dct:title": "О романе Б.Пруса «Фараон»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-саммите-в-стрельне",
+   "dct:title": "О саммите в Стрельне",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-системе-образования",
+   "dct:title": "О системе образования",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-событиях-во-франции-конца-2005-года-о-глобальной-сценаристике-и-перс",
+   "dct:title": "О событиях во Франции конца 2005 года, о глобальной сценаристике и перспективах «Россионии»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-состоянии-тенденциях-и-возможностях-управления",
+   "dct:title": "О состоянии, тенденциях и возможностях управления",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-стратегии-национал-вождизма-для-россии-и-о-глобальной-долговременной",
+   "dct:title": "О стратегии национал-вождизма для России и о глобальной долговременной антикоранической стратегии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-существе-деннонсации-государственной-думой-рф-беловежского-соглашени",
+   "dct:title": "О существе деннонсации Государственной Думой РФ Беловежского соглашения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-1-61-страусиная-позиция-дурная-основа-для-суверенной-демократи",
+   "dct:title": "О ТМ № 1(61) «Страусиная позиция» — дурная основа для суверенной демократии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-2-62-события-явные-и-неявные",
+   "dct:title": "О ТМ № 2(62) События явные и неявные",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-3-63-безумие-думать-что-злые-не-творят-зла",
+   "dct:title": "О ТМ № 3(63) Безумие думать, что злые не творят зла",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-4-64-ран-против-лженауки-врачу-исцелися-сам",
+   "dct:title": "О ТМ № 4(64) РАН против лженауки — «Врачу» исцелися сам…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-5-65-эгоисты-обречены-быть-и-умирать-рабами",
+   "dct:title": "О ТМ № 5(65) Эгоисты обречены быть и умирать рабами…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-6-66-помни-войну",
+   "dct:title": "О ТМ № 6(66) Помни войну!..",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-7-67-альтернатива-вестернизации-мира-есть",
+   "dct:title": "О ТМ № 7(67) Альтернатива «вестернизации» Мира есть…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-8-68-принцип-разделяй-и-властвуй-и-альтернатива-ему",
+   "dct:title": "О ТМ № 8(68) Принцип «разделяй и властвуй» и альтернатива ему",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no-9-69-перспективы-возрождения-руси-россии-и-тенденции-глобально",
+   "dct:title": "О ТМ № 9(69) Перспективы возрождения Руси-России и тенденции глобальной политики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-103-о-стратегии-будущего-россии-и-мира",
+   "dct:title": "О ТМ №1(103) О стратегии будущего России и Мира",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2012"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-108-введение-в-конституционное-право",
+   "dct:title": "О ТМ №1(108) Введение в конституционное право",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-112-ихр-кампф-против-человечности",
+   "dct:title": "О ТМ №1(112) «Ихр кампф» против человечности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-117-мировая-война-близится-к-завершению",
+   "dct:title": "О ТМ №1(117) Мировая война близится к завершению…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-122-о-безбудущности-либеральных-вожделений",
+   "dct:title": "О ТМ №1(122) О безбудущности либеральных вожделений",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-129-нам-пишут-мы-отвечаем-выдержки-из-дискуссии-про-методолог",
+   "dct:title": "О ТМ №1(129) Нам пишут — мы отвечаем — выдержки из дискуссии «про методологию»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2017"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-13",
+   "dct:title": "О ТМ №1(13)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-133-социокультурный-кризис-в-россии-и-стратегия-выхода-из-нег",
+   "dct:title": "О ТМ №1(133) Социокультурный кризис в России и стратегия выхода из него",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-25",
+   "dct:title": "О ТМ №1(25)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-37",
+   "dct:title": "О ТМ №1(37)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-49-о-дедовщине-антикоммунизме-и-коммунизме-по-существу-и-без-",
+   "dct:title": "О ТМ №1(49) О «дедовщине», антикоммунизме и коммунизме по существу и без эмоций",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-73-выбор-толпо-элитаризм-либо-работа-от-души-на-преображение-",
+   "dct:title": "О ТМ №1(73) Выбор толпо-«элитаризм» либо работа от души на преображение общества",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-85-под-здравым-смыслом-всякий-разумеет-только-свой-собственны",
+   "dct:title": "О ТМ №1(85) «Под здравым смыслом всякий разумеет только свой собственный» — есть ли альтернатива",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-94-сталин-позор-россии-либо-олицетворение-будущего-человечест",
+   "dct:title": "О ТМ №1(94) Сталин - позор России либо олицетворение будущего человечества",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-97-десталинизация-мертвые-души-за-работой",
+   "dct:title": "О ТМ №1(97) «Десталинизация» - мёртвые души за работой…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no1-о-перспективах-второго-культурного-преображения",
+   "dct:title": "О ТМ №1. О перспективах второго культурного преображения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-22-и-пусть-последние-станут-первыми",
+   "dct:title": "О ТМ №10(22) И пусть последние станут первыми…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-34-о-полноте-демократии",
+   "dct:title": "О ТМ №10(34) О полноте демократии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-46-еще-раз-о-психтроцкизме",
+   "dct:title": "О ТМ №10(46) Ещё раз о психтроцкизме",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-58-абсолютное-оружие-в-борьбе-идеологий",
+   "dct:title": "О ТМ №10(58) Абсолютное оружие в «борьбе идеологий»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-70-снова-выборы-без-выбора-внутренний-выбор-каждой-личности",
+   "dct:title": "О ТМ №10(70) Снова выборы без выбора — Внутренний выбор каждой личности — ...",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-82-глобальный-финансовый-кризис-и-проблемы-россии",
+   "dct:title": "О ТМ №10(82) Глобальный финансовый кризис и проблемы России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no10-называя-вещи-их-именами-о-захвате-на-мюзикле-норд-ост",
+   "dct:title": "О ТМ №10. Называя вещи их именами (о захвате на мюзикле «Норд-Ост»)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no11",
+   "dct:title": "О ТМ №11",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no11-23",
+   "dct:title": "О ТМ №11(23)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no11-35-к-100-летию-начала-строительства-многопартийности-в-росси",
+   "dct:title": "О ТМ №11(35) К 100-летию начала строительства многопартийности в России…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no11-47",
+   "dct:title": "О ТМ №11(47)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no11-71-не-стоит-наступать-на-одни-и-те-же-грабли-второй-раз",
+   "dct:title": "О ТМ №11(71) Не стоит наступать на одни и те же грабли второй раз",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no11-83-бюрократическая-безнадега-в-россии-и-глобальный-проект-об",
+   "dct:title": "О ТМ №11(83) Бюрократическая безнадёга в России и глобальный проект «Обама»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-24-страсти-мордасти-от-нострадамуса-это-ли-удел-достойный-че",
+   "dct:title": "О ТМ №12(24) Страсти-мордасти от Нострадамуса — это ли удел, достойный человечества",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-36-жизнь-природы-люди-и-звери",
+   "dct:title": "О ТМ №12(36) Жизнь природы люди и звери",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-48-мастер-и-маргарита-роман-м-булгакова-и-экранизация-в-борт",
+   "dct:title": "О ТМ №12(48) «Мастер и Маргарита» роман М.Булгакова и экранизация В.Бортко",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-60-чили-репетиция-захвата-россии",
+   "dct:title": "О ТМ №12(60) Чили репетиция захвата России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-72-если-вы-желаете-чтобы-общество-жило-по-человечески-сами-с",
+   "dct:title": "О ТМ №12(72) Если Вы желаете, чтобы общество жило по-человечески, — САМИ становитесь человеками",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-84-события-язык-жизни",
+   "dct:title": "О ТМ №12(84) События язык Жизни…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no12-о-проблемах-преображения",
+   "dct:title": "О ТМ №12. О проблемах преображения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-104-в-преддверии-инаугурации-вновь-избранного-президента-и-по",
+   "dct:title": "О ТМ №2(104) В преддверии инаугурации вновь избранного президента и после неё - что происходит и что с этим делать",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2012"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-109-глобализация-начало-нового-этапа",
+   "dct:title": "О ТМ №2(109) Глобализация - начало нового этапа",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-113-фашиствующий-антифашизм-либералов",
+   "dct:title": "О ТМ №2(113) Фашиствующий «антифашизм» либералов",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-118-к-70-летию-великой-победы-освободиться-от-власти-иллюзий",
+   "dct:title": "О ТМ №2(118) К 70-летию Великой Победы — освободиться от власти иллюзий!",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-123-земля-выходит-из-конспирологического-проекта",
+   "dct:title": "О ТМ №2(123) Земля выходит из конспирологического проекта",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-130-ноосфера-человечество-личность-глобализация",
+   "dct:title": "О ТМ №2(130) Ноосфера, человечество, личность, глобализация…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2017"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-134-глобализация-как-гибридная-война-и-миссия-в-ней-россии",
+   "dct:title": "О ТМ №2(134) Глобализация как «гибридная война» и миссия в ней России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-14-политическая-аналитика-либо-политическое-интриганство",
+   "dct:title": "О ТМ №2(14) Политическая аналитика либо политическое интриганство",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-26-как-неповторимо-повторяется-история",
+   "dct:title": "О ТМ №2(26) Как неповторимо «повторяется история»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-38",
+   "dct:title": "О ТМ №2(38)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-74-авторитет-как-помеха-личностному-и-общественному-развитию",
+   "dct:title": "О ТМ №2(74) Авторитет как помеха личностному и общественному развитию",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-86-кризис-как-средство-отрезвления-от-иллюзий",
+   "dct:title": "О ТМ №2(86) Кризис как средство отрезвления от иллюзий…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-95-фашизм-как-это-делается-демократически",
+   "dct:title": "О ТМ №2(95) Фашизм - как это делается «демократически»…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-98-как-режим-сам-взращивает-социально-экономический-кризис",
+   "dct:title": "О ТМ №2(98) Как режим САМ взращивает социально-экономический кризис…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no2-исторические-параллели-и-знаки-времени",
+   "dct:title": "О ТМ №2. Исторические параллели и знаки времени",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-105-китайское-аниме-видение-чемпионата-европы-по-футболу-либо",
+   "dct:title": "О ТМ №3(105) Китайское «аниме» — видение чемпионата Европы по футболу либо что-то другое",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2012"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-110-наше-дело-и-дела-не-наши",
+   "dct:title": "О ТМ №3(110) Наше дело и дела не наши…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-114-мистика-большевизма",
+   "dct:title": "О ТМ №3(114) «Мистика» большевизма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-119-о-будущем-мечтайте-праведно-с-любовью",
+   "dct:title": "О ТМ №3(119) О будущем — мечтайте праведно с Любовью…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-124-когда-ждать-экономического-роста",
+   "dct:title": "О ТМ №3(124) Когда ждать экономического роста",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-131-о-положении-в-стране-о-потенциале-страны-и-о-перспективах",
+   "dct:title": "О ТМ №3(131) О положении в стране, о потенциале страны и о перспективах его реализации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2017"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-135-очередные-задачи-постсоветской-власти-и-общества-и-возмож",
+   "dct:title": "О ТМ №3(135) Очередные задачи постсоветской власти и общества и возможности их решения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-15",
+   "dct:title": "О ТМ №3(15)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-27",
+   "dct:title": "О ТМ №3(27)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-39-глобальная-потребность-наших-дней-дебюрократизация-и-изкор",
+   "dct:title": "О ТМ №3(39) Глобальная потребность наших дней - дебюрократизация и изкоренение паразитизма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-51-действенная-власть-в-условиях-апозиции-так-называемых-влас",
+   "dct:title": "О ТМ №3(51) Действенная власть в условиях «апозиции» так называемых «власти» и «оппозиции»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-75-мера-понимания-и-институты-власти-в-обществе",
+   "dct:title": "О ТМ №3(75) Мера понимания и институты власти в обществе",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-87-два-способа-борьбы-с-великодержавным-пессимизмом",
+   "dct:title": "О ТМ №3(87) Два способа борьбы с «великодержавным пессимизмом»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-96-о-государственной-власти-рф-наших-дней",
+   "dct:title": "О ТМ №3(96) О государственной власти РФ наших дней",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-99-о-теракте-в-аэропорту-домодедово-24-01-2011-г",
+   "dct:title": "О ТМ №3(99) О теракте в аэропорту Домодедово 24.01.2011 г.",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no3-правда-почти-как-смерть",
+   "dct:title": "О ТМ №3. Правда - почти как смерть",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4",
+   "dct:title": "О ТМ №4",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-100-за-кого-ни-голосуй-все-равно-получишь-всякий-народ-заслуж",
+   "dct:title": "О ТМ №4(100) За кого ни голосуй — всё равно получишь «всякий народ заслуживает того правления, которое он имеет»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-106-о-консолидирующей-идее-она-давно-уже-есть-в-обществе-и-не",
+   "dct:title": "О ТМ №4(106) О консолидирующей идее - она давно уже есть в обществе и неискоренима",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2012"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-111-власть-на-руси-и-русь-возможности-упущенные-и-возможности",
+   "dct:title": "О ТМ №4(111) Власть на Руси и Русь — возможности упущенные и возможности актуальные…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-115-с-чего-бы-это-некоторые-так-возбудились",
+   "dct:title": "О ТМ №4(115) С чего бы это некоторые так возбудились",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-120-о-возрождении-суверенитета-россии",
+   "dct:title": "О ТМ №4(120) О возрождении суверенитета России…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-125-всеобщая-управленческая-грамотность-выбор-исходя-из-любви",
+   "dct:title": "О ТМ №4(125) Всеобщая управленческая грамотность — выбор — исходя из Любви либо под давлением обстоятельств",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-132-1917-год-начало-преображения-человечества",
+   "dct:title": "О ТМ №4(132) 1917 год — начало преображения человечества",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2017"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-136-православие-не-придет-на-смену-большевизму-ибо-политическ",
+   "dct:title": "О ТМ №4(136) «Православие» не придёт на смену Большевизму, ибо политические проповеди «православных» лживы…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-16-америка-под-властью-троцкизма",
+   "dct:title": "О ТМ №4(16) Америка под властью троцкизма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-28",
+   "dct:title": "О ТМ №4(28)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-40",
+   "dct:title": "О ТМ №4(40)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-5-88-89-полная-функция-управления-на-руси-и-в-сша-об-этике-и-",
+   "dct:title": "О ТМ №4,5(88,89) Полная функция управления на Руси и в США - об этике и управленческом ...",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-52-христы-редко-являются-как-кометы-но-иуды-не-переводятся-ка",
+   "dct:title": "О ТМ №4(52) Христы редко являются, как кометы, но Иуды не переводятся, как комары",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-76-декларации-тенденции-и-историческая-необходимость-развития",
+   "dct:title": "О ТМ №4(76) Декларации, тенденции и историческая необходимость развития цивилизации Руси",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no4-88-об-управленческом-профессионализме-и-этике",
+   "dct:title": "О ТМ №4(88) Об управленческом профессионализме и этике",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5",
+   "dct:title": "О ТМ №5",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-101-ситуация-в-мире-в-воздухе-пахнет-грозой",
+   "dct:title": "О ТМ №5(101) Ситуация в мире - в воздухе пахнет грозой…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-107-процесс-обострения-конфликта-интересов-в-рф-и-перспективы",
+   "dct:title": "О ТМ №5(107) Процесс обострения конфликта интересов в РФ и перспективы его разрешения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2012"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-116-сша-и-остальной-мир-перспективы-глобального-противостояни",
+   "dct:title": "О ТМ №5(116) США и остальной мир — перспективы глобального противостояния",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-121-что-там-на-западе",
+   "dct:title": "О ТМ №5(121) Что там на Западе",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-126-навстречу-выборам-депутатов-госдумы",
+   "dct:title": "О ТМ №5(126) Навстречу выборам депутатов Госдумы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-17-обязательность-невозможного",
+   "dct:title": "О ТМ №5(17) Обязательность «невозможного»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-29-два-послания",
+   "dct:title": "О ТМ №5(29) Два послания",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-41-о-перспективах-партии-и-не-партии-в-развитии-на-основе-коб",
+   "dct:title": "О ТМ №5(41) О перспективах партии и «не-партии» в развитии на основе КОБ + Послесловие",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-53-7-е-послание-в-в-путина-фс-рф-историко-политический-фон",
+   "dct:title": "О ТМ №5(53) 7-е Послание В.В.Путина ФС РФ - историко-политический фон",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no5-77-праведный-произвол-против-юрисдикции-рабовладения",
+   "dct:title": "О ТМ №5(77) Праведный произвол против юрисдикции рабовладения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6",
+   "dct:title": "О ТМ №6",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-102-правдив-и-свободен-их-вещий-язык-и-с-волей-небесною-друже",
+   "dct:title": "О ТМ №6(102) Правдив и свободен их вещий язык и с Волей Небесною дружен…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-127-концептуальная-кабала-православия-или-как-ему-преобразить",
+   "dct:title": "О ТМ №6(127) Концептуальная кабала Православия или как ему преобразиться",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-18-каждый-в-меру-понимания",
+   "dct:title": "О ТМ №6(18) Каждый в меру понимания…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-30",
+   "dct:title": "О ТМ №6(30)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-42",
+   "dct:title": "О ТМ №6(42)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-54-япония-и-русь-прожектерство-либо-предиктор-корректор",
+   "dct:title": "О ТМ №6(54) Япония и Русь «прожектёрство» — либо «предиктор-корректор»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no6-78-жизнь-человечества-историческая-реальность-и-ее-перспектив",
+   "dct:title": "О ТМ №6(78) Жизнь человечества - историческая реальность и её перспективы, либо ...",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7",
+   "dct:title": "О ТМ №7",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-128-орден-меча-и-орала-в-нем-нет-надобности",
+   "dct:title": "О ТМ №7(128) «Орден меча и орала» — в нём нет надобности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-19-государственность-и-бизнес-сиамские-близнецы-либо-нераздел",
+   "dct:title": "О ТМ №7(19) Государственность и бизнес - «сиамские близнецы» либо нераздельность ...",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-31-у-всех-одна-общеполитическая-задача-стать-человеками",
+   "dct:title": "О ТМ №7(31) У всех одна общеполитическая задача — стать человеками",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-43-о-механизме-власти-мифов-над-историко-политической-реально",
+   "dct:title": "О ТМ №7(43) О механизме власти мифов над историко-политической реальностью",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-55-суверенная-демократия-самодержавие-народа-будет-осуществле",
+   "dct:title": "О ТМ №7(55) «Суверенная демократия» = самодержавие народа будет осуществлено в России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-79-еще-раз-либерализм-враг-свободы",
+   "dct:title": "О ТМ №7(79) Ещё раз либерализм — враг свободы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no7-91-тезисы-о-перспективной-целесообразности",
+   "dct:title": "О ТМ №7(91) Тезисы - о перспективной целесообразности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-20-необходимо-освободиться-из-плена-политических-мифов",
+   "dct:title": "О ТМ №8(20) Необходимо освободиться из плена политических мифов",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-32-тоска-по-цели-как-выражение-неверия-богу",
+   "dct:title": "О ТМ №8(32) Тоска по цели как выражение неверия Богу",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-44-основополагающие-принципы-общественно-полезной-экономическ",
+   "dct:title": "О ТМ №8(44) Основополагающие принципы общественно-полезной экономической политики государства",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-56-пятнадцать-лет-после-гкчп",
+   "dct:title": "О ТМ №8(56) Пятнадцать лет после ГКЧП…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-80-знаки-рубежа-эпох",
+   "dct:title": "О ТМ №8(80) Знаки рубежа эпох",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-92-разноликий-экстремизм-и-путь-его-искоренения",
+   "dct:title": "О ТМ №8(92) Разноликий экстремизм и путь его искоренения",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no8-кооперативный-мат-как-выигрыш-в-кооперативном-дележе",
+   "dct:title": "О ТМ №8. Кооперативный мат как «выигрыш» в кооперативном дележе",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-21-чем-отличается-жить-по-совести-от-жить-по-внутреннему-голо",
+   "dct:title": "О ТМ №9(21) Чем отличается жить по совести от жить по «внутреннему голосу»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-33-некоторые-сценарии-глобальной-политики",
+   "dct:title": "О ТМ №9(33) Некоторые сценарии глобальной политики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-45-партии-в-xxi-веке-есть-ли-им-место-в-политике",
+   "dct:title": "О ТМ №9(45) Партии в XXI веке — есть ли им место в политике",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-57-будущее-человечества-диктатура-совести-либо-тирания-хозяев",
+   "dct:title": "О ТМ №9(57) Будущее человечества Диктатура совести либо тирания хозяев Библии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-81-на-перевале",
+   "dct:title": "О ТМ №9(81) На перевале",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2008"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-93-модернизация-от-медведева-мда",
+   "dct:title": "О ТМ №9(93) Модернизация от Медведева — мДА…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-тм-no9-новое-время-наркомания-фашизм-и-идея-цивилизационного-строите",
+   "dct:title": "О ТМ №9. Новое время, наркомания, фашизм, и Идея цивилизационного строительства",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-физкультуре-и-спорте-это-не-одно-и-то-же",
+   "dct:title": "О физкультуре и спорте — это не одно и то же",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-философии-и-методологии-познания",
+   "dct:title": "О философии и методологии познания",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-иcкоренении-глобальной-угрозы-международного-терроризма",
+   "dct:title": "Об иcкоренении глобальной угрозы «международного терроризма»"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-имитационно-провокационной-деятельности",
+   "dct:title": "Об имитационно-провокационной деятельности"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-иносказательности-развода-путиных",
+   "dct:title": "Об иносказательности развода Путиных",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-опасных-тенденциях-в-деятельности-кпе",
+   "dct:title": "Об опасных тенденциях в деятельности КПЕ",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-открытом-письме-со-скрытым-смыслом",
+   "dct:title": "Об открытом письме со скрытым смыслом",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-экспертизе-расовых-доктрин-и-смуты-на-руси",
+   "dct:title": "Об экспертизе Расовых доктрин и Смуты на Руси",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "обзор-возможных-вариантов-событий-после-1995г",
+   "dct:title": "Обзор возможных вариантов событий после 1995г.",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "обмен-мнениями-ответ-хоперским-казакам",
+   "dct:title": "Обмен мнениями. Ответ хоперским казакам",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2000"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "обращение-ii-съезда-впмв-единение-к-лидерам-фракций-и-депутатам-гд-рф",
+   "dct:title": "Обращение II съезда ВПМВ «Единение» к лидерам фракций и депутатам ГД РФ",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2000"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "обращение-к-руководителю-гарвардского-проекта-фионе-хилл",
+   "dct:title": "Обращение к руководителю Гарвардского проекта Фионе Хилл",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "общественные-институты-и-система",
+   "dct:title": "Общественные институты и «система»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "общество-государственность-и-семья",
+   "dct:title": "Общество — государственность и семья"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "община-тэзе-одна-из-форм-библейского-экуменизма",
+   "dct:title": "Община Тэзе — одна из форм библейского экуменизма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "оглянись-во-гневе",
+   "dct:title": "Оглянись во гневе…"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "одиннадцать-условий-барина-зюганова-хватит-и-одного",
+   "dct:title": "Одиннадцать условий барина Зюганова - Хватит и одного…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "одна-конфликтология-и-другая-какая-для-вас-благо",
+   "dct:title": "Одна конфликтология и другая какая для Вас - благо",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "одного-яйца-два-раза-не-высидишь-об-активности-сайентологической-церкв",
+   "dct:title": "Одного яйца два раза не высидишь! (Об активности сайентологической церкви в глобальной политике)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "она-действительно-мешает-нам-жить-о-западной-концепции-прав-человека-в",
+   "dct:title": "Она действительно мешает нам жить (о западной концепции «прав человека» в её исторической практике)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "операция-цру-белый-жеребец-вторая-серия-голливудского-фильма-охота-за-",
+   "dct:title": "Операция ЦРУ «Белый жеребец» — вторая серия голливудского фильма «Охота за Красным Октябрём»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "оракул-социальный-институт-и-политтехнология",
+   "dct:title": "Оракул социальный институт и политтехнология",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "организационно-технологический-подход-к-макроэкономическим-системам-кл",
+   "dct:title": "Организационно-технологический подход к макроэкономическим системам — ключ к успеху",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "освобождение-философии-на-руси-от-догм-византийского-богословия",
+   "dct:title": "Освобождение философии на Руси от догм византийского богословия",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "от-человекообразия-к-человечности",
+   "dct:title": "От человекообразия к человечности"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "ответ-а-старцеву",
+   "dct:title": "Ответ А.Старцеву",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "отповедь-черной-мессе",
+   "dct:title": "Отповедь «Чёрной мессе»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "перманентная-революция-от-парвуса-до-сороса",
+   "dct:title": "Перманентная революция от Парвуса до Сороса",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "перманентная-реорганизация-авиапромышленности-как-способ-уничтожения-а",
+   "dct:title": "Перманентная реорганизация авиапромышленности как способ уничтожения авиации РФ",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "персоны-грата-концепции-нон-грата",
+   "dct:title": "Персоны «грата», концепции - «нон грата»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "печальное-наследие-атлантиды-троцкизм-это-вчера-но-никак-не-завтра",
+   "dct:title": "Печальное наследие Атлантиды (Троцкизм это «вчера», но никак не «завтра»)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "письмо-добренькова-путину",
+   "dct:title": "Письмо_Добренькова_Путину"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "плюралистическая-репрессивность",
+   "dct:title": "Плюралистическая репрессивность",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "по-вере-вашей-да-будет-вам",
+   "dct:title": "По вере вашей да будет вам… "
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "пойдите-научитесь-что-значит-милости-хочу-а-не-жертвы",
+   "dct:title": "Пойдите, научитесь, что значит милости хочу, а не жертвы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "поле-чудес-национальной-безопасности",
+   "dct:title": "«Поле чудес» «национальной» безопасности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "политический-экстремизм-в-россии-либо-все-же-глобальное-томленье-злого",
+   "dct:title": "«Политический экстремизм» в России либо всё же глобальное томленье злого духа",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "послание-президента-фс-рф-10-05-2006",
+   "dct:title": "Послание Президента ФС РФ - 10.05.2006"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "послание-федеральному-собранию-2004",
+   "dct:title": "Послание Федеральному Собранию - 2004"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "последний-гамбит",
+   "dct:title": "Последний гамбит"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "почему-призывая-к-богодержавию-внутренний-предиктор-не-приемлет-послед",
+   "dct:title": "Почему, призывая к Богодержавию, Внутренний Предиктор не приемлет Последний Завет",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "почему-экономическая-наука-должна-стать-прикладной-интерпретацией-доту",
+   "dct:title": "Почему экономическая наука должна стать прикладной интерпретацией ДОТУ",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "правда-ру-о-событиях-в-москве",
+   "dct:title": "ПРАВДА_Ру-О_событиях_в_Москве"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "преступность-и-законность-население-и-государственность",
+   "dct:title": "Преступность и законность население и государственность",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "приди-на-помощь-моему-неверью-о-дианетике-и-саентологии-по-существу-вз",
+   "dct:title": "Приди на помощь моему неверью... О дианетике и саентологии по существу - взгляд со стороны"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "принципы-кадровой-политики-государства-антигосударства-общественной-ин",
+   "dct:title": "Принципы кадровой политики государства, «антигосударства», общественной инициативы"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "про-войны",
+   "dct:title": "Про войны",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "провидение-не-алгебра",
+   "dct:title": "Провидение - не «алгебра»…"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "прогностика-и-программирование-будущего",
+   "dct:title": "Прогностика и программирование будущего",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "прогрессирующий-стабилизец-и-выход-из-него-в-устойчиво-безкризисное-ра",
+   "dct:title": "Прогрессирующий «стабилизец» и выход из него в устойчиво-безкризисное развитие страны",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "проект-закона-о-концепции-общественной-безопасности",
+   "dct:title": "Проект закона о Концепции Общественной Безопасности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "процесс-мировоззренческих-трансформаций-в-мире-и-в-россии-в-прошлом-и-",
+   "dct:title": "Процесс мировоззренческих трансформаций в мире и в России в прошлом и в перспективе",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили",
+   "dct:title": "Психологический аспект истории и перспектив нынешней глобальной цивилизации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "психтроцкизм-и-пидорасинг-угроза-жизни-человечества",
+   "dct:title": "Психтроцкизм и пидорасинг — угроза жизни человечества",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "психтроцкизм-может-быть-и-пафосно-патриотичным-а-не-только-пафосно-инт",
+   "dct:title": "Психтроцкизм может быть и пафосно патриотичным, а не только пафосно интернациональным",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "разгерметизация",
+   "dct:title": "Разгерметизация"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "размышления-при-прочтении-сцен-из-фауста-а-с-пушкина",
+   "dct:title": "Размышления при прочтении «Сцен из Фауста» А.С.Пушкина"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "разрешение-проблем-национальных-взаимоотношений-в-русле-коб",
+   "dct:title": "Разрешение проблем национальных взаимоотношений в русле КОБ"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "реальность-как-воплощение-фантастики-прошлого",
+   "dct:title": "Реальность как воплощение фантастики прошлого",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "рецензия-на-книгу-сущность-человека",
+   "dct:title": "Рецензия на книгу «Сущность человека»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "российское-общество-и-гибель-апл-курск-12-августа-2000-года",
+   "dct:title": "Российское общество и гибель АПЛ «Курск» 12 августа 2000 года"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "россия-наш-дом-или-общеевропейский-газпром",
+   "dct:title": "Россия наш дом или общеевропейский «Газпром»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "руслан-и-людмила",
+   "dct:title": "Руслан и Людмила"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "русское-право-против-библейской-кривды",
+   "dct:title": "Русское право против библейской кривды",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "русское-правоведение-юридическая-чума-на-руси-вылечим",
+   "dct:title": "Русское правоведение — «юридическая чума» на Руси — вылечим"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "сад-растет-сам",
+   "dct:title": "Сад растёт сам",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2009"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "сборник-аналитических-записок-вехи-1989-1995-1998-2004-2005-2007-2010",
+   "dct:title": "Сборник аналитических записок «Вехи» (1989-1995-1998-2004-2005-2007-2010)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1989"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "сборник-аналитических-записок-концептуальная-власть-на-руси",
+   "dct:title": "Сборник аналитических записок «Концептуальная власть на Руси»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "сетевые-технологии-и-управление-революционными-ситуациями",
+   "dct:title": "Сетевые технологии и управление революционными ситуациями",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "системный-кризис-западной-цивилизации",
+   "dct:title": "Системный кризис западной цивилизации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "случайные-совпадения-либо-не-случайные",
+   "dct:title": "Случайные совпадения — либо не случайные…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "смута-на-руси-зарождение-течение-преодоление",
+   "dct:title": "Смута на Руси — зарождение, течение, преодоление…"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "снова-о-будущем-есть-ли-перспективы-у-нынешней-интеллигенции",
+   "dct:title": "Снова о будущем Есть ли перспективы у нынешней интеллигенции",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2001"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "снова-царство-разделившееся-в-самом-себе-это-будет-оставлено-в-прошлом",
+   "dct:title": "Снова «царство, разделившееся в самом себе»  - это будет оставлено в прошлом",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "сопоставление-авраамических-вероучений",
+   "dct:title": "Сопоставление «авраамических» вероучений",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "средства-массовой-информации-в-системе-заклинания-социальной-стихии",
+   "dct:title": "Средства массовой информации в системе заклинания «социальной стихии»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "старые-сценарии-на-новый-лад",
+   "dct:title": "Старые сценарии на новый лад"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "стать-и-быть-самими-собой",
+   "dct:title": "Стать и быть самими собой",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "стенографический-отчет-о-пресс-конференции",
+   "dct:title": "Стенографический отчет о пресс-конференции",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2007"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "стихотворение-стадо",
+   "dct:title": "Стихотворение «Стадо»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "суть-времени-прошедшего-и-перспектив",
+   "dct:title": "Суть времени - прошедшего и перспектив",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2011"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "тайна-загадочного-сада-15-камней-реандзи",
+   "dct:title": "Тайна загадочного сада 15 камней Рёандзи"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "тезисы-о-текущей-политике",
+   "dct:title": "Тезисы о текущей политике",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "тезисы-рецензии-на-повесть-инквизитор",
+   "dct:title": "Тезисы рецензии на повесть «Инквизитор»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "тест-на-интеллектуальность-и-порядочность-для-представителей-государст",
+   "dct:title": "Тест на интеллектуальность и порядочность для представителей государственной власти России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "титаник-это-действительно-глобальный-диагноз-а-не-эпизод-в-истории-мор",
+   "dct:title": "«Титаник» - это действительно глобальный диагноз, а не эпизод в истории мореплавания и киноискусства",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "третий-рим-россия-или-сша",
+   "dct:title": "Третий Рим Россия или США",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "ты-не-видишь-в-творении-милосердного-никакой-несоразмерности",
+   "dct:title": "Ты не видишь в творении Милосердного никакой несоразмерности…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "убийство-саши-и-маши-предлог-для-фашизации-россии",
+   "dct:title": "Убийство Саши и Маши — предлог для фашизации России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "ураган-катрина-как-проявитель-социальной-проблематики",
+   "dct:title": "Ураган «Катрина» как проявитель социальной проблематики",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2005"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "учебник-введение-в-обществознание-как-выражение-профанации-педагогами-",
+   "dct:title": "Учебник «Введение в обществознание» как выражение профанации педагогами своего долга",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "фашиствующий-семитизм-с-точки-зрения-человечности",
+   "dct:title": "Фашиствующий «семитизм» с точки зрения человечности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "федеральный-список-экстремистских-материалов-как-объективное-выражение",
+   "dct:title": "Федеральный список экстремистских материалов как объективное выражение разрушения …",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "финансовый-климат-и-перспективы-модернизации",
+   "dct:title": "Финансовый климат и перспективы модернизации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2010"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "форд-и-сталин-о-том-как-жить-по-человечески",
+   "dct:title": "Форд и Сталин - о том, как жить по-человечески"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "хотите-ли-вы-быть-рабами-ростовщиков-ответ-российской-газете",
+   "dct:title": "Хотите ли вы быть рабами ростовщиков (ответ Российской газете)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2003"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "церковь-и-государственность-в-россии-главенству-чего-отдать-предпочтен",
+   "dct:title": "Церковь и государственность в России — главенству чего отдать предпочтение",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "чем-больше-голосов-вы-отдадите-гайдару-тем-быстрее-мы-придем-к-победе-",
+   "dct:title": "Чем больше голосов вы отдадите Гайдару, тем быстрее мы придём к победе коммунистического труда",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1995"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "чему-быть-того-не-миновать-а-чему-быть-выбор-всех-нас",
+   "dct:title": "Чему быть — того не миновать. А чему быть — выбор всех нас…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "чернильный-визитер-рецензия-на-повесть-инквизитор",
+   "dct:title": "Чернильный визитёр (рецензия на повесть «Инквизитор»)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "четыре-ступени-информационной-безопасности",
+   "dct:title": "Четыре ступени информационной безопасности",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "что-за-перевалом-перестройки",
+   "dct:title": "Что за перевалом перестройки",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1990"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "что-человеку-нужно",
+   "dct:title": "Что человеку нужно",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2004"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "эгоист-подобен-давно-сидящему-в-колодце",
+   "dct:title": "Эгоист подобен давно сидящему в колодце",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1998"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "экономические-ли-проблемы-у-капитализма-в-ссср",
+   "dct:title": "Экономические ли проблемы у капитализма в СССР",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "энергетика-и-экология-пути-преодоления-кризиса",
+   "dct:title": "Энергетика и экология пути преодоления кризиса",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1997"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "югославская-трагедия-о-югославско-натовском-маразме-образца-марта-1999",
+   "dct:title": "Югославская трагедия (О югославско-натовском маразме образца марта 1999 года)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1999"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "язык-наш-как-объективная-данность-и-как-культура-речи",
+   "dct:title": "Язык наш как объективная данность и как культура речи"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "мертвая-вода-ред-2015-года",
+   "dct:title": "Мёртвая вода",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "снова-об-этике-и-патриотизме",
+   "dct:title": "Снова об этике и патриотизме...",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2025"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "суверенная-философия-что-это-такое-и-какая-философская-культура-необхо",
+   "dct:title": "«Суверенная философия»: что это такое и какая философская культура необходима России",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2025"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "экономика-инновационного-развития-в-условиях-глобализации-ред-2025-год",
+   "dct:title": "Экономика инновационного развития в условиях глобализации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2025"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no1-146-2025-г-а-воз-и-ныне-там",
+   "dct:title": "О текущем моменте №1(146), 2025 г. А воз и ныне там…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2025"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no1-145-2024-г-в-стране-невыученных-уроков-show-must",
+   "dct:title": "О текущем моменте №1(145), 2024 г. В стране невыученных уроков: show must go on?",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2024"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "еще-одна-мина-заложенная-в-и-лениным-под-будущее-россии",
+   "dct:title": "Ещё одна «мина», заложенная В.И. Лениным под будущее России…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2024"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "демографическая-агрессия-трудовых-мигрантов-угроза-будущему-россии-и-е",
+   "dct:title": "Демографическая агрессия «трудовых» мигрантов — угроза будущему России и её народов",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2024"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "русский-мир-что-стоит-в-жизни-за-этими-словами-в-прошлом-в-настоящем-и",
+   "dct:title": "«Русский мир»: что стоит в Жизни за этими словами в прошлом, в настоящем и в будущем (1-я редакция)"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "биологические-и-личностные-основы-развития-цивилизации",
+   "dct:title": "Биологические и личностные основы развития цивилизации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2023"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no1-144-2023г-о-положении-в-стране-и-перспективах",
+   "dct:title": "О текущем моменте №1(144), 2023г. О положении в стране и перспективах",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2023"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "справочник-по-межкультурному-взаимодействию",
+   "dct:title": "Справочник по межкультурному взаимодействию"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "импортонеуязвимость-страны-как-это-надо-делать",
+   "dct:title": "Импортонеуязвимость страны: как это надо делать",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2022"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "русский-мир-что-стоит-за-этим-словами-в-настоящем-и-в-будущем-ч-2",
+   "dct:title": "«Русский мир»: что стоит за этим словами в настоящем и в будущем (ч.2)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2022"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "русский-мир-что-стоит-за-этим-словами-в-настоящем-и-в-будущем-ч-1",
+   "dct:title": "«Русский мир»: что стоит за этим словами в настоящем и в будущем (ч.1)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2022"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no3-143-2021г-о-пресс-конференции-в-в-путина-23-12-2",
+   "dct:title": "О текущем моменте №3(143), 2021г. О пресс-конференции В.В. Путина 23.12.2021 г.: оглашения, умолчания, реальность",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2022"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "учите-уроки-истории",
+   "dct:title": "Учите уроки истории…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2021"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no2-142-2021г-о-выборах-депутатов-госдумы-viii-созыв",
+   "dct:title": "О текущем моменте №2(142), 2021г. О выборах депутатов Госдумы VIII созыва и перспективах",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2021"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "тупик-европейской-медицинской-традиции-и-потребность-общества-в-оздоро",
+   "dct:title": "Тупик европейской медицинской традиции и потребность общества в оздоровлении и здравоохранении (ч.1)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2021"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no1-141-2021г-давосская-повестка-дня-2021-выступлени",
+   "dct:title": "О текущем моменте №1(141), 2021г. «Давосская повестка дня 2021», выступление В.В. Путина: оглашения и умолчания",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2021"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "научно-методологическое-обеспечение-социального-управления-и-наша-жизн",
+   "dct:title": "Научно-методологическое обеспечение социального управления и наша жизнь",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2020"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-деятельности-фонда-концептуальных-технологий-алтай-после-18-06-2018-",
+   "dct:title": "О деятельности Фонда концептуальных технологий «Алтай» после 18.06.2018 года",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2020"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no1-140-2020г-от-себя-не-эмигрируешь-не-сбежишь-в-пу",
+   "dct:title": "О текущем моменте №1(140), 2020г. От себя не эмигрируешь, не сбежишь в пу́стынь, себя не обманешь…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2020"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "вяло-текущая-тягомотина-и-главная-задача-общества-формирование-педагог",
+   "dct:title": "Вяло текущая тягомотина и главная задача общества — формирование педагогической субкультуры",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2019"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no6-138-2018г-к-100-летию-завершения-боевых-действий",
+   "dct:title": "О текущем моменте №6(138), 2018г. К 100-летию завершения боевых действий первой мировой войны ХХ века",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no5-137-2018г-о-выступлении-в-в-путина-по-поводу-пен",
+   "dct:title": "О текущем моменте №5(137), 2018г. О выступлении В.В. Путина по поводу пенсионной реформы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no1-139-2019г-снова-о-перспективах",
+   "dct:title": "О текущем моменте №1(139), 2019г. Снова о перспективах…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2019"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "об-этике-и-ее-роли-в-жизни",
+   "dct:title": "Об этике и её роли в жизни",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2019"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-романе-айн-рэнд-атлант-расправил-плечи",
+   "dct:title": "О романе Айн Рэнд «Атлант расправил плечи»",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2018"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no6-127-2016г-новая-доктрина-путина",
+   "dct:title": "О текущем моменте №6(127), 2016г. Новая доктрина Путина?",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2016"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "от-корпоративности-под-покровом-идей-к-соборности-в-богодержавии-ред-2",
+   "dct:title": "От корпоративности под покровом идей к соборности в Богодержавии",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "и-будете-искать-кому-бы-продаться-но-не-будет-на-вас-покупающего-ред-2",
+   "dct:title": "И будете искать, кому бы продаться, но не будет на вас покупающего…",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "философия-управления-качеством",
+   "dct:title": "Философия управления качеством"
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "к-богодержавию-ред-2015-г",
+   "dct:title": "К Богодержавию",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "основы-правоведения-юридическая-чума-на-руси-вылечим-ч-1-2",
+   "dct:title": "Основы правоведения: «юридическая чума» на Руси — вылечим (ч.1,2)",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2014"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "печальное-наследие-атлантиды-ред-2013-г",
+   "dct:title": "Печальное наследие Атлантиды",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2013"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "либерализм-враг-свободы-ред-2015-г",
+   "dct:title": "Либерализм – враг свободы",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2015"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-текущем-моменте-no2-50-2006г-иудин-грех-хх-съезда",
+   "dct:title": "О текущем моменте №2(50), 2006г. Иудин грех ХХ съезда",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "возможные-пути-восстановления-государственности-русской-цивилизации",
+   "dct:title": "Возможные пути восстановления государственности Русской цивилизации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2006"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "о-культуре-толпо-элитаризма-и-большевизма-в-период-строительства-социа",
+   "dct:title": "О культуре толпо-«элитаризма» и большевизма в период строительства социализма",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "2002"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "общественная-этико-экономическая-экспертиза-научного-отчета-академии-н",
+   "dct:title": "Общественная этико-экономическая экспертиза научного отчета Академии Народного Хозяйства при Правительстве Российской Федерации",
+   "dct:issued": {
+    "@type": "xsd:gYear",
+    "@value": "1996"
+   }
+  },
+  {
+   "@type": "dcat:Dataset",
+   "dct:identifier": "semantic-layer",
+   "dct:title": "Семантический слой: темы, понятия, адреса цитирования",
+   "dcat:distribution": [
+    {
+     "@type": "dcat:Distribution",
+     "dct:format": "application/jsonlines",
+     "dcat:downloadURL": "data/entities.json"
+    }
+   ]
+  }
+ ]
+}

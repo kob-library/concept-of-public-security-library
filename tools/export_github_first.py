@@ -49,7 +49,7 @@ REPO = Path(__file__).resolve().parents[1]
 # are NOT covered by that license. export/* release docs stay internal.
 CODE_FILES = ['requirements.txt', '.gitignore', 'AGENTS.md']
 CODE_DIRS = ['tools', 'converter', 'tests', '.github/workflows']
-SKIP_NAMES = {'__pycache__'}
+SKIP_NAMES = {'__pycache__', '.pytest_cache'}
 # publish.yml is a manual GitHub Pages deploy of the static site; a book-only
 # repository without a site must not carry a workflow that suggests one.
 SKIP_FILES = {'publish.yml'}

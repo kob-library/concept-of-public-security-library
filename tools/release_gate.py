@@ -137,7 +137,19 @@ def check_public_media(corpus:Path, volumes, media_allowlist:Path, approval:dict
     byte-changed files, duplicate/missing entries and out-of-sandbox
     paths all block the release.
     """
-    publishable=tom_publishable_media(registry_rows,volumes)
+    if registry_rows:
+        publishable=tom_publishable_media(registry_rows,volumes)
+        publishable_ids={fid for m in publishable.values()
+                         for fid in m.values()}
+    else:
+        # legacy corpora without a figure registry: every preview file in
+        # assets/media is publishable and must be individually allowlisted
+        publishable={v:{p.name:None for p in
+                        (corpus/f'tom-{v}/assets/media').rglob('*')
+                        if p.is_file()}
+                     for v in volumes
+                     if (corpus/f'tom-{v}/assets/media').is_dir()}
+        publishable_ids=set()
     total=sum(len(x) for x in publishable.values())
     if not total:
         notes.append('No publishable preview media present');return
@@ -147,7 +159,6 @@ def check_public_media(corpus:Path, volumes, media_allowlist:Path, approval:dict
         return
     try:rows=jsonl(media_allowlist)
     except Exception:reasons.append('Public media allowlist unparseable');return
-    publishable_ids={fid for m in publishable.values() for fid in m.values()}
     scope=approval.get('release_scope')
     scope_name=scope.get('name') if isinstance(scope,dict) else scope
     for e in rows:
@@ -168,8 +179,7 @@ def check_public_media(corpus:Path, volumes, media_allowlist:Path, approval:dict
         src=e.get('source_image')
         fid=e.get('figure_id')
         if fid not in publishable_ids and (v,src) not in verified_media:
-            reasons.append(f'Allowlist entry {path} (volume {v}) references neither a '
-                           f'registry-publishable figure_id nor a verified queue original');continue
+            reasons.append(f'Allowlist entry {path} (volume {v}) does not reference a verified queue original or registry-publishable figure: {src}');continue
         entries[key]=e
     covered=set()
     for v,names in publishable.items():
@@ -211,11 +221,12 @@ def check_release(corpus:Path, release_file:Path):
     registry_rows=[]
     reg_path=release_file.parent/'figures_registry.jsonl'
     if media_scope=='allowlist':
-        if not reg_path.is_file():
-            reasons.append('Figure registry missing; required to define the publishable media set')
-        else:
+        if reg_path.is_file():
             try:registry_rows=jsonl(reg_path)
             except Exception:reasons.append('Figure registry unparseable')
+        else:
+            notes.append('Figure registry absent — legacy verified-queue '
+                         'media gating applies (assets/media = previews)')
     # Registry-decided objects supersede legacy queue tracking rows: a queue
     # entry whose image already carries a final registry status (published,
     # duplicate, metadata_only_*, decorative_excluded) is resolved by the

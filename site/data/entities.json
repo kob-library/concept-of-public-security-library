@@ -1,0 +1,824 @@
+{
+ "generated_by": "semantic_layer",
+ "entities": [
+  {
+   "kind": "topic",
+   "id": "topic-management",
+   "label": "Управление и теория управления",
+   "members": 25,
+   "site_path": "topics/topic-management.html",
+   "membership_rule": {
+    "type": "title_terms",
+    "terms": [
+     "управлени"
+    ]
+   },
+   "membership_rule_version": 1
+  },
+  {
+   "kind": "topic",
+   "id": "topic-society",
+   "label": "Общество и социальные процессы",
+   "members": 26,
+   "site_path": "topics/topic-society.html",
+   "membership_rule": {
+    "type": "title_terms",
+    "terms": [
+     "обществ",
+     "социальн",
+     "социолог"
+    ]
+   },
+   "membership_rule_version": 1
+  },
+  {
+   "kind": "topic",
+   "id": "topic-egregors",
+   "label": "Эгрегоры и матрично-эгрегориальное управление",
+   "members": 2,
+   "site_path": "topics/topic-egregors.html",
+   "membership_rule": {
+    "type": "title_terms",
+    "terms": [
+     "эгрегор",
+     "матрич"
+    ]
+   },
+   "membership_rule_version": 1
+  },
+  {
+   "kind": "concept",
+   "id": "cp-egregor",
+   "term": "эгрегор",
+   "aliases": [
+    "эгрегоры",
+    "эгрегориальный"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-egregor.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s04-08",
+    "os-3-73a6462301de-ch-10-s10-05",
+    "os-4-626d5f616670-ch-13-s13-02-02"
+   ],
+   "related_topic_ids": [
+    "topic-egregors"
+   ],
+   "related_concept_ids": [
+    "cp-matrichno-egregorialnoe-upravlenie",
+    "cp-sobornyiy-intellekt"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-matrichno-egregorialnoe-upravlenie",
+   "term": "матрично-эгрегориальное управление",
+   "aliases": [
+    "эгрегориально-матричное управление",
+    "эгрегориальное управление",
+    "матричное управление"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-matrichno-egregorialnoe-upravlenie.html",
+   "evidence_section_ids": [
+    "os-4-626d5f616670-ch-13-s13-02-02",
+    "os-3-73a6462301de-ch-10-s10-05"
+   ],
+   "related_topic_ids": [
+    "topic-egregors"
+   ],
+   "related_concept_ids": [
+    "cp-egregor",
+    "cp-besstrukturnoe-upravlenie"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-supersistema",
+   "term": "суперсистема",
+   "aliases": [
+    "суперсистемы",
+    "суперсистемный"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-supersistema.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-12",
+    "os-t1-source-28876226106e-s06-08"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-sobornyiy-intellekt",
+    "cp-besstrukturnoe-upravlenie"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-tip-stroya-psihiki",
+   "term": "тип строя психики",
+   "aliases": [
+    "типы строя психики",
+    "строй психики"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-tip-stroya-psihiki.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s04-07",
+    "os-3-73a6462301de-ch-10-s10-02",
+    "os-3-73a6462301de-ch-10-s10-03"
+   ],
+   "related_topic_ids": [
+    "topic-society"
+   ],
+   "related_concept_ids": [
+    "cp-egregor",
+    "cp-obraz-zhizni"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-polnaya-funktsiya-upravleniya",
+   "term": "полная функция управления",
+   "aliases": [
+    "полной функции управления"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-polnaya-funktsiya-upravleniya.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-03",
+    "os-2-17468c374b02-ch-08-s08-05"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-vektor-tseley",
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-vektor-tseley",
+   "term": "вектор целей",
+   "aliases": [
+    "вектора целей",
+    "вектор ошибки"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-vektor-tseley.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-05"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-polnaya-funktsiya-upravleniya",
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-dotu",
+   "term": "достаточно общая теория управления",
+   "aliases": [
+    "ДОТУ",
+    "достаточно общей теории управления"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-dotu.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-ch-06",
+    "os-t1-source-28876226106e-s06-01"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-polnaya-funktsiya-upravleniya",
+    "cp-metod-dinamicheskogo-programmirovaniya",
+    "cp-supersistema"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-kontseptualnaya-vlast",
+   "term": "концептуальная власть",
+   "aliases": [
+    "концептуальной власти"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-kontseptualnaya-vlast.html",
+   "evidence_section_ids": [
+    "os-2-17468c374b02-ch-08-s08-05"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-bibleyskiy-proekt",
+   "term": "библейский проект",
+   "aliases": [
+    "библейского проекта"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-bibleyskiy-proekt.html",
+   "evidence_section_ids": [
+    "os-2-17468c374b02-ch-08-s08-07",
+    "os-3-73a6462301de-ch-10-s10-05",
+    "os-2-17468c374b02-ap-02"
+   ],
+   "related_topic_ids": [
+    "topic-egregors"
+   ],
+   "related_concept_ids": [
+    "cp-egregor"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-besstrukturnoe-upravlenie",
+   "term": "бесструктурное управление",
+   "aliases": [
+    "бесструктурный способ управления",
+    "бесструктурным управлением"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-besstrukturnoe-upravlenie.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-08",
+    "os-t1-source-28876226106e-s06-12"
+   ],
+   "related_topic_ids": [
+    "topic-management",
+    "topic-egregors"
+   ],
+   "related_concept_ids": [
+    "cp-supersistema",
+    "cp-matrichno-egregorialnoe-upravlenie"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-metod-dinamicheskogo-programmirovaniya",
+   "term": "метод динамического программирования",
+   "aliases": [
+    "динамического программирования"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-metod-dinamicheskogo-programmirovaniya.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-13"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-dotu",
+    "cp-polnaya-funktsiya-upravleniya"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-informatsionno-algoritmicheskaya-bezopasnost",
+   "term": "информационно-алгоритмическая безопасность",
+   "aliases": [
+    "информационно-алгоритмической безопасности"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-informatsionno-algoritmicheskaya-bezopasnost.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-11"
+   ],
+   "related_topic_ids": [
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-dotu"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-sobornyiy-intellekt",
+   "term": "соборный интеллект",
+   "aliases": [
+    "соборного интеллекта",
+    "соборность"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-sobornyiy-intellekt.html",
+   "evidence_section_ids": [
+    "os-t1-source-28876226106e-s06-12"
+   ],
+   "related_topic_ids": [
+    "topic-egregors",
+    "topic-management"
+   ],
+   "related_concept_ids": [
+    "cp-supersistema",
+    "cp-egregor"
+   ]
+  },
+  {
+   "kind": "concept",
+   "id": "cp-obraz-zhizni",
+   "term": "образ жизни",
+   "aliases": [
+    "образе жизни"
+   ],
+   "definition_scope": "corpus_term",
+   "site_path": "concepts/cp-obraz-zhizni.html",
+   "evidence_section_ids": [
+    "os-6-e835b1f35db3-ch-22"
+   ],
+   "related_topic_ids": [
+    "topic-society"
+   ],
+   "related_concept_ids": [
+    "cp-tip-stroya-psihiki"
+   ]
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-01-07",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s01-07",
+   "anchor": "sec-01-07",
+   "site_path": "tom-1/sections/01-07.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-04-07",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s04-07",
+   "anchor": "sec-04-07",
+   "site_path": "tom-1/sections/04-07.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-04-08",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s04-08",
+   "anchor": "sec-04-08",
+   "site_path": "tom-1/sections/04-08.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-ch06",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-ch-06",
+   "anchor": "sec-ch-06",
+   "site_path": "tom-1/chapters/06.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-01",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-01",
+   "anchor": "sec-06-01",
+   "site_path": "tom-1/sections/06-01.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-03",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-03",
+   "anchor": "sec-06-03",
+   "site_path": "tom-1/sections/06-03.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-05",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-05",
+   "anchor": "sec-06-05",
+   "site_path": "tom-1/sections/06-05.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-08",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-08",
+   "anchor": "sec-06-08",
+   "site_path": "tom-1/sections/06-08.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-11",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-11",
+   "anchor": "sec-06-11",
+   "site_path": "tom-1/sections/06-11.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-12",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-12",
+   "anchor": "sec-06-12",
+   "site_path": "tom-1/sections/06-12.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t1-06-13",
+   "work_id": "osnovy-sociologii-tom-1",
+   "section_id": "os-t1-source-28876226106e-s06-13",
+   "anchor": "sec-06-13",
+   "site_path": "tom-1/sections/06-13.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t2-08-05",
+   "work_id": "osnovy-sociologii-tom-2",
+   "section_id": "os-2-17468c374b02-ch-08-s08-05",
+   "anchor": "sec-08-05",
+   "site_path": "tom-2/sections/ch-08-s08-05.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t2-08-07",
+   "work_id": "osnovy-sociologii-tom-2",
+   "section_id": "os-2-17468c374b02-ch-08-s08-07",
+   "anchor": "sec-08-07",
+   "site_path": "tom-2/sections/ch-08-s08-07.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t2-ap-02",
+   "work_id": "osnovy-sociologii-tom-2",
+   "section_id": "os-2-17468c374b02-ap-02",
+   "anchor": "sec-ap-02",
+   "site_path": "tom-2/appendices/ap-02.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t3-ch10",
+   "work_id": "osnovy-sociologii-tom-3",
+   "section_id": "os-3-73a6462301de-ch-10",
+   "anchor": "sec-ch-10",
+   "site_path": "tom-3/chapters/ch-10.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t3-10-02",
+   "work_id": "osnovy-sociologii-tom-3",
+   "section_id": "os-3-73a6462301de-ch-10-s10-02",
+   "anchor": "sec-10-02",
+   "site_path": "tom-3/sections/ch-10-s10-02.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t3-10-05",
+   "work_id": "osnovy-sociologii-tom-3",
+   "section_id": "os-3-73a6462301de-ch-10-s10-05",
+   "anchor": "sec-10-05",
+   "site_path": "tom-3/sections/ch-10-s10-05.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t4-ch13",
+   "work_id": "osnovy-sociologii-tom-4",
+   "section_id": "os-4-626d5f616670-ch-13",
+   "anchor": "sec-ch-13",
+   "site_path": "tom-4/chapters/ch-13.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t4-13-02-02",
+   "work_id": "osnovy-sociologii-tom-4",
+   "section_id": "os-4-626d5f616670-ch-13-s13-02-02",
+   "anchor": "sec-13-02-02",
+   "site_path": "tom-4/subsections/ch-13-s13-02-02.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t5-19-03-01",
+   "work_id": "osnovy-sociologii-tom-5",
+   "section_id": "os-5-234bfeb38188-ch-19-s19-03-01",
+   "anchor": "sec-19-03-01",
+   "site_path": "tom-5/subsections/ch-19-s19-03-01.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-t6-ch22",
+   "work_id": "osnovy-sociologii-tom-6",
+   "section_id": "os-6-e835b1f35db3-ch-22",
+   "anchor": "sec-ch-22",
+   "site_path": "tom-6/chapters/ch-22.html",
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-dotu-02",
+   "work_id": "достаточно-общая-теория-управления",
+   "section_id": "достаточно-общая-теория-управления/s02",
+   "anchor": "sec-dotu-02",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-dotu-09",
+   "work_id": "достаточно-общая-теория-управления",
+   "section_id": "достаточно-общая-теория-управления/s09",
+   "anchor": "sec-dotu-09",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-dotu-11",
+   "work_id": "достаточно-общая-теория-управления",
+   "section_id": "достаточно-общая-теория-управления/s11",
+   "anchor": "sec-dotu-11",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-mv-15",
+   "work_id": "мертвая-вода-ред-2015-года",
+   "section_id": "мертвая-вода-ред-2015-года/s15",
+   "anchor": "sec-mv-15",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-mv-21",
+   "work_id": "мертвая-вода-ред-2015-года",
+   "section_id": "мертвая-вода-ред-2015-года/s21",
+   "anchor": "sec-mv-21",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-mv-41",
+   "work_id": "мертвая-вода-ред-2015-года",
+   "section_id": "мертвая-вода-ред-2015-года/s41",
+   "anchor": "sec-mv-41",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kv-sbornik-02",
+   "work_id": "сборник-аналитических-записок-концептуальная-власть-на-руси",
+   "section_id": "сборник-аналитических-записок-концептуальная-власть-на-руси/s02",
+   "anchor": "sec-kv-02",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kv-iz-proshlogo-01",
+   "work_id": "из-прошлого-русской-концептуальной-власти",
+   "section_id": "из-прошлого-русской-концептуальной-власти/s01",
+   "anchor": "sec-kv-ip-01",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kursk-06",
+   "work_id": "российское-общество-и-гибель-апл-курск-12-августа-2000-года",
+   "section_id": "российское-общество-и-гибель-апл-курск-12-августа-2000-года/s06",
+   "anchor": "sec-kursk-06",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-kadry-10",
+   "work_id": "принципы-кадровой-политики-государства-антигосударства-общественной-ин",
+   "section_id": "принципы-кадровой-политики-государства-антигосударства-общественной-ин/s10",
+   "anchor": "sec-kadry-10",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "citation_target",
+   "id": "ct-psih-11",
+   "work_id": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили",
+   "section_id": "психологический-аспект-истории-и-перспектив-нынешней-глобальной-цивили/s11",
+   "anchor": "sec-psih-11",
+   "site_path": null,
+   "language": "ru"
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-topic-management-ru",
+   "entity_id": "topic-management",
+   "language": "ru",
+   "canonical_name": "Управление и теория управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-topic-management-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-topic-society-ru",
+   "entity_id": "topic-society",
+   "language": "ru",
+   "canonical_name": "Общество и социальные процессы",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-topic-society-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-topic-egregors-ru",
+   "entity_id": "topic-egregors",
+   "language": "ru",
+   "canonical_name": "Эгрегоры и матрично-эгрегориальное управление",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-topic-egregors-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-egregor-ru",
+   "entity_id": "cp-egregor",
+   "language": "ru",
+   "canonical_name": "эгрегор",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-egregor-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-matrichno-egregorialnoe-upravlenie-ru",
+   "entity_id": "cp-matrichno-egregorialnoe-upravlenie",
+   "language": "ru",
+   "canonical_name": "матрично-эгрегориальное управление",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-matrichno-egregorialnoe-upravlenie-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-supersistema-ru",
+   "entity_id": "cp-supersistema",
+   "language": "ru",
+   "canonical_name": "суперсистема",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-supersistema-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-tip-stroya-psihiki-ru",
+   "entity_id": "cp-tip-stroya-psihiki",
+   "language": "ru",
+   "canonical_name": "тип строя психики",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-tip-stroya-psihiki-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-polnaya-funktsiya-upravleniya-ru",
+   "entity_id": "cp-polnaya-funktsiya-upravleniya",
+   "language": "ru",
+   "canonical_name": "полная функция управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-polnaya-funktsiya-upravleniya-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-vektor-tseley-ru",
+   "entity_id": "cp-vektor-tseley",
+   "language": "ru",
+   "canonical_name": "вектор целей",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-vektor-tseley-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-dotu-ru",
+   "entity_id": "cp-dotu",
+   "language": "ru",
+   "canonical_name": "достаточно общая теория управления",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-dotu-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-kontseptualnaya-vlast-ru",
+   "entity_id": "cp-kontseptualnaya-vlast",
+   "language": "ru",
+   "canonical_name": "концептуальная власть",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-kontseptualnaya-vlast-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-bibleyskiy-proekt-ru",
+   "entity_id": "cp-bibleyskiy-proekt",
+   "language": "ru",
+   "canonical_name": "библейский проект",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-bibleyskiy-proekt-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-besstrukturnoe-upravlenie-ru",
+   "entity_id": "cp-besstrukturnoe-upravlenie",
+   "language": "ru",
+   "canonical_name": "бесструктурное управление",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-besstrukturnoe-upravlenie-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-metod-dinamicheskogo-programmirovaniya-ru",
+   "entity_id": "cp-metod-dinamicheskogo-programmirovaniya",
+   "language": "ru",
+   "canonical_name": "метод динамического программирования",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-metod-dinamicheskogo-programmirovaniya-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-informatsionno-algoritmicheskaya-bezopasnost-ru",
+   "entity_id": "cp-informatsionno-algoritmicheskaya-bezopasnost",
+   "language": "ru",
+   "canonical_name": "информационно-алгоритмическая безопасность",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-informatsionno-algoritmicheskaya-bezopasnost-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-sobornyiy-intellekt-ru",
+   "entity_id": "cp-sobornyiy-intellekt",
+   "language": "ru",
+   "canonical_name": "соборный интеллект",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-sobornyiy-intellekt-ru",
+   "indexable": false
+  },
+  {
+   "kind": "language_variant",
+   "id": "lv-cp-obraz-zhizni-ru",
+   "entity_id": "cp-obraz-zhizni",
+   "language": "ru",
+   "canonical_name": "образ жизни",
+   "translation_status": "canonical",
+   "review_status": "reviewed",
+   "canonical_variant_id": "lv-cp-obraz-zhizni-ru",
+   "indexable": false
+  }
+ ]
+}

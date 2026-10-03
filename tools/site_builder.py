@@ -7,6 +7,7 @@ import argparse, collections, hashlib, html, json, re, shutil, os
 from pathlib import Path
 from urllib.parse import unquote, urlparse
 import mistune
+import semantic_layer as sem
 
 VOLUMES=range(1,7)
 DEFAULT_ROBOTS='noindex,nofollow'
@@ -40,7 +41,7 @@ function el(tag,text,klass){const e=document.createElement(tag);if(text)e.textCo
 function doSearch(){const q=input.value.toLocaleLowerCase('ru').trim().split(/\\s+/).filter(Boolean);area.replaceChildren();if(!q.length)return;
 const hits=[];for(const item of index){const text=(item.title+' '+item.text).toLocaleLowerCase('ru');if(q.every(w=>text.includes(w))){const score=q.reduce((s,w)=>s+(item.title.toLocaleLowerCase('ru').includes(w)?10:1),0);hits.push({item,score});}}
 hits.sort((a,b)=>b.score-a.score);area.append(el('p','Найдено: '+hits.length+'. Показаны первые 50 совпадений.','muted'));
-for(const v of hits.slice(0,50)){const block=el('div',null,'search-result');const a=el('a',v.item.title);if(/^[a-z][a-z0-9+.-]*:/i.test(v.item.url))continue;a.href=v.item.url;const par=el('p',v.item.text.slice(0,380));const sub=el('small','Том '+v.item.volume+' · '+v.item.section_id);block.append(a,par,sub);area.append(block);}}
+for(const v of hits.slice(0,50)){const block=el('div',null,'search-result');const a=el('a',v.item.title);if(/^[a-z][a-z0-9+.-]*:/i.test(v.item.url))continue;a.href=v.item.url;const par=el('p',v.item.text.slice(0,380));const sub=el('small',v.item.kind==='concept'?('понятие · '+v.item.section_id):('Том '+v.item.volume+' · '+v.item.section_id));block.append(a,par,sub);area.append(block);}}
 input.addEventListener('input',doSearch);
 '''
 
@@ -49,13 +50,14 @@ def esc(x):return html.escape(str(x),quote=True)
 def redirect_markdown_links(s):
     # Marked-up HTML produced with mistune escaping raw HTML.
     return re.sub(r'(href=["\'])([^"\']+?)\.md(?=(?:#[^"\']*)?["\'])',lambda m:m.group(1)+m.group(2)+'.html',s)
-def standalone(title,main,side='',rootprefix='',robots=None,reader=False,desc=None,canonical=None):
+def standalone(title,main,side='',rootprefix='',robots=None,reader=False,desc=None,canonical=None,jsonld=None):
     if robots is None:robots=DEFAULT_ROBOTS
     robots_tag=f'<meta name="robots" content="{robots}">'
     desc_tag=f'<meta name="description" content="{esc(desc[:250])}">' if desc else ''
     canon_tag=f'<link rel="canonical" href="{esc(canonical)}">' if canonical else ''
+    jsonld_tag=jsonld or ''
     reader_tag=f'<script src="{rootprefix}assets/reader.js" defer></script>' if reader else ''
-    return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{robots_tag}{desc_tag}{canon_tag}<title>{esc(title)}</title><link rel="stylesheet" href="{rootprefix}assets/style.css">{reader_tag}</head><body><header><a href="{rootprefix}index.html"><strong>Корпус «Основы социологии»</strong></a> · <span style="opacity:.8">структурированный архив первоисточников</span></header><div class="wrap"><nav><a href="{rootprefix}index.html">← Вся библиотека</a>{side}</nav><article>{main}</article></div></body></html>'''
+    return f'''<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{robots_tag}{desc_tag}{canon_tag}{jsonld_tag}<title>{esc(title)}</title><link rel="stylesheet" href="{rootprefix}assets/style.css">{reader_tag}</head><body><header><a href="{rootprefix}index.html"><strong>Корпус «Основы социологии»</strong></a> · <span style="opacity:.8">структурированный архив первоисточников</span></header><div class="wrap"><nav><a href="{rootprefix}index.html">← Вся библиотека</a>{side}</nav><article>{main}</article></div></body></html>'''
 
 def header_removed(md):return re.sub(r'\A---\s*\n.*?\n---\s*\n','',md,flags=re.S)
 
@@ -149,6 +151,7 @@ RUBRICS = [
     ('Культура и мировоззрение', ['культур', 'мировоззрени']),
     ('Психология и личность', ['психолог', 'личност']),
     ('Экономика и хозяйство', ['экономи', 'хозяйств']),
+    ('Эгрегоры и матрично-эгрегориальное управление', ['эгрегор', 'матрич']),
 ]
 
 def build_topics_page(all_sections, out:Path, base_url:str):
@@ -177,11 +180,21 @@ def build_topics_page(all_sections, out:Path, base_url:str):
         canonical=(base_url.rstrip('/')+'/topics.html') if base_url else None),encoding='utf8')
     return sum(1 for _ in blocks)
 
-def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
+def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str='',editorial:Path|None=None):
     global DEFAULT_ROBOTS
     # 'candidate' renders the exact public file set for review/dry-run but is
     # marked noindex and carries a not-for-publication banner; it never deploys.
     if mode not in ('internal','public','candidate'):raise SystemExit(f'unknown mode {mode}')
+    # Editorial semantic layer (topics/concepts/citations/variants). Schema
+    # errors are fatal everywhere: silently shipping a partial semantic map
+    # is worse than no semantic layer at all.
+    ed=sem.load_editorial(editorial if editorial is not None
+                          else Path(__file__).resolve().parents[1]/'editorial')
+    ed_errors=sem.validate_records(ed)
+    if ed_errors:
+        raise SystemExit('EDITORIAL RECORDS INVALID:\n- '+'\n- '.join(ed_errors))
+    cite_by_sec={c['section_id']:c for c in ed['citations']
+                 if c.get('status')=='active' and c.get('site_path')}
     DEFAULT_ROBOTS='index,follow' if mode=='public' else 'noindex,nofollow'
     if mode=='public':
         ensure_public_gate(corpus,release or Path('release/release_approval.json'))
@@ -194,6 +207,18 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
     # (candidate) or refuse (public) Markdown references to unapproved media.
     allow=load_media_allowlist((release.parent/'public_media_allowlist.jsonl') if release else None)
     scope=load_release_scope(release) if mode!='internal' else {'media':'allowlist','pdfs':'ship','volumes':list(VOLUMES),'canonical_pdf_url':''}
+    # When a figure registry exists it is the decision artifact: only
+    # registry-publishable files may ship, and non-publishable refs are
+    # omitted with a note — not treated as unapproved publishable media.
+    # Without a registry, legacy strict mode applies (every media ref is
+    # publishable and must be allowlisted).
+    publishable=None
+    if mode!='internal' and scope['media']=='allowlist' and release:
+        reg_path=release.parent/'figures_registry.jsonl'
+        if reg_path.is_file():
+            from release_gate import tom_publishable_media
+            reg_rows=[json.loads(l) for l in reg_path.read_text(encoding='utf8').splitlines() if l.strip()]
+            publishable={v:set(m) for v,m in tom_publishable_media(reg_rows,scope['volumes']).items()}
     unapproved=[];omitted_media=[]
     out.mkdir(parents=True,exist_ok=True)
     (out/'assets').mkdir(exist_ok=True)
@@ -258,6 +283,12 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
                         + (f' data-archive="{esc(scope["canonical_pdf_url"])}"' if scope['pdfs']=='reference' else (f' data-archive="{esc(pdf_url)}"' if scope['pdfs']=='ship' else ''))
                         + (f' data-page="{page}"' if page else ''))
             cite=f'<button type="button" class="cite" {cite_attrs}>Копировать с источником</button><small class="muted"> копирует выделенное с библиографической ссылкой; сохраняйте контекст цитаты.</small>'
+            ct=cite_by_sec.get(sec['id'])
+            if ct:
+                # Stable addressing layer chrome — the ct-id survives nav/
+                # wording changes; it is NOT a separate page.
+                cite+=(f'<small class="muted" id="{esc(ct["anchor"])}"> стабильный адрес цитирования: '
+                       f'<code>{esc(ct["citation_target_id"])}</code></small>')
             nav=f'<p>{esc(sec["title"])}</p><p><a href="{pref}index.html">Оглавление тома {v}</a></p>'
             previous=sec.get('previous_path') or sec.get('previous');nxt=sec.get('next_path') or sec.get('next')
             def pageref(x):return esc(os.path.relpath(od/Path(x).with_suffix('.html'),target.parent).replace(os.sep,'/'))
@@ -273,7 +304,12 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
                 keep={(vv,n) for (vv,n) in allow if vv==v} if scope['media']=='allowlist' else set()
                 replaced=[]
                 content=_omit_media_imgs(content,keep,v,sec['id'],replaced)
-                (unapproved if scope['media']=='allowlist' else omitted_media).extend(replaced)
+                for ref in replaced:
+                    name=ref.rsplit(':',1)[-1]
+                    if scope['media']!='allowlist' or (publishable is not None and name not in publishable.get(v,())):
+                        omitted_media.append(ref)
+                    else:
+                        unapproved.append(ref)
             # Same-titled sections in different volumes get disambiguating
             # context in <title>/description; authorial H1/body untouched.
             dup=title_counts[sec['title']]>1
@@ -284,11 +320,14 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
             # Authorial markdown may already carry its own H1; only inject a
             # page H1 when the body has none (exactly one meaningful H1/page).
             h1='' if '<h1' in content else f'<h1>{esc(sec["title"])}</h1>'
+            vol_index=(base_url.rstrip('/')+f'/tom-{v}/index.html') if base_url else f'{pref}index.html'
+            sec_bc=sem.ld_breadcrumb([(f'Том {v}',vol_index),(sec['title'],sec_url)])
             target.write_text(standalone(page_title,
                 f'<p class="breadcrumbs"><a href="{pref}index.html">Том {v}</a> / {esc(sec["title"])}</p>'
                 +h1+meta+cite+foot+content+pager,
                 nav,rootpref,reader=True,desc=desc,
-                canonical=sec_url if base_url else None),encoding='utf8')
+                canonical=sec_url if base_url else None,
+                jsonld=sem.ld_json([sec_bc])),encoding='utf8')
         if mode=='internal':
             shutil.copytree(book/'assets/media',od/'assets/media',dirs_exist_ok=True)
         elif scope['media']=='allowlist':
@@ -297,6 +336,8 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
                 if not f.is_file():continue
                 want=allow.get((v,f.name))
                 if want and _sha256(f)==want:shutil.copy2(f,mdest/f.name)
+                elif publishable is not None and f.name not in publishable.get(v,()):
+                    pass  # registry-decided non-publishable: never ships
                 else:unapproved.append(f'tom-{v}:file:{f.name}')
         # scope 'none': ship no graphics at all (text-first release)
         if v==1 and mode=='internal': # Topic links reference additional PDF sources and evidence inside tom-1.
@@ -323,8 +364,11 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
         links='\n'.join(f'<li><a href="{esc(Path(s["path"]).with_suffix(".html").as_posix())}">{esc(s["title"])}</a> <small>· {esc(s["kind"])}</small></li>' for s in secs)
         content=f'<h1>Том {v}</h1><p>Авторский порядок чтения · {len(secs)} адресуемых единиц.</p><ol>{links}</ol>'
         vdesc=f'«Основы социологии» ВП СССР, том {v}: оглавление и полные разделы произведения в авторском порядке чтения.'
+        v_index_url=(base_url.rstrip('/')+f'/tom-{v}/index.html') if base_url else None
         (od/'index.html').write_text(standalone(f'Основы социологии. Том {v}',content,rootprefix='../',desc=vdesc,
-            canonical=(base_url.rstrip('/')+f'/tom-{v}/index.html') if base_url else None),encoding='utf8')
+            canonical=v_index_url,
+            jsonld=sem.ld_json([sem.ld_book(f'Основы социологии. Том {v}',
+                v_index_url or f'tom-{v}/index.html')])),encoding='utf8')
     if mode=='public' and unapproved:
         raise SystemExit('Unapproved publishable media:\n- '+'\n- '.join(sorted(set(unapproved))[:50]))
     shutil.copy2(corpus/'data/works.jsonl',out/'data/works.jsonl')
@@ -340,10 +384,209 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
         idx.append({'title':sec['title'],'volume':int(sec['volume']),'section_id':sec['id'],
                     'url':f'tom-{sec["volume"]}/'+Path(sec['path']).with_suffix('.html').as_posix(),
                     'text':c['text'][:480]})
-    (out/'data/search_index.json').write_text(json.dumps(idx,ensure_ascii=False,separators=(',',':')),encoding='utf8')
     topics_count=build_topics_page(all_sections,out,base_url)
+    # --- Semantic layer: Topic/Concept pages + data exports -------------
+    # Every emitted entity must pass the single indexable() policy; pages
+    # are written only for indexable entities — unpublished/unsupported
+    # records produce no page at all (not just noindex).
+    sec_by_id={s['id']:s for s in all_sections}
+    def sec_title(sid):
+        s=sec_by_id.get(sid);return s['title'] if s else None
+    def sec_text(sid):
+        s=sec_by_id.get(sid)
+        if not s:return None
+        p=corpus/f'tom-{s["volume"]}'/s['path']
+        return p.read_text(encoding='utf8') if p.is_file() else None
+    def sec_page(sid):
+        s=sec_by_id.get(sid)
+        if not s:return None
+        return f'tom-{s["volume"]}/'+Path(s['path']).with_suffix('.html').as_posix()
+    b_abs=lambda p:(base_url.rstrip('/')+'/'+p) if base_url else None
+    cite_by_ct={c['citation_target_id']:c for c in ed['citations']}
+    ct_by_sec={c['section_id']:c for c in ed['citations']}
+    # Concepts: verify evidence against real section titles/text; only
+    # verified entries survive into the emitted record.
+    published_concepts=[]
+    for c in ed['concepts']:
+        ev=sem.verify_evidence(c,sec_title,sec_text)
+        if sem.indexable('concept',c,evidence=ev):
+            published_concepts.append((c,ev))
+    published_ids={c['concept_id'] for c,_ in published_concepts}
+    # Topics: first-match membership (same rule as the rubric index —
+    # a section is claimed by the first matching topic).
+    used=set();published_topics=[]
+    for t in ed['topics']:
+        members=[s for s in sem.topic_members(t,all_sections)
+                 if s['id'] not in used]
+        for s in members:used.add(s['id'])
+        if sem.indexable('topic',t,members=members):
+            published_topics.append((t,members))
+    sem_uris=[]
+    concept_cards=[]
+    # Topic detail pages breadcrumb up to the rubric index — but that page
+    # only exists when corpus titles prove at least one rubric; otherwise
+    # the valid parent is the landing page.
+    topics_parent=b_abs('topics.html') if topics_count else b_abs('index.html')
+    topics_parent_label='Темы и разделы' if topics_count else '«Основы социологии»'
+    topics_parent_href='../topics.html' if topics_count else '../index.html'
+    if published_concepts:
+        (out/'concepts').mkdir(exist_ok=True)
+        clinks=[]
+        for c,ev in published_concepts:
+            tname=c['canonical_term'];cid=c['concept_id']
+            page=f'concepts/{cid}.html'
+            scope_ru={'corpus_term':'термин корпуса (авторская терминология источников)',
+                      'editorial_navigation':'редакционный навигационный термин',
+                      'established_term':'общеупотребительный термин'}[c['definition_scope']]
+            alias_html=(f'<p><small class="muted">Также встречается: '
+                        f'{esc(", ".join(c.get("aliases") or []))}</small></p>'
+                        if c.get('aliases') else '')
+            ev_items=[]
+            for e in ev:
+                url=sec_page(e['section_id'])
+                ttl=sec_title(e['section_id']) or e['section_id']
+                ctid=ct_by_sec.get(e['section_id'])
+                ctsmall=(f' <small>· <code>{esc(ctid["citation_target_id"])}</code></small>'
+                         if ctid else '')
+                ev_items.append(f'<li><a href="../{esc(url)}">{esc(ttl)}</a>{ctsmall}</li>'
+                                if url else f'<li>{esc(ttl)} <small>(раздел вне сайта)</small></li>')
+            topic_names=[t['label'] for t,_ in published_topics
+                         if t['topic_id'] in (c.get('related_topic_ids') or [])]
+            topic_items=''.join(f'<li><a href="../topics/{esc(t["topic_id"])}.html">{esc(t["label"])}</a></li>'
+                                for t,_ in published_topics
+                                if t['topic_id'] in (c.get('related_topic_ids') or []))
+            pc_by_id={x['concept_id']:x for x,_ in published_concepts}
+            rel_items=''.join(f'<li><a href="{esc(r)}.html">{esc(pc_by_id[r]["canonical_term"])}</a></li>'
+                              for r in (c.get('related_concept_ids') or []) if r in pc_by_id)
+            bc=sem.ld_breadcrumb([('Библиотека',b_abs('index.html')),
+                                  ('Понятия',b_abs('concepts/index.html')),
+                                  (tname,b_abs(page))])
+            lds=[bc,sem.ld_definedterm(c,b_abs(page) or page,
+                                       b_abs('concepts/index.html') or 'concepts/index.html')]
+            body=(f'<p class="breadcrumbs"><a href="../index.html">Библиотека</a> / '
+                  f'<a href="index.html">Понятия</a> / {esc(tname)}</p>'
+                  f'<h1>{esc(tname)}</h1>'
+                  f'<p class="notice"><strong>Редакционная навигация, а не авторский текст.</strong> '
+                  f'Категория термина: <em>{scope_ru}</em>. Описание термина — редакционное; '
+                  f'содержательные утверждения смотрите в приведённых разделах источника.</p>'
+                  +alias_html
+                  +f'<p>{esc(c.get("editorial_description") or "")}</p>'
+                  +f'<h2>Источниковая база ({len(ev)})</h2><ol>{"".join(ev_items)}</ol>'
+                  +(f'<h2>Рубрики</h2><ul>{topic_items}</ul>' if topic_items else '')
+                  +(f'<h2>Связанные понятия</h2><ul>{rel_items}</ul>' if rel_items else ''))
+            (out/page).write_text(standalone(f'{tname} — понятие корпуса',body,
+                rootprefix='../',desc=(c.get('editorial_description') or tname)[:250],
+                canonical=b_abs(page),jsonld=sem.ld_json(lds)),encoding='utf8')
+            sem_uris.append('/'+page)
+            clinks.append(f'<li><a href="{esc(cid)}.html"><strong>{esc(tname)}</strong></a>'
+                          f' <small class="muted">· {scope_ru} · {len(ev)} раздел(а)</small></li>')
+            concept_cards.append(c)
+        # Glossary page: DefinedTermSet over the published terms only.
+        termset=[sem.ld_definedterm(c,b_abs(f'concepts/{c["concept_id"]}.html') or
+                                    f'concepts/{c["concept_id"]}.html',
+                                    b_abs('concepts/index.html') or 'concepts/index.html')
+                 for c,_ in published_concepts]
+        cbc=sem.ld_breadcrumb([('Библиотека',b_abs('index.html')),
+                               ('Понятия',b_abs('concepts/index.html'))])
+        cbody=('<p class="breadcrumbs"><a href="../index.html">Библиотека</a> / Понятия</p>'
+               '<h1>Понятия корпуса</h1>'
+               '<p class="notice"><strong>Редакционный указатель терминов, а не авторский текст.</strong> '
+               'Включено только то, что подтверждено реальными разделами корпуса и прошло '
+               'редакционную проверку; отсутствие термина означает лишь отсутствие подтверждённой '
+               'записи, а не отсутствие темы в корпусе.</p>'
+               f'<ol>{"".join(clinks)}</ol>')
+        (out/'concepts/index.html').write_text(standalone('Понятия корпуса',cbody,
+            rootprefix='../',desc='Указатель подтверждённых корпусом терминов: определения — редакционные, доказательная база — разделы источника.',
+            canonical=b_abs('concepts/index.html'),
+            jsonld=sem.ld_json([cbc,sem.ld_definedtermset('Понятия корпуса',
+                b_abs('concepts/index.html') or 'concepts/index.html',termset)])),
+            encoding='utf8')
+        sem_uris.append('/concepts/index.html')
+    if published_topics:
+        (out/'topics').mkdir(exist_ok=True)
+        for t,members in published_topics:
+            page=f'topics/{t["topic_id"]}.html'
+            concept_links=''.join(
+                f'<li><a href="../concepts/{esc(c["concept_id"])}.html">{esc(c["canonical_term"])}</a></li>'
+                for c,_ in published_concepts
+                if t['topic_id'] in (c.get('related_topic_ids') or []))
+            items='\n'.join(
+                f'<li><a href="../{esc(sec_page(s["id"]))}">{esc(s["title"])}</a> '
+                f'<small>· том {s["volume"]}</small></li>' for s in members)
+            bc=sem.ld_breadcrumb([('Библиотека',b_abs('index.html')),
+                                  ('Темы' if topics_count else topics_parent_label,
+                                   topics_parent),
+                                  (t['label'],b_abs(page))])
+            lds=[bc,sem.ld_collection(t['label'],b_abs(page) or page,
+                    [{'@type':'ListItem','position':i+1,
+                      'url':b_abs(sec_page(s['id'])) or sec_page(s['id']),
+                      'name':s['title']} for i,s in enumerate(members)],
+                    t.get('description') or '')]
+            body=(f'<p class="breadcrumbs"><a href="../index.html">Библиотека</a> / '
+                  f'<a href="{topics_parent_href}">{esc(topics_parent_label if not topics_count else "Темы")}</a> / {esc(t["label"])}</p>'
+                  f'<h1>{esc(t["label"])}</h1>'
+                  '<p class="notice"><strong>Редакционная рубрика, а не авторский текст.</strong> '
+                  'Состав выведен из реальных заголовков разделов источника; включение раздела '
+                  'не является утверждением истинности его содержания.</p>'
+                  +f'<p>{esc(t.get("description") or "")}</p>'
+                  +f'<h2>Разделы ({len(members)})</h2><ol>{items}</ol>'
+                  +(f'<h2>Понятия рубрики</h2><ul>{concept_links}</ul>' if concept_links else ''))
+            (out/page).write_text(standalone(t['label'],body,rootprefix='../',
+                desc=(t.get('description') or t['label'])[:250],
+                canonical=b_abs(page),jsonld=sem.ld_json(lds)),encoding='utf8')
+            sem_uris.append('/'+page)
+    # Machine-readable semantic export + stable citation ledger. Derived
+    # data only — never an independent citation source.
+    entity_rows=[]
+    for t,members in published_topics:
+        entity_rows.append({'kind':'topic','id':t['topic_id'],'label':t['label'],
+            'members':len(members),'site_path':f'topics/{t["topic_id"]}.html',
+            'membership_rule':t['membership_rule'],
+            'membership_rule_version':t['membership_rule_version']})
+    for c,ev in published_concepts:
+        entity_rows.append({'kind':'concept','id':c['concept_id'],
+            'term':c['canonical_term'],'aliases':c.get('aliases') or [],
+            'definition_scope':c['definition_scope'],
+            'site_path':f'concepts/{c["concept_id"]}.html',
+            'evidence_section_ids':[e['section_id'] for e in ev],
+            'related_topic_ids':c.get('related_topic_ids') or [],
+            'related_concept_ids':[r for r in (c.get('related_concept_ids') or [])
+                                   if r in published_ids]})
+    for ct in ed['citations']:
+        entity_rows.append({'kind':'citation_target','id':ct['citation_target_id'],
+            'work_id':ct['work_id'],'section_id':ct['section_id'],
+            'anchor':ct['anchor'],'site_path':ct.get('site_path'),
+            'language':ct['language']})
+    for v in ed['variants']:
+        entity_rows.append({'kind':'language_variant','id':v['variant_id'],
+            'entity_id':v['entity_id'],'language':v['language'],
+            'canonical_name':v['canonical_name'],
+            'translation_status':v['translation_status'],
+            'review_status':v['review_status'],
+            'canonical_variant_id':v.get('canonical_variant_id'),
+            'indexable':sem.indexable('language_variant',v)})
+    # retrieval entries: published concepts are discoverable through the same
+    # site search surface as sections (retrieval-only: kind='concept').
+    for c,_ev in published_concepts:
+        idx.append({'title':c['canonical_term'],'kind':'concept',
+                    'volume':'','section_id':c['concept_id'],
+                    'url':f'concepts/{c["concept_id"]}.html',
+                    'text':((c.get('editorial_description') or '')+' '
+                            +' '.join(c.get('aliases') or []))[:480]})
+    (out/'data/search_index.json').write_text(
+        json.dumps(idx,ensure_ascii=False,separators=(',',':')),encoding='utf8')
+    (out/'data/entities.json').write_text(
+        json.dumps({'generated_by':'semantic_layer','entities':entity_rows},
+                   ensure_ascii=False,indent=1)+'\n',encoding='utf8')
+    sem.write_jsonl(out/'data/citations.jsonl',ed['citations'])
     topics_link=('<p><a href="topics.html">Темы и разделы</a> <small>(редакционная навигация)</small></p>'
                  if topics_count else '')
+    concepts_link=('<p><a href="concepts/index.html">Понятия корпуса</a> '
+                   f'<small>({len(published_concepts)} подтверждённых термина, редакционный указатель)</small></p>'
+                   if published_concepts else '')
+    topic_detail_links=''.join(
+        f'<p>· <a href="topics/{esc(t["topic_id"])}.html">{esc(t["label"])}</a></p>'
+        for t,_ in published_topics)
     vol_links='\n'.join(f'<div class="card"><a href="tom-{v}/index.html"><strong>Том {v}</strong></a> · Оглавление и разделы</div>' for v in scope['volumes'])
     disclaimer={'internal':'<p class="notice"><strong>Внутренняя версия.</strong> Тексты и иллюстрации не прошли полную визуальную и правовую приёмку. Этот экземпляр не предназначен для общедоступного размещения.</p>',
                 'candidate':'<p class="notice"><strong>Кандидат выпуска — не для публикации.</strong> Состав соответствует публичному режиму; релиз требует одобрения владельца и прохождения release gate.</p>'}.get(mode,'<p>Исследовательская библиотека первоисточников: изложенные в работах взгляды являются позицией их авторов.</p>')
@@ -357,10 +600,21 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
         elif scope['pdfs']=='none':
             compose.append('<p class="notice">Файлы PDF в этот выпуск не включены; указаны имена файлов и кандидатные страницы проверенного издания.</p>')
     topics_block='<h2>Тематические маршруты</h2><p><a href="tom-1/topics/social-time-technological-change.html">Социальное время и технологические изменения</a> <small>(редакционный указатель, не оригинальный авторский текст)</small></p>' if mode=='internal' else ''
-    indexpage=f'<h1>«Основы социологии»: {len(scope["volumes"])} томов</h1>{disclaimer}{"".join(compose)}<p>Текст открыт для последовательного чтения и полнотекстового поиска. Указанные страницы PDF в неподтверждённых записях являются автоматическими кандидатами.</p><input id="query" placeholder="Найти в корпусе: культура, управление, социальное время..." aria-label="Поиск по корпусу"><small id="loading">Загрузка поискового индекса...</small><div id="results" aria-live="polite"></div><script src="assets/search.js" defer></script>{topics_block}{topics_link}<h2>Оглавления</h2>{vol_links}<h2>Данные для ИИ</h2><p><a href="data/works.jsonl">Реестр произведений</a> · <a href="data/sections.jsonl">Разделы</a> · <a href="data/chunks.jsonl">Поисковые фрагменты</a></p><p>Автоматическая проверка нахождения текста в файле не доказывает истинность описанных в нём утверждений.</p>'
+    indexpage=f'<h1>«Основы социологии»: {len(scope["volumes"])} томов</h1>{disclaimer}{"".join(compose)}<p>Текст открыт для последовательного чтения и полнотекстового поиска. Указанные страницы PDF в неподтверждённых записях являются автоматическими кандидатами.</p><input id="query" placeholder="Найти в корпусе: культура, управление, социальное время..." aria-label="Поиск по корпусу"><small id="loading">Загрузка поискового индекса...</small><div id="results" aria-live="polite"></div><script src="assets/search.js" defer></script>{topics_block}{topics_link}<h2>Оглавления</h2>{vol_links}{topic_detail_links}{concepts_link}<h2>Данные для ИИ</h2><p><a href="data/works.jsonl">Реестр произведений</a> · <a href="data/sections.jsonl">Разделы</a> · <a href="data/chunks.jsonl">Поисковые фрагменты</a> · <a href="data/entities.json">Семантический слой</a> · <a href="data/citations.jsonl">Адреса цитирования</a></p><p>Автоматическая проверка нахождения текста в файле не доказывает истинность описанных в нём утверждений.</p>'
     index_desc='Исследовательская библиотека первоисточников: «Основы социологии» ВП СССР — полные разделы шести томов, полнотекстовый поиск, цитирование с указанием источника.'
+    landing_url=(base_url.rstrip('/')+'/index.html') if base_url else 'index.html'
+    datasets=[sem.ld_dataset(f'Основы социологии. Том {v}',
+                             (base_url.rstrip('/')+f'/tom-{v}/index.html') if base_url else f'tom-{v}/index.html',
+                             'Полные разделы тома с привязкой к изданию')
+              for v in scope['volumes']]
+    datasets.append(sem.ld_dataset('Машинные индексы корпуса',
+        landing_url,'Реестры works/sections/chunks и семантический слой в JSON',
+        downloads=[((base_url.rstrip('/')+'/data/works.jsonl') if base_url else 'data/works.jsonl','application/jsonlines'),
+                   ((base_url.rstrip('/')+'/data/entities.json') if base_url else 'data/entities.json','application/json')]))
+    landing_ld=sem.ld_json([sem.ld_datacatalog('Библиотека первоисточников ВП СССР',
+        landing_url,datasets,index_desc)])
     (out/'index.html').write_text(standalone('«Основы социологии» ВП СССР — библиотека первоисточников',indexpage,rootprefix='',robots='index,follow' if mode=='public' else 'noindex,nofollow',desc=index_desc,
-        canonical=(base_url.rstrip('/')+'/index.html') if base_url else None),encoding='utf8')
+        canonical=(base_url.rstrip('/')+'/index.html') if base_url else None,jsonld=landing_ld),encoding='utf8')
     (out/'.nojekyll').write_text('',encoding='utf8')
     # llms.txt uses relative links — absolute host-root paths would escape a
     # GitHub Pages project subpath (/repo/).
@@ -373,11 +627,18 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
         base_url=base_url.rstrip('/')
         uris=['/index.html']+(['/topics.html'] if topics_count else [])+[f'/tom-{v}/index.html' for v in scope['volumes']]
         for s in all_sections:uris.append(f'/tom-{s["volume"]}/'+Path(s['path']).with_suffix('.html').as_posix())
+        # Semantic pages were emitted only for indexable entities — the
+        # same predicate that admitted the page admits it to the sitemap.
+        uris+=sem_uris
         doc=''.join('<url><loc>'+esc(base_url+p)+'</loc></url>' for p in uris)
         (out/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+doc+'</urlset>',encoding='utf8')
         (out/'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {esc(base_url)}/sitemap.xml\n',encoding='utf8')
     missing=audit_internal_links(out)
     print(json.dumps({'mode':mode,'volumes':len(scope['volumes']),'pages':len(all_sections),'chunks':len(idx),
+                      'semantic':{'topics':len(published_topics),
+                                  'concepts':len(published_concepts),
+                                  'citation_targets':len(ed['citations']),
+                                  'language_variants':len(ed['variants'])},
                       'scope':{k:scope[k] for k in ('media','pdfs')},
                       'unapproved_media_refs':sorted(set(unapproved)) if mode!='internal' else [],
                       'omitted_media':sorted(set(omitted_media)) if mode!='internal' else [],
@@ -387,5 +648,5 @@ def build(corpus:Path,out:Path,mode:str,release:Path|None=None,base_url:str=''):
         raise SystemExit('Public artifact has links to missing files:\n- '+'\n- '.join(missing[:50]))
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--corpus',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--mode',choices=['internal','public','candidate'],default='internal');ap.add_argument('--release-approval',type=Path);ap.add_argument('--base-url',default='');args=ap.parse_args()
-    build(args.corpus,args.output,args.mode,args.release_approval,args.base_url)
+    ap=argparse.ArgumentParser();ap.add_argument('--corpus',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--mode',choices=['internal','public','candidate'],default='internal');ap.add_argument('--release-approval',type=Path);ap.add_argument('--base-url',default='');ap.add_argument('--editorial',type=Path,default=None);args=ap.parse_args()
+    build(args.corpus,args.output,args.mode,args.release_approval,args.base_url,args.editorial)

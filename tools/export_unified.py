@@ -869,6 +869,244 @@ def _resolve_public_path(row: dict, out: Path, work_dirs: dict) -> None:
         row['public_path'] = row['public_asset_sha256'] = None
 
 
+SCOPE_LABEL_RU = {
+    'corpus_term': 'термин корпуса (авторская терминология источников)',
+    'editorial_navigation': 'редакционный навигационный термин',
+    'established_term': 'общеупотребительный термин'}
+
+
+def emit_semantic_layer(out: Path, report: dict,
+                        editorial_dir: Path | None = None) -> dict:
+    """Research-discovery semantic layer (Track 2 MVP): derived editorial
+    entities — topics, evidence-verified concepts, citation targets,
+    language variants — into data/*.jsonl, entities.json, CONCEPTS.md and
+    a DCAT serialization. The same semantic_layer.indexable() policy used
+    by the site build decides what is publishable; records that fail
+    evidence verification produce no output. Never touches source text."""
+    import semantic_layer as sem
+    ed = sem.load_editorial(editorial_dir or gh.REPO / 'editorial')
+    errors = sem.validate_records(ed)
+    if errors:
+        raise SystemExit('EDITORIAL RECORDS INVALID:\n- '
+                         + '\n- '.join(errors))
+    if not (ed['topics'] or ed['concepts']):
+        return {'topics': 0, 'concepts': 0, 'citation_targets': 0,
+                'language_variants': 0}
+    # Merged public index = the released data/sections.jsonl; evidence is
+    # verified against the EXPORTED text (post-transform), not the source.
+    sec_rows = [json.loads(l) for l in
+                (out / 'data/sections.jsonl').read_text(encoding='utf-8')
+                .splitlines() if l.strip()]
+    def sid_of(r):
+        return r.get('section_id') or r.get('id')
+    sec_index = {sid_of(r): r for r in sec_rows}
+
+    def get_title(sid):
+        r = sec_index.get(sid)
+        return r['title'] if r else None
+
+    def get_text(sid):
+        r = sec_index.get(sid)
+        if not r:
+            return None
+        p = out / r['path']
+        return p.read_text(encoding='utf-8') if p.is_file() else None
+
+    published_concepts = []
+    for c in ed['concepts']:
+        ev = sem.verify_evidence(c, get_title, get_text)
+        if sem.indexable('concept', c, evidence=ev):
+            published_concepts.append((c, ev))
+    used, published_topics = set(), []
+    norm_secs = [dict(r, id=sid_of(r)) for r in sec_rows if sid_of(r)]
+    for t in ed['topics']:
+        members = [dict(r, _sid=r['id']) for r in
+                   sem.topic_members(t, norm_secs) if r['id'] not in used]
+        for r in members:
+            used.add(r['_sid'])
+        if sem.indexable('topic', t, members=members):
+            published_topics.append((t, members))
+    # Language variants: editorial records + variants derived from the
+    # real translations layer — exactly one canonical (ru) per entity.
+    variants = list(ed['variants'])
+    tr_path = out / 'data/translations.jsonl'
+    if tr_path.is_file():
+        canon_seen = set()
+        for tr in sem.read_jsonl(tr_path):
+            wid = tr.get('translation_of')
+            lang = tr.get('language')
+            if not wid or not lang:
+                continue
+            canon = f'lv-{wid}-ru'
+            if canon not in canon_seen:
+                variants.append({'variant_id': canon, 'entity_id': wid,
+                                 'entity_kind': 'work', 'language': 'ru',
+                                 'canonical_name': wid, 'aliases': [],
+                                 'localized_summary': None,
+                                 'translation_status': 'canonical',
+                                 'review_status': 'reviewed',
+                                 'source_variant_id': None,
+                                 'canonical_variant_id': canon})
+                canon_seen.add(canon)
+            variants.append({'variant_id': f'lv-{wid}-{lang}',
+                'entity_id': wid, 'entity_kind': 'work', 'language': lang,
+                'canonical_name': tr.get('title') or wid,
+                'aliases': [], 'localized_summary': None,
+                'translation_status': ('confirmed'
+                                       if tr.get('full_text_status') == 'full'
+                                       else 'provisional'),
+                'review_status': ('reviewed'
+                                  if tr.get('provenance_status')
+                                  == 'confirmed_source' else 'unreviewed'),
+                'source_variant_id': canon,
+                'canonical_variant_id': canon})
+    errors = sem.variant_chain_errors(variants)
+    if errors:
+        raise SystemExit('LANGUAGE VARIANTS INVALID:\n- ' + '\n- '.join(errors))
+
+    ddir = out / 'data'
+    sem.write_jsonl(ddir / 'topics.jsonl',
+                    [t for t, _ in published_topics])
+    sem.write_jsonl(ddir / 'concepts.jsonl',
+                    [dict(c, verified_evidence=ev)
+                     for c, ev in published_concepts])
+    sem.write_jsonl(ddir / 'citations.jsonl', ed['citations'])
+    sem.write_jsonl(ddir / 'language_variants.jsonl', variants)
+
+    # Semantic export: stable ids + relationships + canonical paths.
+    ct_by_sec = {c['section_id']: c for c in ed['citations']}
+    entity_rows = []
+    for t, members in published_topics:
+        entity_rows.append({'kind': 'topic', 'id': t['topic_id'],
+            'label': t['label'], 'members': len(members),
+            'repo_path': 'TOPICS.md',
+            'site_path': f'topics/{t["topic_id"]}.html',
+            'membership_rule': t['membership_rule'],
+            'membership_rule_version': t['membership_rule_version'],
+            'member_section_ids': [m['_sid'] for m in members]})
+    for c, ev in published_concepts:
+        entity_rows.append({'kind': 'concept', 'id': c['concept_id'],
+            'term': c['canonical_term'], 'aliases': c.get('aliases') or [],
+            'definition_scope': c['definition_scope'],
+            'repo_path': 'CONCEPTS.md',
+            'site_path': f'concepts/{c["concept_id"]}.html',
+            'evidence_section_ids': [e['section_id'] for e in ev],
+            'related_topic_ids': c.get('related_topic_ids') or [],
+            'related_work_ids': c.get('related_work_ids') or [],
+            'related_concept_ids': c.get('related_concept_ids') or []})
+    for ct in ed['citations']:
+        entity_rows.append({'kind': 'citation_target',
+            'id': ct['citation_target_id'], 'work_id': ct['work_id'],
+            'section_id': ct['section_id'], 'anchor': ct['anchor'],
+            'site_path': ct.get('site_path'),
+            'repo_path': ct.get('repo_path'), 'language': ct['language']})
+    for v in variants:
+        entity_rows.append({'kind': 'language_variant',
+            'id': v['variant_id'], 'entity_id': v['entity_id'],
+            'language': v['language'],
+            'canonical_name': v['canonical_name'],
+            'translation_status': v['translation_status'],
+            'review_status': v['review_status'],
+            'canonical_variant_id': v.get('canonical_variant_id'),
+            'indexable': sem.indexable('language_variant', v)})
+    (ddir / 'entities.json').write_text(
+        json.dumps({'generated_by': 'semantic_layer',
+                    'entities': entity_rows}, ensure_ascii=False, indent=1)
+        + '\n', encoding='utf-8')
+
+    # CONCEPTS.md — human glossary. Every term links to its verified
+    # source evidence; editorial framing is explicit.
+    md = ['# Понятия корпуса', '',
+          'Редакционный указатель терминов, а не авторский текст. Термин '
+          'публикуется только при подтверждённой привязке к реальным '
+          'разделам источника и после редакционной проверки. Категория '
+          'термина указана явно: «термин корпуса» — авторская '
+          'терминология, а не общепринятое понятие.', '']
+    for c, ev in published_concepts:
+        md.append(f'## {c["canonical_term"]} (`{c["concept_id"]}`)')
+        md.append('')
+        md.append(f'- Категория: {SCOPE_LABEL_RU[c["definition_scope"]]}')
+        if c.get('aliases'):
+            md.append(f'- Также встречается: '
+                      + ', '.join(c['aliases']))
+        if c.get('editorial_description'):
+            md.append(f'- {c["editorial_description"]}')
+        links = []
+        for e in ev:
+            r = sec_index.get(e['section_id'])
+            if r:
+                ct = ct_by_sec.get(e['section_id'])
+                suffix = (f' · `{ct["citation_target_id"]}`' if ct else '')
+                links.append(f'[{r["title"]}]({r["path"]}){suffix}')
+        md.append(f'- Источниковая база: ' + ' · '.join(links))
+        tids = c.get('related_topic_ids') or []
+        tlabels = [t['label'] for t, _ in published_topics
+                   if t['topic_id'] in tids]
+        if tlabels:
+            md.append(f'- Рубрики: ' + ' · '.join(tlabels))
+        md.append('')
+    (out / 'CONCEPTS.md').write_text('\n'.join(md), encoding='utf-8')
+
+    # TOPICS.md: append the concept layer under the rubric index.
+    topics_md = out / 'TOPICS.md'
+    if topics_md.is_file() and published_concepts:
+        tmd = topics_md.read_text(encoding='utf-8').rstrip()
+        for t, members in published_topics:
+            names = [c['canonical_term'] for c, _ in published_concepts
+                     if t['topic_id'] in (c.get('related_topic_ids') or [])]
+            if names:
+                tmd += (f'\n\n### {t["label"]} — понятия\n\n'
+                        + '\n'.join(f'- {n}' for n in names))
+        tmd += ('\n\n---\n\nПонятийный слой: [CONCEPTS.md](CONCEPTS.md) — '
+                f'{len(published_concepts)} подтверждённых терминов '
+                '(редакционный указатель).')
+        topics_md.write_text(tmd + '\n', encoding='utf-8')
+
+    # README: expose the glossary next to the other entry points.
+    readme = out / 'README.md'
+    if readme.is_file():
+        body = readme.read_text(encoding='utf-8')
+        needle = '- [Хронология](CHRONOLOGY.md) — по годам источников.'
+        add = ('\n- [Понятия корпуса](CONCEPTS.md) — '
+               f'{len(published_concepts)} терминов с подтверждённой '
+               'привязкой к разделам источника (редакционный указатель).')
+        if needle in body and 'CONCEPTS.md' not in body:
+            body = body.replace(needle, needle + add, 1)
+            readme.write_text(body, encoding='utf-8')
+
+    # DCAT 3 — minimal deterministic serialization of the same entities.
+    dcat = {'@context': {'dcat': 'http://www.w3.org/ns/dcat#',
+                         'dct': 'http://purl.org/dc/terms/',
+                         'xsd': 'http://www.w3.org/2001/XMLSchema#'},
+            '@type': 'dcat:Catalog',
+            'dct:title': 'Библиотека первоисточников ВП СССР / КОБ',
+            'dct:language': 'ru',
+            'dcat:dataset': []}
+    works_rows = sem.read_jsonl(ddir / 'works.jsonl')
+    for w in works_rows:
+        ds = {'@type': 'dcat:Dataset',
+              'dct:identifier': w.get('work_id'),
+              'dct:title': w.get('title')}
+        if w.get('year'):
+            ds['dct:issued'] = {'@type': 'xsd:gYear', '@value': str(w['year'])}
+        dcat['dcat:dataset'].append(ds)
+    dcat['dcat:dataset'].append({
+        '@type': 'dcat:Dataset',
+        'dct:identifier': 'semantic-layer',
+        'dct:title': 'Семантический слой: темы, понятия, адреса цитирования',
+        'dcat:distribution': [
+            {'@type': 'dcat:Distribution',
+             'dct:format': 'application/jsonlines',
+             'dcat:downloadURL': 'data/entities.json'}]})
+    (ddir / 'dcat.jsonld').write_text(
+        json.dumps(dcat, ensure_ascii=False, indent=1) + '\n',
+        encoding='utf-8')
+    return {'topics': len(published_topics),
+            'concepts': len(published_concepts),
+            'citation_targets': len(ed['citations']),
+            'language_variants': len(variants)}
+
+
 def extend(out: Path, extra: Path, report: dict,
            tr_ledger: Path | None = None, tr_build: Path | None = None,
            media_mode: str = 'none',
@@ -1241,6 +1479,8 @@ provenance-блоке её README/разделов; `dotu_url` — указат�
               'переводы произведений на других языках.']
              if tr_registry else []), '']
     readme.write_text(body.rstrip() + '\n\n' + '\n'.join(add), encoding='utf-8')
+
+    report['semantic_layer'] = emit_semantic_layer(out, report)
 
     # public-representation masking; logged in the export report
     masks = []

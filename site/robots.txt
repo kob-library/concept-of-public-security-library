@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kob-library.github.io/concept-of-public-security-library/sitemap.xml
